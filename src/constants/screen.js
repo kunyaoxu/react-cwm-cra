@@ -1,0 +1,3 @@
+const DESKTOP_WIDTH = 1080;
+
+const MOBILE_WIDTH = 736;

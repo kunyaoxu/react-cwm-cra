@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.828 32.828">
+    <defs>
+        <style>
+            .hamburger-path{fill:none;stroke:#262626;stroke-linecap:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="Group_334" transform="translate(-186.586 -36.586)">
+        <path id="Line_118" d="M0 30L30 0" class="hamburger-path" transform="translate(188 38)"/>
+        <path id="Line_129" d="M30 30L0 0" class="hamburger-path" transform="translate(188 38)"/>
+    </g>
+</svg>
