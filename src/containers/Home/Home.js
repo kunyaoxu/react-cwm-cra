@@ -1,3 +1,4 @@
+import IntroVideo from './components/IntroVideo';
 import { Wrapper, SloganTextBox, BrandTextBox, PurposeTextBox } from './styled';
 
 const Home = () => {
@@ -8,6 +9,8 @@ const Home = () => {
       <PurposeTextBox>
         在企業間搭建一座橋樑，協助企業培植永續競爭力
       </PurposeTextBox>
+
+      <IntroVideo />
     </Wrapper>
   );
 };
