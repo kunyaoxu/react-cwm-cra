@@ -32,22 +32,18 @@ export const Wrapper = styled(Header)`
 export const BannerWrapper = styled.div`
   ${media.greaterThan('large')`
     flex: 212;
+    > svg {
+      width: ${pxToRem(212.3)};
+      height: auto;
+    }
   `}
   ${media.lessThan('large')`
     flex: 1;
     display: flex;
     justify-content: center;
-  `}
-`;
-
-export const BannerBox = styled.div`
-  ${media.greaterThan('large')`
-    width: ${pxToRem(212.3)};
-    height: ${pxToRem(71.6)};
-  `}
-
-  ${media.lessThan('large')`
-    width: ${mPxToRem(144.7)};
-    height: ${mPxToRem(48.8)};
+    > svg {
+      width: ${mPxToRem(144.7)};
+      height: auto;
+    }
   `}
 `;
