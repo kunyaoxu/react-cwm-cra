@@ -49,13 +49,12 @@ export const Description = styled.div`
   font-weight: 500;
 
   ${media.greaterThan('large')`
-    width: ${pxToRem(722)};
     font-size: ${pxToRem(16)};
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.88;
-    letter-spacing: 0.8px;
+    letter-spacing: ${pxToRem(0.8)};
     text-align: center
   `}
 
