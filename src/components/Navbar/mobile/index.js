@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Drawer } from 'antd';
+import { handleClickHashLink } from 'utils/hashLinkClickHandler';
 import { HamburgerSvg, DrawerCloseSvg, FaceBookIcon } from 'svgs';
 import { HamburgerBox, CloseIconBox, DrawerItem, FacebookItem } from './styled';
 
@@ -36,12 +37,54 @@ const MobileNavbar = () => {
           </CloseIconBox>
         }
       >
-        <DrawerItem>WHY NOW</DrawerItem>
-        <DrawerItem>WHY US</DrawerItem>
-        <DrawerItem>ABOUT US</DrawerItem>
-        <DrawerItem>VALUES OF MEMBERSHIP</DrawerItem>
-        <DrawerItem>PRODUCT CONTENT</DrawerItem>
-        <DrawerItem>JOIN ENQUIRY</DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'why-now' });
+            onClose();
+          }}
+        >
+          WHY NOW
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'why-us' });
+            onClose();
+          }}
+        >
+          WHY US
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'about-us' });
+            onClose();
+          }}
+        >
+          ABOUT US
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'values-of-membership' });
+            onClose();
+          }}
+        >
+          VALUES OF MEMBERSHIP
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'product-content' });
+            onClose();
+          }}
+        >
+          PRODUCT CONTENT
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'join-enquiry' });
+            onClose();
+          }}
+        >
+          JOIN ENQUIRY
+        </DrawerItem>
         <FacebookItem>
           <FaceBookIcon />
         </FacebookItem>

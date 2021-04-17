@@ -10,7 +10,6 @@ export const Wrapper = styled(Header)`
   display: flex;
   z-index: 1;
   width: 100%;
-  height: 135px;
   padding-top: 29px;
   padding-bottom: 34.4px;
   align-items: center;
@@ -33,6 +32,7 @@ export const BannerWrapper = styled.div`
   ${media.greaterThan('large')`
     flex: 212;
     > svg {
+      cursor: pointer;
       width: ${pxToRem(212.3)};
       height: auto;
     }

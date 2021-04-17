@@ -8,6 +8,7 @@ import { Dots, Dot } from './Styled';
 
 const Pagination = () => {
   const pageIds = [
+    'home',
     'why-now',
     'why-us',
     'about-us',

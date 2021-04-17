@@ -2,7 +2,7 @@ import { Wrapper, SloganTextBox, BrandTextBox, PurposeTextBox } from './styled';
 
 const Home = () => {
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <SloganTextBox>共享、共學、共好</SloganTextBox>
       <BrandTextBox>天下永續會</BrandTextBox>
       <PurposeTextBox>
