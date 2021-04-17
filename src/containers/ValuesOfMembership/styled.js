@@ -46,13 +46,16 @@ export const GroupedMobileImage = styled.img.attrs(() => ({
 
 export const TextBoxContainer = styled(Flex)`
   width: 100%;
-  padding-left: ${pxToRem(234)};
-  padding-right: ${pxToRem(221)};
-
   justify-content: space-between;
+
+  ${media.greaterThan('large')`
+    padding-left: ${pxToRem(98)};
+    padding-right: ${pxToRem(98)};
+  `}
 
   ${media.lessThan('large')`
     flex-direction: column;
     align-items: center;
+    margin-bottom: ${mPxToRem(69)};
   `}
 `;
