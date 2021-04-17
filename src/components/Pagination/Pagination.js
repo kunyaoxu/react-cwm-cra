@@ -1,6 +1,7 @@
 import React from 'react';
 import Scrollspy from 'components/Scrollspy/scrollspy';
 import { Dots, Dot } from './Styled';
+import Countdown from 'antd/lib/statistic/Countdown';
 
 const Pagination = () => {
   const pageIds = [
@@ -16,16 +17,7 @@ const Pagination = () => {
   const handleClickDotForActive = ({ e, id }) => {
     const element = document.getElementById(id);
     e.preventDefault();
-    // console.log(element.scrollTop);
-    // console.log(element.getBoundingClientRect());
-    // console.log(window.pageYOffset);
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'start',
-    });
-    // const top =element.getBoundingClientRect().top
-    // window.scrollTo()
+    window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
     addHashIdToUrl(id);
   };
 
