@@ -25,17 +25,17 @@ export const Wrapper = styled(Flex)`
 
 export const ContentWrapper = styled(Flex)`
   position: relative;
-  flex: 1;
-  flex-direction: column;
   width: 100%;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
 
   ${media.greaterThan('large')`
-    padding: ${pxToRem(189)} ${pxToRem(278)} ${pxToRem(176)} ${pxToRem(278)};
-    margin-top: ${pxToRem(122.1)};
+    padding: 0 ${pxToRem(278)} ${pxToRem(176)} ${pxToRem(278)};
+    margin-top: ${pxToRem(221)};
   `}
 
   ${media.lessThan('large')`
-    align-items: center;
     justify-content: space-between;
     margin-top: ${mPxToRem(56.6)};
   `}
