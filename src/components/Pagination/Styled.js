@@ -14,10 +14,11 @@ export const Dots = styled(Flex)`
   justify-content: center;
   list-style: none;
   padding: 0;
-
   position: fixed;
   bottom: ${pxToRem(142)};
   right: ${pxToRem(33)};
+  z-index: 1;
+
   ul {
     list-style: none;
     padding: 0;

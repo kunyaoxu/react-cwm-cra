@@ -1,4 +1,6 @@
 import { Layout } from 'antd';
+import smoothscroll from 'smoothscroll-polyfill';
+
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import Content from 'components/Content';
@@ -14,6 +16,9 @@ import JoinEnquiry from 'containers/JoinEnquiry';
 import 'antd/dist/antd.css';
 import GlobalStyle from 'styles/global-styles';
 import styles from 'styles/Home.module.css';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 export default function App() {
   return (

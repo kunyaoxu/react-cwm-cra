@@ -8,8 +8,8 @@ const { Header } = Layout;
 export const Wrapper = styled(Header)`
   position: fixed;
   display: flex;
-  z-index: 1;
   width: 100%;
+  z-index: 3;
   padding-top: 29px;
   padding-bottom: 34.4px;
   align-items: center;

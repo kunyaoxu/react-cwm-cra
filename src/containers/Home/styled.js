@@ -3,6 +3,7 @@ import media from 'styled-media-query';
 import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
 export const Wrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +14,7 @@ export const Wrapper = styled.div`
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 2;
 
   ${media.greaterThan('large')`
     height: ${pxToRem(945)};
