@@ -7,7 +7,7 @@ export const Wrapper = styled(Box)`
   font-family: GenYoGothicTWTTF;
 
   ${media.greaterThan('large')`
-    width: ${pxToRem(621)};
+    min-width: ${pxToRem(621)};
     font-size: ${pxToRem(16)};
     line-height: ${pxToRem(18)};
     letter-spacing: ${pxToRem(0.5)};

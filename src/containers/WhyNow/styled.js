@@ -12,9 +12,9 @@ export const Wrapper = styled(Flex)`
   background-size: auto 100%;
 
   ${media.greaterThan('large')`
-    justify-content: space-between;
     height: ${pxToRem(1080)};
     padding: ${pxToRem(290)} ${pxToRem(234)} ${pxToRem(137)} ${pxToRem(234)};
+    justify-content: space-between;
   `}
 
   ${media.lessThan('large')`
@@ -63,17 +63,15 @@ export const DescriptionBox = styled.div`
 export const WhyNowImageContainer = styled(Flex)`
   align-items: center;
   justify-content: center;
-
   ${media.greaterThan('large')`
     width: ${pxToRem(653)};
     height: ${pxToRem(653)};
   `}
-
   ${media.lessThan('large')`
     width: ${mPxToRem(320)};
     height: ${mPxToRem(320)};
     margin-top: ${mPxToRem(30)};
-  `}
+  `};
 `;
 
 export const WhyNowImage = styled.img.attrs(() => ({

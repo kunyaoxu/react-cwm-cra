@@ -8,10 +8,10 @@ export const Wrapper = styled(Flex)`
   align-items: center;
 
   ${media.greaterThan('large')`
-    margin-bottom: ${pxToRem(147)};
+    margin-bottom: ${pxToRem(174)};
     > svg {
-      width: 100%;
-      height: auto;
+      height: ${pxToRem(66)};
+      width: auto;
     }
   `}
 
