@@ -3,39 +3,66 @@ import media from 'styled-media-query';
 import Flex from 'common/Flex';
 import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Flex)`
   width: 100%;
-  background: #d6e2e5;
-
-  ${media.greaterThan('large')`
-    height: ${pxToRem(1368)};
-    padding: 0 ${pxToRem(92)};
-  `}
-
-  ${media.lessThan('large')`
-    height: ${mPxToRem(826)};
-    padding: 0 ${mPxToRem(19.5)};
-  `}
-`;
-
-export const ContentWrapper = styled(Flex)`
-  flex-direction: column;
   align-items: center;
-  background-repeat: no-repeat;
+  flex-direction: column;
+  background: #98bc77;
+  position: relative;
 
   ${media.greaterThan('large')`
     height: ${pxToRem(1368)};
-    background-image: url('/images/about-us-bg.jpg');
-    background-size: 100% 100%;
+    border-left: ${pxToRem(92)} solid #d6e2e5;
+    border-right: ${pxToRem(92)} solid #d6e2e5;
     padding-top: ${pxToRem(214.9)};
+
   `}
 
   ${media.lessThan('large')`
     height: ${mPxToRem(826)};
-    background-image: url('/images/about-us-bg@mobile.jpg');
-    background-size: 100% 100%;
+    border-left: ${mPxToRem(19)} solid #d6e2e5;
+    border-right: ${mPxToRem(19)} solid #d6e2e5;
     padding-top: ${mPxToRem(70)};
     padding-left: ${mPxToRem(27)};
     padding-right: ${mPxToRem(27)};
+  `}
+`;
+
+export const CardContainer = styled(Flex)`
+  ${media.greaterThan('large')`
+    margin-top: ${pxToRem(61)};
+    > :not(:last-child) {
+      :after {
+        position: absolute;
+        content: '';
+        right: 0;
+        width: 1px;
+        height: 100%;
+        opacity: 0.5;
+        background-color: white;
+      }
+    }
+  `}
+
+  ${media.lessThan('large')`
+    margin-top: ${mPxToRem(47)};
+  `}
+`;
+
+export const EarthImg = styled.img.attrs(() => ({
+  src: `${process.env.PUBLIC_URL}/images/about-us-earth.png`,
+  alt: '...',
+}))`
+  position: absolute;
+  bottom: 0;
+
+  ${media.greaterThan('large')`
+    width: ${pxToRem(1184)};
+    height: auto;
+  `}
+
+  ${media.lessThan('large')`
+    width: ${mPxToRem(290)};
+    height: auto;
   `}
 `;

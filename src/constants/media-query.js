@@ -7,4 +7,4 @@ const MAP_MEDIA_QUERY = {
 
 export const MEDIA_THRESHOLD = 'large';
 
-export const MEDIA_THRESHOLD_FOR_HOOK = `(min-width: ${MAP_MEDIA_QUERY[MEDIA_THRESHOLD]}px)`;
+export const MEDIA_THRESHOLD_FOR_HOOK = `(max-width: ${MAP_MEDIA_QUERY[MEDIA_THRESHOLD]})`;
