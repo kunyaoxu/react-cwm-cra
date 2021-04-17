@@ -2,6 +2,7 @@ import { Layout } from 'antd';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import Content from 'components/Content';
+import Pagination from 'components/Pagination';
 import Landing from 'containers/Home';
 import WhyNow from 'containers/WhyNow';
 import WhyUs from 'containers/WhyUs';
@@ -45,6 +46,8 @@ export default function App() {
 
         {/* Footer */}
         <Footer />
+        {/* right side dots */}
+        <Pagination />
       </Layout>
     </div>
   );

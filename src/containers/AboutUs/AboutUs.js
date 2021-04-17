@@ -4,7 +4,7 @@ import Slogan from './components/Slogan';
 import { Wrapper, CardContainer, EarthImg } from './styled';
 
 const AboutUs = () => (
-  <Wrapper>
+  <Wrapper id="about-us">
     {/* About Us Title */}
     <Title />
 
