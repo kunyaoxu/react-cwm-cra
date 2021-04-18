@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 import Flex from 'common/Flex';
 import { LoadingSvg } from 'svgs';
+import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
 export const Wrapper = styled(Flex)`
   width: 100%;
@@ -21,6 +22,11 @@ export const AntdFrom = styled(Form)`
   ${media.greaterThan('large')`
     max-width: 75.6%;
     padding: 4% 10.5%;
+    margin-bottom: ${pxToRem(181)};
+  `}
+
+  ${media.lessThan('large')`
+    margin-bottom: ${mPxToRem(48)};
   `}
 `;
 
