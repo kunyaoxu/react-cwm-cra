@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import {
   handleClickHashLink,
   addHashIdToUrl,
@@ -17,6 +17,20 @@ const Pagination = () => {
     'join-enquiry',
   ];
 
+  const [offset, setOffset] = useState();
+
+  useEffect(() => {
+    getOffset();
+    window.addEventListener('resize', getOffset);
+    return () => window.removeEventListener('resize', getOffset);
+  }, []);
+
+  const getOffset = () => {
+    /**因Scrollspy被觸發的位置預設為視窗頂部，但畫面觸發位置是navBar下面 */
+    const offsetHeightNavbar = document.getElementById('navbar').offsetHeight;
+    setOffset(-1 * offsetHeightNavbar - 1); // `-1` 因為why-now滾動位置還是有1px誤差，走投無路惹只好寫死
+  };
+
   /** 換頁處理 */
   const handleCurrentPageChanged = (activePage) => {
     const dots = document.getElementById('dots');
@@ -33,6 +47,7 @@ const Pagination = () => {
       <Scrollspy
         items={pageIds}
         currentClassName="is-current"
+        offset={offset}
         onUpdate={handleCurrentPageChanged}
       >
         {pageIds?.map((_, index) => (

@@ -6,7 +6,7 @@ import Desktop from './desktop';
 
 const Navbar = () => {
   return (
-    <Wrapper>
+    <Wrapper id="navbar">
       <BannerWrapper>
         <LogoSvg onClick={(e) => handleClickHashLink({ e, id: 'home' })} />
       </BannerWrapper>
