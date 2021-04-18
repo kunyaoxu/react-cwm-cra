@@ -45,7 +45,39 @@ export const CardContainer = styled(Flex)`
   `}
 
   ${media.lessThan('large')`
+    flex-wrap: wrap;
     margin-top: ${mPxToRem(47)};
+
+    > div.break {
+      position: relative;
+      flex-basis: 100%;
+      height: ${mPxToRem(36)};
+      :before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      :after {
+        position: absolute;
+        content: '';
+        left: calc(50% - 1px);
+        height: 100%;
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    > :nth-child(3n+1) {
+      :after {
+        position: absolute;
+        content: '';
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
   `}
 `;
 

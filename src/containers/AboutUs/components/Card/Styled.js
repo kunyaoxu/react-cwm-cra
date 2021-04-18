@@ -49,7 +49,8 @@ export const Wrapper = styled(Flex)`
   `}
 
   ${media.lessThan('large')`
-    width: ${mPxToRem(161)};
+    flex: 1;
+    width: ${mPxToRem(160)};
     height: ${mPxToRem(146)};
     text-shadow: 0 0 ${mPxToRem(5)} rgba(0, 0, 0, 0.25);
   `};

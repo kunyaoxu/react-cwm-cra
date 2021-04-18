@@ -31,6 +31,7 @@ const AboutUs = () => (
           '對客戶、消費者承諾的創新實務',
         ]}
       />
+      <div className="break" />
       <Card
         title="環境永續"
         contents={[
