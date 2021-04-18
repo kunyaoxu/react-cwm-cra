@@ -10,6 +10,7 @@ import { ReactComponent as ProductContent01Svg } from './product-content-1.svg';
 import { ReactComponent as ProductContent02Svg } from './product-content-2.svg';
 import { ReactComponent as ProductContent03Svg } from './product-content-3.svg';
 import { ReactComponent as ProductContent04Svg } from './product-content-4.svg';
+import { ReactComponent as SkipButtonSvg } from './skip-button.svg';
 import { ReactComponent as ValuesSloganSvg } from './values-slogan.svg';
 import { ReactComponent as ValuesEngSloganSvg } from './values-eng@m.svg';
 import { ReactComponent as WhyEngSvg } from './why-eng.svg';
@@ -33,6 +34,7 @@ export {
   ProductContent02Svg,
   ProductContent03Svg,
   ProductContent04Svg,
+  SkipButtonSvg,
   ValuesSloganSvg,
   ValuesEngSloganSvg,
   WhyEngSvg,

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.343 64">
+    <defs>
+        <filter id="thw4th80oa" width="84" height="64" x="2.672" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur result="blur" stdDeviation="6.5"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(-809 -8387.5)">
+        <rect width="88.343" height="42.167" fill="#edf1f2" rx="21" transform="translate(809 8399)"/>
+        <g filter="url(#thw4th80oa)" transform="translate(809 8387.5)">
+            <text fill="#566c6c" font-family="NotoSansCJKtc-Bold, Noto Sans CJK TC" font-size="17px" font-weight="700" letter-spacing="0.1em" transform="translate(22.17 38.5)">
+                <tspan x="0" y="0">SKIP</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

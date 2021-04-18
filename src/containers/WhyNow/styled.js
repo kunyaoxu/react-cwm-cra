@@ -8,7 +8,7 @@ export const Wrapper = styled(Flex)`
   width: 100%;
   color: #566c6c;
   font-family: GenYoMinTWTTF;
-  background-image: url('/images/why-now-bg.jpg');
+  background-image: url(${process.env.PUBLIC_URL}/images/why-now-bg.jpg);
   background-size: auto 100%;
 
   ${media.greaterThan('large')`
