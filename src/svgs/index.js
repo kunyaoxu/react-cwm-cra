@@ -16,6 +16,7 @@ import { ReactComponent as WhyEngSvg } from './why-eng.svg';
 import { ReactComponent as WhyNowSvg } from './why-now.svg';
 import { ReactComponent as WhyUsSvg } from './why-us.svg';
 import { ReactComponent as WhyUsEngSvg } from './why-us@eng.svg';
+import { ReactComponent as LoadingSvg } from './loading.svg';
 
 export {
   AboutSvg,
@@ -23,6 +24,7 @@ export {
   LogoSvg,
   HamburgerSvg,
   DrawerCloseSvg,
+  LoadingSvg,
   ProductSvg,
   ProductEngSvg,
   ProductContent01Svg,
