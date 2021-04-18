@@ -10,11 +10,9 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.15.1",
-    "eslint-config-react-app": "^6.0.0",
     "qs": "^6.10.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
     "react-use": "^17.2.3",
     "smoothscroll-polyfill": "^0.4.4",
@@ -45,8 +43,10 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.24.0",
-    "eslint-config-airbnb": "^18.2.1"
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-react-app": "^6.0.0"
   }
 }

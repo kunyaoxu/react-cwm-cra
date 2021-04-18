@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import qs from 'qs';
 import { Form, Input, Select, Checkbox } from 'antd';
 import { CaretDownOutlined } from '@ant-design/icons';
-import qs from 'qs';
+import Title from './components/Title';
+import RecruitRule from './components/RecruitRule';
 import {
   Wrapper,
   AntdFrom,
@@ -54,6 +56,12 @@ const JoinEnquiry = () => {
 
   return (
     <Wrapper id="join-enquiry">
+      {/* 頁面Title */}
+      <Title />
+      {/* 招收規則 */}
+      <RecruitRule />
+
+      {/* Form part */}
       <AntdFrom form={form} name="control-hooks" onFinish={onFinish}>
         <AntdFromItem {...layout} label="⊕公司名稱" name={['fields', 0]}>
           <Input placeholder="請輸入" type="text" />

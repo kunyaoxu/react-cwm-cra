@@ -17,6 +17,8 @@ import { ReactComponent as WhyNowSvg } from './why-now.svg';
 import { ReactComponent as WhyUsSvg } from './why-us.svg';
 import { ReactComponent as WhyUsEngSvg } from './why-us@eng.svg';
 import { ReactComponent as LoadingSvg } from './loading.svg';
+import { ReactComponent as JoinEnquirySvg } from './join-enquiry.svg';
+import { ReactComponent as JoinEngSvg } from './join@eng.svg';
 
 export {
   AboutSvg,
@@ -38,4 +40,6 @@ export {
   WhyUsSvg,
   WhyUsEngSvg,
   FaceBookIcon,
+  JoinEnquirySvg,
+  JoinEngSvg,
 };

@@ -5,11 +5,10 @@ import Flex from 'common/Flex';
 import { LoadingSvg } from 'svgs';
 
 export const Wrapper = styled(Flex)`
-  flex-direction: column;
-  align-items: center;
   width: 100%;
+  align-items: center;
+  flex-direction: column;
   background: #566c6c;
-  font-family: 'Noto Sans TC';
 `;
 
 export const AntdFrom = styled(Form)`
@@ -17,6 +16,7 @@ export const AntdFrom = styled(Form)`
   width: 100%;
   max-width: 90.5%;
   padding: 6% 7.7%;
+  font-family: 'Noto Sans TC';
 
   ${media.greaterThan('large')`
     max-width: 75.6%;
