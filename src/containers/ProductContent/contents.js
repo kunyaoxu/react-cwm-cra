@@ -4,32 +4,14 @@ import {
   ProductContent03Svg,
   ProductContent04Svg,
 } from 'svgs';
+import Content01 from './components/Content01';
 import ContentText from './components/ContentText';
 
 const CONTENTS = [
   {
     icon: <ProductContent01Svg />,
     title: '永續培力工作坊',
-    body: (
-      <>
-        {/* 桌面版文字 */}
-        <ContentText className="only-desktop">
-          每期會員安排一場為期兩天的永續培力工作坊，
-        </ContentText>
-        <ContentText className="only-desktop">
-          形式包括企業參訪、個案探討、總編輯會客室、大師交流、趨勢分享等…。
-        </ContentText>
-
-        {/* 手機版文字 */}
-        <ContentText className="only-mobile">
-          每期會員安排一場為期兩天的永續培力工作坊，
-        </ContentText>
-        <ContentText className="only-mobile">
-          形式包括企業參訪、個案探討、總編輯會客室、大師交流、
-        </ContentText>
-        <ContentText className="only-mobile">趨勢分享等…。</ContentText>
-      </>
-    ),
+    body: <Content01 />,
     imgSrc: '/images/product-contents-01.jpg',
   },
   {

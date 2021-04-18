@@ -3,6 +3,7 @@ import media from 'styled-media-query';
 import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
 export const Wrapper = styled.div`
+  position: relative;
   border-top: 1px solid #566c6c;
 
   ${media.greaterThan('large')`

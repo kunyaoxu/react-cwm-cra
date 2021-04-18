@@ -9,14 +9,14 @@ export const Wrapper = styled(Flex)`
   background-color: white;
 
   ${media.greaterThan('large')`
-    height: ${pxToRem(2730)};
+    /* height: ${pxToRem(2730)}; */
     padding-top: ${pxToRem(250.1)};
     border-left: ${pxToRem(92)} solid #d6e2e5;
     border-right: ${pxToRem(92)} solid #d6e2e5;
   `}
 
   ${media.lessThan('large')`
-    height: ${mPxToRem(2204)};
+    /* height: ${mPxToRem(2204)}; */
     padding: ${mPxToRem(70)} ${mPxToRem(19.5)} 0 ${mPxToRem(19.5)};
     border-left: ${mPxToRem(19)} solid #d6e2e5;
     border-right: ${mPxToRem(19)} solid #d6e2e5;
