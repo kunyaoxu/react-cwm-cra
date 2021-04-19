@@ -9,11 +9,4 @@ export const handleClickHashLink = ({ e, id }) => {
     top: element.offsetTop - homeElOffset,
     behavior: 'smooth',
   });
-  addHashIdToUrl(id);
-};
-
-/** url加 `#${id}`*/
-export const addHashIdToUrl = (id) => {
-  const hash = id ? `#${id}` : ' '; // 首頁沒id
-  window.history.pushState(null, null, hash);
 };
