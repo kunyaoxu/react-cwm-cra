@@ -1,4 +1,4 @@
-import { Form, Button } from 'antd';
+import { Form, Button, Select, Input, Col } from 'antd';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 import Flex from 'common/Flex';
@@ -31,20 +31,86 @@ export const AntdFrom = styled(Form)`
 `;
 
 export const AntdFromItem = styled(Form.Item)`
-  background-color: #768e91;
   margin-bottom: 12px;
 
-  & > .ant-form-item-label {
-    & > label {
-      color: rgb(246, 246, 246);
-      font-size: 11px;
-      height: unset;
-    }
+  & > .ant-form-item-label > label,
+  & .ant-checkbox-wrapper .ant-checkbox + span {
+    color: #f6f6f6;
+    font-size: 11px;
+    line-height: 17px;
+    font-weight: 500;
+    height: initial;
+    word-break: keep-all;
+
+    ${media.greaterThan('large')`
+      font-size: 18px;
+      line-height: 27px;
+    `}
   }
 
+  & .ant-checkbox-wrapper .ant-checkbox {
+    &:after {
+      border: 0;
+    }
+    & > .ant-checkbox-inner,
+    & > .ant-checkbox-inner > * {
+      border: 0;
+      border-radius: 0;
+      background: #9daeb0;
+    }
+
+    &.ant-checkbox-checked .ant-checkbox-inner {
+      background: #f7e082;
+      &:after {
+        content: unset;
+      }
+    }
+
+    & + span {
+      padding: 0 6px;
+    }
+  }
+`;
+
+export const AntdSelect = styled(Select)`
+  &.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: #9daeb0;
+    border: 0;
+    height: 31px;
+
+    input {
+      height: 100%;
+    }
+
+    ${media.greaterThan('large')`
+      height: 46px;
+    `}
+  }
+
+  & .ant-select-selector .ant-select-selection-placeholder,
+  & .ant-select-selector .ant-select-selection-item {
+    background-color: transparent;
+    color: #566c6c;
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    ${media.greaterThan('large')`
+      font-size: 15px;
+      line-height: 46px;
+    `}
+  }
+`;
+
+export const OptionStyle = styled.div`
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Noto Sans TC';
+
   ${media.greaterThan('large')`
-    margin-bottom: 18px;
-    padding: 0 30px;
+    font-size: 15px;
+    line-height: 36px;
   `}
 `;
 
@@ -77,6 +143,42 @@ export const AntdButton = styled(Button)`
   `}
 `;
 
+export const AntdInput = styled(Input)`
+  color: #566c6c;
+  background-color: #fff;
+  border: 0;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 31px;
+
+  &.ant-input:placeholder-shown {
+    background-color: #9daeb0;
+  }
+
+  &.ant-input::placeholder {
+    color: #566c6c;
+  }
+
+  &.ant-input:focus {
+    background-color: #fff;
+  }
+
+  ${media.greaterThan('large')`
+    font-size: 15px;
+    height: 46px;
+  `}
+`;
+
+export const AntdCol = styled(Col)`
+  min-width: 100%;
+  ${media.greaterThan('large')`
+    min-width: unset;
+    flex: 1;
+    padding: 0 30px;
+  `}
+`;
+
 export const rotate = keyframes`
   from {
     transform: rotate(0);
@@ -95,7 +197,7 @@ export const AntdLoadingCircle = styled(LoadingSvg)`
   `}
 `;
 
-export const DivdeLine = styled.div`
+export const DivideLine = styled.div`
   background-color: #fff;
   height: 1px;
   margin-top: 22px;

@@ -102,7 +102,17 @@ const GlobalStyle = createGlobalStyle`
       display: none;
     `}
   }
-
+  
+  .ant-select-item.ant-select-item-option.ant-select-item-option-selected {
+    color: #566c6c;
+  }
+  .ant-select-item.ant-select-item-option.ant-select-item-option-active {
+    background: #edf1f2;
+  }
+  .ant-select-item.ant-select-item-option {
+    color: #768e91;
+    background: white;
+  }
 `;
 
 export default GlobalStyle;
