@@ -19,6 +19,11 @@ import { ReactComponent as WhyUsEngSvg } from './why-us@eng.svg';
 import { ReactComponent as LoadingSvg } from './loading.svg';
 import { ReactComponent as JoinEnquirySvg } from './join-enquiry.svg';
 import { ReactComponent as JoinEngSvg } from './join@eng.svg';
+import { ReactComponent as ModalCloseButton } from './modal-close-button.svg';
+import { ReactComponent as DAY1 } from './DAY1.svg';
+import { ReactComponent as DAY2 } from './DAY2.svg';
+import { ReactComponent as MobileDAY1 } from './MOBILE-DAY1.svg';
+import { ReactComponent as MobileDAY2 } from './MOBILE-DAY2.svg';
 
 export {
   AboutSvg,
@@ -42,4 +47,9 @@ export {
   FaceBookIcon,
   JoinEnquirySvg,
   JoinEngSvg,
+  ModalCloseButton,
+  DAY1,
+  DAY2,
+  MobileDAY1,
+  MobileDAY2,
 };

@@ -1,8 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
+import Modal from 'components/Modal';
+import useMobile from 'hooks/useMobile';
 import ContentText from '../ContentText';
+import ModalContent from '../ModalContent';
+import MobileModalContent from '../MobileModalContent';
 import { LearnMoreButton, LearnMoreButtonContainer } from './Styled';
 
 const Content01 = () => {
+  const isMobile = useMobile();
+  const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <>
       {/* 桌面版文字 */}
@@ -23,12 +29,22 @@ const Content01 = () => {
       <ContentText className="only-mobile">趨勢分享等…。</ContentText>
 
       <LearnMoreButtonContainer>
-        <LearnMoreButton>
+        <LearnMoreButton onClick={() => setIsModalVisible(true)}>
           瞭解
           <br />
           更多
         </LearnMoreButton>
       </LearnMoreButtonContainer>
+      <Modal
+        open={isModalVisible}
+        onRequestClose={() => setIsModalVisible(false)}
+      >
+        {isMobile ? (
+          <MobileModalContent onCloseClick={() => setIsModalVisible(false)} />
+        ) : (
+          <ModalContent onCloseClick={() => setIsModalVisible(false)} />
+        )}
+      </Modal>
     </>
   );
 };

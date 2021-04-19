@@ -16,6 +16,7 @@ export const LearnMoreButton = styled.button`
   font-weight: bold;
   background-color: #566c6c;
   border-radius: 50%;
+  border-color: transparent;
   outline: none;
 
   ${media.greaterThan('large')`
