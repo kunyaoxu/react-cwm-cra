@@ -114,6 +114,13 @@ const GlobalStyle = createGlobalStyle`
     background: white;
   }
 
+  .ant-message-notice {
+    margin-top: ${mPxToRem(95)};
+    ${media.greaterThan('large')`
+      margin-top: ${pxToRem(140)};
+    `}
+  }
+
   .ant-message-custom-content {
     display: flex;
     font-size: ${mPxToRem(12)};

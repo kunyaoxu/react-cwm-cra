@@ -87,10 +87,7 @@ const JoinEnquiry = () => {
               天下雜誌 行銷業務部副理 章庭維
             </div>
           ),
-          style: {
-            marginTop: '30vh',
-          },
-          duration: 8,
+          duration: 3,
         });
       })
       .catch(() => {
@@ -102,9 +99,6 @@ const JoinEnquiry = () => {
               請再次確認並送出，謝謝您！
             </div>
           ),
-          style: {
-            marginTop: '30vh',
-          },
           duration: 3,
         });
         console.error('google sheet error!');
