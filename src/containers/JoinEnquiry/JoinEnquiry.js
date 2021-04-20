@@ -1,52 +1,68 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import qs from 'qs';
-import { Form, Checkbox, Row } from 'antd';
+import { Form, Checkbox, Row, message } from 'antd';
 import { CaretDownOutlined } from '@ant-design/icons';
 import Title from './components/Title';
 import RecruitRule from './components/RecruitRule';
+import SortInfo from './components/SortInfo';
 import {
   Wrapper,
   AntdFrom,
-  AntdFromItem,
+  AntdFormItem,
   AntdButton,
   AntdCol,
   AntdLoadingCircle,
   AntdSelect,
+  AntdCheckbox,
   OptionStyle,
+  OtherCol,
+  CheckboxCol,
   AntdInput,
   DivideLine,
 } from './styled';
+import ContactInfo from './components/ContactInfo';
 
 const API_URL =
-  'https://script.google.com/macros/s/AKfycbwkGUAsiG5lO5z2zde-zh4ntpLNmT_CNZYpfR2eWp0Wj6JYvcAmnCeUYdahIye0LTor/exec';
+  'https://script.google.com/macros/s/AKfycbxkuGOmF0C8doxvtLfpMXK-yzGB0T3UDb22nDZZ2s48LpKhAcstNracI5IHGq-5Eu4e/exec';
 
 const { Option } = AntdSelect;
+
+const OTHER = '@@OTHER@@';
 
 const layout = {
   labelCol: { span: 24 },
   wrapperCol: { span: 24 },
 };
-// const tailLayout = {
-//   wrapperCol: { offset: 8, span: 16 },
-// };
 
 const JoinEnquiry = () => {
   const [form] = Form.useForm();
+  const ref = useRef();
   const [isProcessSubmit, setIsProcessSubmit] = useState(false);
-  const [tmpData, setTmpData] = useState({ fields: [] });
+  const [otherStr, setOtherStr] = useState(null);
 
-  console.log(tmpData);
+  useEffect(() => {
+    if (otherStr !== null && otherStr?.length === 0) {
+      ref.current.focus();
+    } else if (otherStr?.length === 0) {
+      ref.current.blur();
+    }
+  }, [otherStr]);
 
   const onSendForm = (data) => {
     if (isProcessSubmit) return;
     setIsProcessSubmit(true);
-    console.log(data);
+    // console.log(data);
 
     fetch(
       `${API_URL}?${qs.stringify(
         {
           fields: data.fields.map((val) =>
-            Array.isArray(val) ? val.toString() : val ?? null
+            Array.isArray(val)
+              ? val
+                  .filter((val) => (val === OTHER ? false : val))
+                  .join(',')
+                  .concat(otherStr ? ',' + otherStr : '')
+              : val ?? null
           ),
         },
         {
@@ -55,9 +71,25 @@ const JoinEnquiry = () => {
       )}`
     )
       .then(() => {
-        console.log('fields', data?.fields, 'succes');
+        // console.log('fields', data?.fields, 'succes');
+        setOtherStr(null);
+        form.resetFields();
+        message.success({
+          content: '表單送出成功!',
+          style: {
+            marginTop: '30vh',
+          },
+        });
       })
-      .catch(() => console.error('google sheet error!'))
+      .catch(() => {
+        message.error({
+          content: '表單送出失敗!',
+          style: {
+            marginTop: '30vh',
+          },
+        });
+        console.error('google sheet error!');
+      })
       .finally(() => setIsProcessSubmit(false));
   };
 
@@ -69,24 +101,23 @@ const JoinEnquiry = () => {
       <RecruitRule />
 
       {/* Form part */}
-      <AntdFrom
-        form={form}
-        name="control-hooks"
-        autoComplete={'off'}
-        // onFinish={onSendForm}
-        onFieldsChange={() => setTmpData(form.getFieldsValue())}
-      >
+      <AntdFrom form={form} name="control-hooks" autoComplete={'off'}>
         <Row>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕公司名稱" name={['fields', 0]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕公司名稱" name={['fields', 0]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <Row>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕貴公司屬性" name={['fields', 1]}>
+            <AntdFormItem {...layout} label="⊕貴公司屬性" name={['fields', 1]}>
               <AntdSelect
+                disabled={isProcessSubmit}
                 placeholder="請選擇"
                 suffixIcon={<CaretDownOutlined />}
               >
@@ -106,15 +137,16 @@ const JoinEnquiry = () => {
                   <OptionStyle>外商公司</OptionStyle>
                 </Option>
               </AntdSelect>
-            </AntdFromItem>
+            </AntdFormItem>
           </AntdCol>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕貴公司所屬產業"
               name={['fields', 2]}
             >
               <AntdSelect
+                disabled={isProcessSubmit}
                 placeholder="請選擇"
                 suffixIcon={<CaretDownOutlined />}
               >
@@ -182,17 +214,18 @@ const JoinEnquiry = () => {
                   <OptionStyle>綜合</OptionStyle>
                 </Option>
               </AntdSelect>
-            </AntdFromItem>
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <Row>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕貴公司2020年營業規模"
               name={['fields', 3]}
             >
               <AntdSelect
+                disabled={isProcessSubmit}
                 placeholder="請選擇"
                 suffixIcon={<CaretDownOutlined />}
               >
@@ -221,15 +254,16 @@ const JoinEnquiry = () => {
                   <OptionStyle>不方便透露</OptionStyle>
                 </Option>
               </AntdSelect>
-            </AntdFromItem>
+            </AntdFormItem>
           </AntdCol>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕貴公司目前在台員工人數規模"
               name={['fields', 4]}
             >
               <AntdSelect
+                disabled={isProcessSubmit}
                 placeholder="請選擇"
                 suffixIcon={<CaretDownOutlined />}
               >
@@ -249,17 +283,18 @@ const JoinEnquiry = () => {
                   <OptionStyle>不方便透露</OptionStyle>
                 </Option>
               </AntdSelect>
-            </AntdFromItem>
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <Row>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕貴公司是否有編製CSR或永續報告書"
               name={['fields', 5]}
             >
               <AntdSelect
+                disabled={isProcessSubmit}
                 placeholder="請選擇"
                 suffixIcon={<CaretDownOutlined />}
               >
@@ -270,15 +305,16 @@ const JoinEnquiry = () => {
                   <OptionStyle>沒有</OptionStyle>
                 </Option>
               </AntdSelect>
-            </AntdFromItem>
+            </AntdFormItem>
           </AntdCol>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕貴公司推行CSR的方式"
               name={['fields', 6]}
             >
               <AntdSelect
+                disabled={isProcessSubmit}
                 placeholder="請選擇"
                 suffixIcon={<CaretDownOutlined />}
               >
@@ -292,118 +328,201 @@ const JoinEnquiry = () => {
                   <OptionStyle>沒有專責部門或編組</OptionStyle>
                 </Option>
               </AntdSelect>
-            </AntdFromItem>
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <Row>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕請依照貴公司目前的永續現況，自評需精進的領域為 （可複選）"
               name={['fields', 7]}
             >
-              <Checkbox.Group>
-                <Checkbox value="公司治理">公司治理</Checkbox>
-                <Checkbox value="企業承諾（員工照顧與培育）">
-                  企業承諾（員工照顧與培育）
-                </Checkbox>
-                <Checkbox value="社會參與">社會參與</Checkbox>
-                <Checkbox value="環境永續">環境永續</Checkbox>
+              <Checkbox.Group style={{ width: '100%' }}>
+                <Row>
+                  <CheckboxCol>
+                    <Row>
+                      <AntdCheckbox disabled={isProcessSubmit} value="公司治理">
+                        公司治理
+                      </AntdCheckbox>
+                      <AntdCheckbox
+                        disabled={isProcessSubmit}
+                        value="企業承諾(員工照顧與培育)"
+                      >
+                        企業承諾(員工照顧與培育)
+                      </AntdCheckbox>
+                    </Row>
+                    <Row>
+                      <AntdCheckbox disabled={isProcessSubmit} value="社會參與">
+                        社會參與
+                      </AntdCheckbox>
+                      <AntdCheckbox disabled={isProcessSubmit} value="環境永續">
+                        環境永續
+                      </AntdCheckbox>
+                    </Row>
+                  </CheckboxCol>
+                  <OtherCol>
+                    <AntdCheckbox
+                      disabled={isProcessSubmit}
+                      value={OTHER}
+                      onChange={() => {
+                        if (
+                          form
+                            .getFieldsValue()
+                            ?.fields?.[7]?.find((val) => val === OTHER)
+                        ) {
+                          setOtherStr(null);
+                        } else {
+                          setOtherStr('');
+                        }
+                      }}
+                    >
+                      其它
+                    </AntdCheckbox>
+                    <AntdInput
+                      disabled={null === otherStr || isProcessSubmit}
+                      ref={ref}
+                      value={otherStr}
+                      onChange={(e) => setOtherStr(e.target.value)}
+                      placeholder="請填寫"
+                      type="text"
+                    />
+                  </OtherCol>
+                </Row>
                 {/* TODO: 其他 */}
-                <label>
-                  <Checkbox value="其它">其它</Checkbox>
-                  {/* TODO: 其他的輸入 */}
-                  <AntdInput placeholder="請填寫" type="text" />
-                </label>
               </Checkbox.Group>
-            </AntdFromItem>
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <DivideLine />
         <Row>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕董事長" name={['fields', 8]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕董事長" name={['fields', 8]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕總經理（執行長）"
               name={['fields', 9]}
             >
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <DivideLine />
         <Row>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕貴公司負責永續（CSR、ESG）之最高主管"
               name={['fields', 10]}
             >
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕職稱" name={['fields', 11]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕職稱" name={['fields', 11]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <DivideLine />
         <Row>
           <AntdCol>
-            <AntdFromItem
+            <AntdFormItem
               {...layout}
               label="⊕貴公司預計參與永續會培力工作坊之主管"
               name={['fields', 12]}
             >
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕職稱" name={['fields', 13]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕職稱" name={['fields', 13]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <DivideLine />
         <Row>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕填表人" name={['fields', 14]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕填表人" name={['fields', 14]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕職稱" name={['fields', 15]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕職稱" name={['fields', 15]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <Row>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕聯絡電話" name={['fields', 16]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕聯絡電話" name={['fields', 16]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕電子信箱" name={['fields', 17]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕電子信箱" name={['fields', 17]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
         </Row>
         <Row>
           <AntdCol>
-            <AntdFromItem {...layout} label="⊕寄件地址" name={['fields', 18]}>
-              <AntdInput placeholder="請填寫" type="text" />
-            </AntdFromItem>
+            <AntdFormItem {...layout} label="⊕寄件地址" name={['fields', 18]}>
+              <AntdInput
+                disabled={isProcessSubmit}
+                placeholder="請填寫"
+                type="text"
+              />
+            </AntdFormItem>
           </AntdCol>
         </Row>
-
-        <AntdFromItem>
+        <SortInfo />
+        <AntdFormItem style={{ marginBottom: '8px' }}>
           <AntdButton
             htmlType="button"
             className={isProcessSubmit ? 'loading' : null}
@@ -414,7 +533,8 @@ const JoinEnquiry = () => {
           >
             {isProcessSubmit ? <AntdLoadingCircle /> : 'SUBMIT'}
           </AntdButton>
-        </AntdFromItem>
+        </AntdFormItem>
+        <ContactInfo />
       </AntdFrom>
     </Wrapper>
   );

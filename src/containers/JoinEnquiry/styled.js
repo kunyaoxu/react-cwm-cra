@@ -1,4 +1,4 @@
-import { Form, Button, Select, Input, Col } from 'antd';
+import { Form, Button, Select, Input, Col, Checkbox } from 'antd';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 import Flex from 'common/Flex';
@@ -10,6 +10,10 @@ export const Wrapper = styled(Flex)`
   align-items: center;
   flex-direction: column;
   background: #566c6c;
+
+  * {
+    user-select: auto;
+  }
 `;
 
 export const AntdFrom = styled(Form)`
@@ -30,21 +34,25 @@ export const AntdFrom = styled(Form)`
   `}
 `;
 
-export const AntdFromItem = styled(Form.Item)`
-  margin-bottom: 12px;
+export const AntdFormItem = styled(Form.Item)`
+  margin-bottom: ${mPxToRem(12)};
+
+  ${media.greaterThan('large')`
+    margin-bottom: ${pxToRem(40)};
+  `}
 
   & > .ant-form-item-label > label,
   & .ant-checkbox-wrapper .ant-checkbox + span {
     color: #f6f6f6;
-    font-size: 11px;
-    line-height: 17px;
+    font-size: ${mPxToRem(11)};
+    line-height: ${mPxToRem(17)};
     font-weight: 500;
     height: initial;
     word-break: keep-all;
 
     ${media.greaterThan('large')`
-      font-size: 18px;
-      line-height: 27px;
+      font-size:${pxToRem(18)};
+      line-height: ${pxToRem(27)};
     `}
   }
 
@@ -76,41 +84,42 @@ export const AntdSelect = styled(Select)`
   &.ant-select:not(.ant-select-customize-input) .ant-select-selector {
     background-color: #9daeb0;
     border: 0;
-    height: 31px;
+    height: ${mPxToRem(31)};
 
     input {
       height: 100%;
     }
 
     ${media.greaterThan('large')`
-      height: 46px;
+      height: ${pxToRem(46)};
     `}
   }
 
   & .ant-select-selector .ant-select-selection-placeholder,
   & .ant-select-selector .ant-select-selection-item {
+    display: flex;
+    align-items: center;
     background-color: transparent;
     color: #566c6c;
-    font-size: 9px;
+    font-size: ${mPxToRem(9)};
     letter-spacing: 1px;
     font-weight: bold;
 
     ${media.greaterThan('large')`
-      font-size: 15px;
-      line-height: 46px;
+      font-size: ${pxToRem(15)};
+      line-height: ${pxToRem(46)};
     `}
   }
 `;
 
 export const OptionStyle = styled.div`
-  font-size: 9px;
+  font-size: ${mPxToRem(9)};
   letter-spacing: 1px;
   font-weight: bold;
   font-family: 'Noto Sans TC';
 
   ${media.greaterThan('large')`
-    font-size: 15px;
-    line-height: 36px;
+    font-size: ${pxToRem(15)};
   `}
 `;
 
@@ -121,11 +130,11 @@ export const AntdButton = styled(Button)`
   color: #566c6c;
   border-color: #edf1f2;
   font-weight: bold;
-  font-size: 10px;
+  font-size: ${mPxToRem(10)};
   letter-spacing: 1px;
-  border-radius: 14px;
-  height: 28px;
-  width: 202px;
+  border-radius: ${mPxToRem(14)};
+  height: ${mPxToRem(28)};
+  width: ${mPxToRem(202)};
 
   &:hover,
   &.loading,
@@ -136,10 +145,10 @@ export const AntdButton = styled(Button)`
   }
 
   ${media.greaterThan('large')`
-    font-size: 17px;
-    border-radius: 21px;
-    height: 42px;
-    width: 302px;
+    font-size: ${pxToRem(17)};
+    border-radius: ${pxToRem(21)};
+    height: ${pxToRem(42)};
+    width: ${pxToRem(302)};
   `}
 `;
 
@@ -147,10 +156,15 @@ export const AntdInput = styled(Input)`
   color: #566c6c;
   background-color: #fff;
   border: 0;
-  font-size: 9px;
+  font-size: ${mPxToRem(9)};
   font-weight: 500;
   letter-spacing: 1px;
-  height: 31px;
+  height: ${mPxToRem(31)};
+
+  &.ant-input-disabled {
+    color: #fff;
+    background-color: #9daeb0;
+  }
 
   &.ant-input:placeholder-shown {
     background-color: #9daeb0;
@@ -165,8 +179,8 @@ export const AntdInput = styled(Input)`
   }
 
   ${media.greaterThan('large')`
-    font-size: 15px;
-    height: 46px;
+    font-size: ${pxToRem(15)};
+    height: ${pxToRem(46)};
   `}
 `;
 
@@ -175,7 +189,39 @@ export const AntdCol = styled(Col)`
   ${media.greaterThan('large')`
     min-width: unset;
     flex: 1;
-    padding: 0 30px;
+    padding: 0 ${pxToRem(30)};
+  `}
+`;
+
+export const AntdCheckbox = styled(Checkbox)`
+  margin-bottom: ${mPxToRem(10)};
+  margin-right: ${pxToRem(29)};
+  ${media.greaterThan('large')`
+    margin-bottom: ${pxToRem(14)};
+    margin-right: ${pxToRem(32)};
+  `}
+`;
+
+export const OtherCol = styled(Col)`
+  flex: 1;
+
+  ${media.greaterThan('large')`
+    display: flex;
+    & ${AntdCheckbox} {
+      margin-right: ${pxToRem(15)};
+    }
+
+    & > input {
+      height: 100%;
+    }
+  `}
+`;
+
+export const CheckboxCol = styled(Col)`
+  min-width: 100%;
+
+  ${media.greaterThan('large')`
+    min-width: unset;
   `}
 `;
 
@@ -189,20 +235,20 @@ export const rotate = keyframes`
 
 export const AntdLoadingCircle = styled(LoadingSvg)`
   animation: ${rotate} 1s linear infinite;
-  width: 14px;
-  height: 14px;
+  width: ${mPxToRem(14)};
+  height: ${mPxToRem(14)};
   ${media.greaterThan('large')`
-    width: 25px;
-    height: 25px;
+    width: ${pxToRem(25)};
+    height: ${pxToRem(25)};
   `}
 `;
 
 export const DivideLine = styled.div`
   background-color: #fff;
   height: 1px;
-  margin-top: 22px;
-  margin-bottom: 12px;
+  margin-top: ${mPxToRem(8)};
+  margin-bottom: ${mPxToRem(14)};
   ${media.greaterThan('large')`
-    margin: 38px 30px 36px;
+    margin: ${pxToRem(0)} ${pxToRem(30)} ${pxToRem(36)};
   `}
 `;
