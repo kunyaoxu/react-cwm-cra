@@ -19,11 +19,13 @@ export const Wrapper = styled(Flex)`
  * 最左邊一排
  */
 export const InvalidNameBox = styled(Box)`
-  width: ${pxToRem(246)};
+  width: ${pxToRem(254)};
+  margin-right: ${pxToRem(31)};
 `;
 
 export const InvalidNameTitle = styled(H3)`
   font-weight: bold;
+  margin-bottom: ${pxToRem(154)};
 `;
 
 export const InvalidNameContent = styled(Box)`
@@ -32,47 +34,40 @@ export const InvalidNameContent = styled(Box)`
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
+  text-align: justify;
   line-height: 1.93;
   letter-spacing: ${pxToRem(1.5)};
-  text-align: left;
   color: #768e91;
 `;
 
-/**
- * Calender components below
- */
-export const AgendaBox = styled(Box)`
-  margin-left: ${pxToRem(79)};
-`;
+// 中間 Carousel部分
+export const CarouselButtonContainer = styled(Flex)`
+  width: ${pxToRem(47)};
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 
-export const AgendaText = styled(H3)`
-  margin-bottom: ${pxToRem(44)};
-`;
+  &.c-b-right-side {
+    transform: rotate(180deg);
+  }
 
-export const CalenderContainer = styled(Flex)`
-  font-family: GenYoGothicTWTTF;
-  font-size: ${pxToRem(15)};
-  font-weight: 500;
-  line-height: 1.93;
-  letter-spacing: ${pxToRem(0.75)};
-  text-align: left;
-  color: #768e91;
-
-  > *:first-child {
-    margin-right: ${pxToRem(65)};
+  path {
+    fill: #566c6c;
   }
 `;
 
-export const CalenderBox = styled(Box)`
-  width: ${pxToRem(411)};
-  height: ${pxToRem(632)};
+export const CarouselContainer = styled(Box)`
+  width: ${pxToRem(798)};
+  height: ${pxToRem(696)};
+  margin-left: ${pxToRem(28)};
+  margin-right: ${pxToRem(28)};
 `;
 
+// 最右邊 - close button
 export const CloseButtonContainer = styled(Box)`
   position: relative;
   width: ${pxToRem(51)};
   height: 100%;
-  margin-left: ${pxToRem(21)};
 
   svg {
     cursor: pointer;

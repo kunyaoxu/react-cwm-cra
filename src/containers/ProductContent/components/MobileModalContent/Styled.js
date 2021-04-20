@@ -13,7 +13,7 @@ export const Wrapper = styled(Flex)`
   overflow: auto;
 
   width: ${mPxToRem(375)};
-  height: ${mPxToRem(650)};
+  height: 95vh;
   padding: ${mPxToRem(25)} ${mPxToRem(32)} ${mPxToRem(77.3)} ${mPxToRem(32)};
 `;
 
@@ -58,15 +58,16 @@ export const InvalidNameContent = styled(Box)`
   letter-spacing: ${mPxToRem(1.5)};
   text-align: center;
   color: #768e91;
-`;
-
-export const AgendaText = styled(InvalidNameTitle)`
-  font-weight: 500;
-  margin-top: ${mPxToRem(56)};
   margin-bottom: ${mPxToRem(40)};
 `;
 
-export const CalenderBox = styled(Box)`
-  width: ${mPxToRem(308)};
+export const ContentSvgBox = styled(Box)`
+  width: ${mPxToRem(310)};
   height: auto;
+  margin-top: ${mPxToRem(50)};
+
+  svg {
+    width: ${mPxToRem(310)};
+    height: auto;
+  }
 `;

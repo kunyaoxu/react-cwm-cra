@@ -1,47 +1,72 @@
-import { DAY1, DAY2, ModalCloseButton } from 'svgs';
+import { useRef } from 'react';
+import { Carousel } from 'antd';
+import {
+  ModalCloseButton,
+  ModalCarouselButton,
+  ModalContent01,
+  ModalContent02,
+  ModalContent03,
+  ModalContent04,
+  ModalContent05,
+  ModalContent06,
+  ModalContent07,
+  ModalContent08,
+  ModalContent09,
+} from 'svgs';
 import {
   Wrapper,
   InvalidNameBox,
   InvalidNameTitle,
   InvalidNameContent,
-  AgendaBox,
-  AgendaText,
-  CalenderBox,
-  CalenderContainer,
   CloseButtonContainer,
+  CarouselContainer,
+  CarouselButtonContainer,
 } from './Styled';
 
 const ModalContent = ({ onCloseClick }) => {
+  const carouselRef = useRef();
+
+  const handlePrevButtonClick = () => {
+    carouselRef.current.prev();
+  };
+
+  const handleNextButtonClick = () => {
+    carouselRef.current.next();
+  };
+
   return (
     <Wrapper>
       {/* 最左邊 */}
       <InvalidNameBox>
-        <InvalidNameTitle>培力工坊名稱</InvalidNameTitle>
+        <InvalidNameTitle>天下永續培力工作坊</InvalidNameTitle>
         <InvalidNameContent>
-          內容介紹文案待補內容介紹文案待 補內容介紹文案待補內容介紹文案
-          待補內容介紹文案待補內容介紹文 案待補內容介紹文案待補內容介紹
-          文案待補內容介紹文案待補內容介 紹文案待補內容介紹文案待補內容
-          介紹文案待補內容介紹文案待補內 容介紹文案待補內容介紹文案待補
-          內容介紹文案待補內容介紹文案待 補內容介紹文案待補內容介紹文案
-          待補內容介紹文案待補內容介紹文 案待補內容
+          「永續會工作坊」為永續會一大特色，是針對每期會員進行為期二天的培力工作坊。二天工作坊內容，將針對公司治理、企業承諾、社會參與、環境永續四大構面，各以Best
+          practice與分組討論兩形式展開。
         </InvalidNameContent>
       </InvalidNameBox>
 
       {/* 中間 */}
-      <AgendaBox>
-        <AgendaText>工作坊議程</AgendaText>
+      <CarouselButtonContainer>
+        <ModalCarouselButton onClick={handlePrevButtonClick} />
+      </CarouselButtonContainer>
 
-        <CalenderContainer>
-          {/* Day 1 - calender */}
-          <CalenderBox>
-            <DAY1 />
-          </CalenderBox>
-          {/* Day 2 - calender */}
-          <CalenderBox>
-            <DAY2 />
-          </CalenderBox>
-        </CalenderContainer>
-      </AgendaBox>
+      <CarouselContainer>
+        <Carousel ref={carouselRef}>
+          <ModalContent01 />
+          <ModalContent02 />
+          <ModalContent03 />
+          <ModalContent04 />
+          <ModalContent05 />
+          <ModalContent06 />
+          <ModalContent07 />
+          <ModalContent08 />
+          <ModalContent09 />
+        </Carousel>
+      </CarouselContainer>
+
+      <CarouselButtonContainer className="c-b-right-side">
+        <ModalCarouselButton onClick={handleNextButtonClick} />
+      </CarouselButtonContainer>
 
       {/* 右邊 - 純粹關閉按鈕 */}
       <CloseButtonContainer>

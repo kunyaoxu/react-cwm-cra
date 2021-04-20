@@ -10,6 +10,7 @@ export const Wrapper = styled(Flex)`
   justify-content: space-between;
   flex-direction: column;
   background-color: #262626;
+  overflow: hidden;
 
   p {
     font-family: AdobeTextPro;
