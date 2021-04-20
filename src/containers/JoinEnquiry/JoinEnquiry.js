@@ -75,18 +75,37 @@ const JoinEnquiry = () => {
         setOtherStr(null);
         form.resetFields();
         message.success({
-          content: '表單送出成功!',
+          content: (
+            <div style={{ textAlign: 'left' }}>
+              您申請的表單已成功送出，3日內將有專人與您聯繫。
+              <br />
+              <br />
+              若有任何問題請來電：
+              <br />
+              02-20578627#284
+              <br />
+              天下雜誌 行銷業務部副理 章庭維
+            </div>
+          ),
           style: {
             marginTop: '30vh',
           },
+          duration: 8,
         });
       })
       .catch(() => {
         message.error({
-          content: '表單送出失敗!',
+          content: (
+            <div style={{ textAlign: 'left' }}>
+              抱歉，您的表單送出失敗，
+              <br />
+              請再次確認並送出，謝謝您！
+            </div>
+          ),
           style: {
             marginTop: '30vh',
           },
+          duration: 3,
         });
         console.error('google sheet error!');
       })

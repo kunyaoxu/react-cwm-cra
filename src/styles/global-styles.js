@@ -113,6 +113,15 @@ const GlobalStyle = createGlobalStyle`
     color: #768e91;
     background: white;
   }
+
+  .ant-message-custom-content {
+    display: flex;
+    font-size: ${mPxToRem(12)};
+
+    ${media.greaterThan('large')`
+      font-size: ${pxToRem(16)};
+    `}
+  }
 `;
 
 export default GlobalStyle;
