@@ -133,7 +133,10 @@ const CONTENTS = [
           以天下永續會會員身份，
         </ContentText>
         <ContentText className="only-desktop">
-          受邀參加天下雜誌年度經濟論壇，天下經濟論壇冬季場。
+          受邀參加天下雜誌年度經濟論壇，
+        </ContentText>
+        <ContentText className="only-desktop">
+          天下經濟論壇夏季場（2021年7月15日）和冬季場。
         </ContentText>
 
         {/* 手機版文字 */}
@@ -145,7 +148,10 @@ const CONTENTS = [
           如何從新局勢與科技，看見未來機會？以天下永續會會員身份，
         </ContentText>
         <ContentText className="only-mobile">
-          受邀參加天下雜誌年度經濟論壇，天下經濟論壇冬季場。
+          受邀參加天下雜誌年度經濟論壇，
+        </ContentText>
+        <ContentText className="only-mobile">
+          天下經濟論壇夏季場（2021年7月15日）和冬季場。
         </ContentText>
       </>
     ),

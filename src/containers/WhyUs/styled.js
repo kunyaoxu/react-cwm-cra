@@ -49,7 +49,7 @@ export const Description = styled.div`
   font-weight: 500;
 
   ${media.greaterThan('large')`
-    font-size: ${pxToRem(16)};
+    font-size: ${pxToRem(18)};
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;

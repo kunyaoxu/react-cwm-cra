@@ -9,7 +9,7 @@ export const Wrapper = styled(Box)`
   text-align: center;
 
   ${media.greaterThan('large')`
-    font-size: ${pxToRem(16)};
+    font-size: ${pxToRem(18)};
     line-height: ${pxToRem(14)};
     margin-top: ${pxToRem(131)};
     text-shadow: 0 0 ${pxToRem(5)} rgba(0, 0, 0, 0.25);

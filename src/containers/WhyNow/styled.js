@@ -27,7 +27,7 @@ export const Wrapper = styled(Flex)`
 
 export const MainPartContainer = styled(Box)`
   ${media.greaterThan('large')`
-    width: ${pxToRem(621)};
+    width: auto;
     height: 100%;
   `}
 

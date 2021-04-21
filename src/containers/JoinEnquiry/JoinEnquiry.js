@@ -226,6 +226,9 @@ const JoinEnquiry = () => {
                 <Option value="綜合">
                   <OptionStyle>綜合</OptionStyle>
                 </Option>
+                <Option value="其它">
+                  <OptionStyle>其它</OptionStyle>
+                </Option>
               </AntdSelect>
             </AntdFormItem>
           </AntdCol>
