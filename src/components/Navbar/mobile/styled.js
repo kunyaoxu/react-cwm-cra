@@ -32,27 +32,9 @@ export const DrawerItem = styled.div`
   font-weight: bold;
   font-size: 0.410628rem;
   letter-spacing: 0.020531rem;
-  margin-bottom: 0.120772rem;
+  margin-bottom: 0.4rem;
 
   :hover {
     color: #909798;
-  }
-`;
-
-export const FacebookItem = styled(DrawerItem)`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 0.468599rem;
-
-  svg {
-    width: 0.567632rem;
-    height: 0.567632rem;
-  }
-
-  &:hover {
-    svg > path {
-      fill: #909798;
-    }
   }
 `;

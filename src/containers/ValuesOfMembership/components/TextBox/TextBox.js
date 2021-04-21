@@ -1,9 +1,11 @@
 import { Wrapper, TitleText } from './styled';
 
+const CHT_INDEX = ['一', '二', '三', '四', '五', '六'];
+
 const TextBox = ({ index, children }) => {
   return (
     <Wrapper>
-      <TitleText>{`0${index}`}</TitleText>
+      <TitleText>{`價值${CHT_INDEX[index]}`}</TitleText>
       {children}
     </Wrapper>
   );

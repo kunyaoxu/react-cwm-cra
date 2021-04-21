@@ -11,22 +11,32 @@ const Content01 = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <>
-      {/* 桌面版文字 */}
-      <ContentText className="only-desktop">
-        每期會員安排一場為期兩天的永續培力工作坊，
-      </ContentText>
-      <ContentText className="only-desktop">
-        形式包括企業參訪、個案探討、總編輯會客室、大師交流、趨勢分享等…。
-      </ContentText>
-
-      {/* 手機版文字 */}
-      <ContentText className="only-mobile">
-        每期會員安排一場為期兩天的永續培力工作坊，
-      </ContentText>
-      <ContentText className="only-mobile">
-        形式包括企業參訪、個案探討、總編輯會客室、大師交流、
-      </ContentText>
-      <ContentText className="only-mobile">趨勢分享等…。</ContentText>
+      {isMobile ? (
+        <>
+          <ContentText>
+            「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為
+          </ContentText>
+          <ContentText>
+            期二天的培力工作坊。將針對公司治理、企業承諾、社會參與、環
+          </ContentText>
+          <ContentText>
+            境永續四大面向，各以Best practice與分組討論兩形式展開各以
+          </ContentText>
+          <ContentText>典範借鏡與分組討論兩形式展開。</ContentText>
+        </>
+      ) : (
+        <>
+          <ContentText>
+            「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為期二天的培
+          </ContentText>
+          <ContentText>
+            力工作坊。將針對公司治理、企業承諾、社會參與、環境永續四大面向，各以
+          </ContentText>
+          <ContentText>
+            Best practice與分組討論兩形式展開各以典範借鏡與分組討論兩形式展開。
+          </ContentText>
+        </>
+      )}
 
       <LearnMoreButtonContainer>
         <LearnMoreButton onClick={() => setIsModalVisible(true)}>

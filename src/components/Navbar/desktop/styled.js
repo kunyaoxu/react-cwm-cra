@@ -5,7 +5,7 @@ import Flex from 'common/Flex';
 import pxToRem from 'utils/pxToRem';
 
 export const Wrapper = styled(Flex)`
-  flex: 300;
+  flex: 400;
 
   ${media.lessThan('large')`
     display: none;
@@ -37,23 +37,5 @@ export const NavbarItem = styled(Button).attrs(() => ({
   :focus {
     outline: none;
     background: transparent;
-  }
-`;
-
-export const FacebookItemBox = styled(NavbarItem)`
-  flex: 1;
-
-  svg {
-    width: ${pxToRem(23.5)};
-    height: ${pxToRem(23.5)};
-  }
-
-  :hover {
-    color: #909798;
-    background: transparent;
-
-    svg > path {
-      fill: #909798;
-    }
   }
 `;

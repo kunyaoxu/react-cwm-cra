@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   ${media.greaterThan('large')`
     height: ${pxToRem(234.8)};
     padding-top: ${pxToRem(38.8)};
+    text-align: justify;
   `}
   ${media.lessThan('large')`
     padding-top: ${mPxToRem(25.8)};

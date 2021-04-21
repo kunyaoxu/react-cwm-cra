@@ -6,6 +6,7 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 export const Wrapper = styled(Box)`
   color: white;
   font-family: GenYoGothicTWTTF;
+  text-align: center;
 
   ${media.greaterThan('large')`
     font-size: ${pxToRem(16)};
@@ -18,7 +19,6 @@ export const Wrapper = styled(Box)`
     font-size: ${mPxToRem(10)};
     line-height: ${mPxToRem(17)};
     margin-top: ${mPxToRem(46.6)};
-    text-shadow: 0 0 ${mPxToRem(5)} rgba(0, 0, 0, 0.25);
-    text-align: center;
+    text-shadow: 0 0 ${mPxToRem(5)} rgba(0, 0, 0, 0.25);   
   `}
 `;

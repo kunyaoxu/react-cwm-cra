@@ -52,6 +52,6 @@ export const ContentImg = styled.img`
   ${media.lessThan('large')`
     width: ${mPxToRem(305)};
     height: ${mPxToRem(237)};
-    margin-top: ${mPxToRem(33)};
+    margin-top: ${mPxToRem(26)};
   `}
 `;

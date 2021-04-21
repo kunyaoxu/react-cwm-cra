@@ -9,12 +9,12 @@ import {
 } from './styled';
 
 const TEXT_LIST = [
-  '協助企業發現公司營運決策納入永續的方法與價值。',
-  '為企業縱整散落各處的CSR亮點。',
-  '協助企業的利害關係人溝通，讓社會看見企業的永續價值。',
-  '提升企業彰顯ESG投資價值。',
-  '掌握海內外永續相關評鑑原則。',
-  '增進與豐富企業家的永續交流及網絡。',
+  '發現企業決策納入永續的價值與方法。',
+  '綜整散落企業各處的CSR亮點。',
+  '優化企業利害關係人溝通，讓社會看見企業永續價值。',
+  '彰顯企業ESG投資價值。',
+  '掌握海內外永續評鑑重點與原則。',
+  '增進企業的永續交流與網絡。',
 ];
 
 const ValuesOfMembership = () => (
@@ -27,7 +27,7 @@ const ValuesOfMembership = () => (
 
     <TextBoxContainer>
       {TEXT_LIST.map((text, i) => (
-        <TextBox key={i} index={i + 1}>
+        <TextBox key={i} index={i}>
           <p>{text}</p>
         </TextBox>
       ))}

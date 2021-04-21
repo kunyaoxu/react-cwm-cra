@@ -6,7 +6,7 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 export const Wrapper = styled(Flex)`
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: rgb(246, 246, 246);
 
   ${media.greaterThan('large')`
     /* height: ${pxToRem(2730)}; */
@@ -38,5 +38,6 @@ export const ContentWrapper = styled(Flex)`
   ${media.lessThan('large')`
     justify-content: space-between;
     margin-top: ${mPxToRem(56.6)};
+    padding-bottom: ${mPxToRem(48)};
   `}
 `;

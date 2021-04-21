@@ -1,6 +1,5 @@
-import { FaceBookIcon } from 'svgs';
 import { handleClickHashLink } from 'utils/hashLinkClickHandler';
-import { Wrapper, ItemsBox, NavbarItem, FacebookItemBox } from './styled';
+import { Wrapper, ItemsBox, NavbarItem } from './styled';
 
 const Navbar = () => (
   <Wrapper>
@@ -36,6 +35,12 @@ const Navbar = () => (
         PRODUCT CONTENT
       </NavbarItem>
       <NavbarItem
+        href="#schedule-section"
+        onClick={(e) => handleClickHashLink({ e, id: 'schedule-section' })}
+      >
+        SCHEDULE
+      </NavbarItem>
+      <NavbarItem
         href="#join-enquiry"
         onClick={(e) => handleClickHashLink({ e, id: 'join-enquiry' })}
         style={{ marginRight: '0.259259rem' }}
@@ -43,10 +48,6 @@ const Navbar = () => (
         JOIN ENQUIRY
       </NavbarItem>
     </ItemsBox>
-
-    <FacebookItemBox>
-      <FaceBookIcon />
-    </FacebookItemBox>
   </Wrapper>
 );
 

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Drawer } from 'antd';
 import { handleClickHashLink } from 'utils/hashLinkClickHandler';
-import { HamburgerSvg, DrawerCloseSvg, FaceBookIcon } from 'svgs';
-import { HamburgerBox, CloseIconBox, DrawerItem, FacebookItem } from './styled';
+import { HamburgerSvg, DrawerCloseSvg } from 'svgs';
+import { HamburgerBox, CloseIconBox, DrawerItem } from './styled';
 
 const bodyStyle = {
   padding: '2.246376rem 0',
@@ -79,15 +79,20 @@ const MobileNavbar = () => {
         </DrawerItem>
         <DrawerItem
           onClick={(e) => {
+            handleClickHashLink({ e, id: 'schedule-section' });
+            onClose();
+          }}
+        >
+          SCHEDULE
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
             handleClickHashLink({ e, id: 'join-enquiry' });
             onClose();
           }}
         >
           JOIN ENQUIRY
         </DrawerItem>
-        <FacebookItem>
-          <FaceBookIcon />
-        </FacebookItem>
       </Drawer>
     </>
   );
