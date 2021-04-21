@@ -23,7 +23,7 @@ import {
 import ContactInfo from './components/ContactInfo';
 
 const API_URL =
-  'https://script.google.com/macros/s/AKfycbxkuGOmF0C8doxvtLfpMXK-yzGB0T3UDb22nDZZ2s48LpKhAcstNracI5IHGq-5Eu4e/exec';
+  'https://script.google.com/macros/s/AKfycbxuV2Im86O8nMtcYMczL2IAGJCSpNn10ECxJRhTTyUPWepagf_DrIlGVoKXcJ8K8KE/exec';
 
 const { Option } = AntdSelect;
 
