@@ -12,6 +12,7 @@ const Pagination = () => {
     'about-us',
     'values-of-membership',
     'product-content',
+    'schedule-section',
     'join-enquiry',
   ];
 

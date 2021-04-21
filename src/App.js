@@ -10,6 +10,7 @@ import Landing from 'containers/Home';
 import WhyNow from 'containers/WhyNow';
 import WhyUs from 'containers/WhyUs';
 import AboutUs from 'containers/AboutUs';
+import Schedule from 'containers/Schedule';
 import ValuesOfMembership from 'containers/ValuesOfMembership';
 import ProductContent from 'containers/ProductContent';
 import JoinEnquiry from 'containers/JoinEnquiry';
@@ -52,6 +53,8 @@ export default function App() {
           <ValuesOfMembership />
           {/* Section - Product Content */}
           <ProductContent />
+          {/* Section - Schedule */}
+          <Schedule />
           {/* Section - Join Enquiry */}
           <JoinEnquiry />
         </Content>
