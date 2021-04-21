@@ -5,6 +5,7 @@ import { Wrapper, CardContainer, EarthImg } from './styled';
 
 const AboutUs = () => (
   <Wrapper id="about-us">
+    <EarthImg />
     {/* About Us Title */}
     <Title />
 
@@ -53,7 +54,6 @@ const AboutUs = () => (
         ]}
       />
     </CardContainer>
-    <EarthImg />
   </Wrapper>
 );
 

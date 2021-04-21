@@ -8,7 +8,7 @@ export const Wrapper = styled(Box)`
 
   ${media.greaterThan('large')`
     min-width: ${pxToRem(621)};
-    font-size: ${pxToRem(18)};
+    font-size: ${pxToRem(22)};
     line-height: ${pxToRem(18)};
     letter-spacing: ${pxToRem(0.5)};
 
@@ -18,7 +18,7 @@ export const Wrapper = styled(Box)`
   `}
 
   ${media.lessThan('large')`
-    font-size: ${mPxToRem(10)};
+    font-size: ${mPxToRem(13)};
     line-height: ${mPxToRem(17)};
     letter-spacing: ${mPxToRem(0.5)};
 

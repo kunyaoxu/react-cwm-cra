@@ -2,9 +2,10 @@ import { useState } from 'react';
 import Modal from 'components/Modal';
 import useMobile from 'hooks/useMobile';
 import ContentText from '../ContentText';
+import MobileContentText from '../MobileContentText';
 import ModalContent from '../ModalContent';
 import MobileModalContent from '../MobileModalContent';
-import { LearnMoreButton, LearnMoreButtonContainer } from './Styled';
+// import { LearnMoreButton, LearnMoreButtonContainer } from './Styled';
 
 const Content01 = () => {
   const isMobile = useMobile();
@@ -12,39 +13,33 @@ const Content01 = () => {
   return (
     <>
       {isMobile ? (
-        <>
-          <ContentText>
-            「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為
-          </ContentText>
-          <ContentText>
-            期二天的培力工作坊。將針對公司治理、企業承諾、社會參與、環
-          </ContentText>
-          <ContentText>
-            境永續四大面向，各以Best practice與分組討論兩形式展開各以
-          </ContentText>
-          <ContentText>典範借鏡與分組討論兩形式展開。</ContentText>
-        </>
+        <MobileContentText>
+          「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為期二天的培力工作坊。將針對公司治理、企業承諾、社會參與、環
+          境永續四大面向，各以Best
+          practice與分組討論兩形式展開各以典範借鏡與分組討論兩形式展開。
+        </MobileContentText>
       ) : (
         <>
           <ContentText>
-            「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為期二天的培
+            「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為期二天
           </ContentText>
           <ContentText>
-            力工作坊。將針對公司治理、企業承諾、社會參與、環境永續四大面向，各以
+            的培力工作坊。將針對公司治理、企業承諾、社會參與、環境永續四大
           </ContentText>
           <ContentText>
-            Best practice與分組討論兩形式展開各以典範借鏡與分組討論兩形式展開。
+            面向，各以Best practice與分組討論兩形式展開各以典範借鏡與分組
           </ContentText>
+          <ContentText>討論兩形式展開。</ContentText>
         </>
       )}
 
-      <LearnMoreButtonContainer>
+      {/* <LearnMoreButtonContainer>
         <LearnMoreButton onClick={() => setIsModalVisible(true)}>
           瞭解
           <br />
           更多
         </LearnMoreButton>
-      </LearnMoreButtonContainer>
+      </LearnMoreButtonContainer> */}
       <Modal
         open={isModalVisible}
         onRequestClose={() => setIsModalVisible(false)}

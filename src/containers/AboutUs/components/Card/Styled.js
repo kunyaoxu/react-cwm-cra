@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import Box from 'common/Box';
 import Flex from 'common/Flex';
 import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
@@ -33,25 +34,40 @@ export const Wrapper = styled(Flex)`
     text-align: center;
 
     ${media.greaterThan('large')`
-      font-size: ${pxToRem(14)};
+      font-size: ${pxToRem(22)};
       line-height: ${pxToRem(16)};
     `}
     ${media.lessThan('large')`
-      font-size: ${mPxToRem(9)};
+      font-size: ${mPxToRem(11)};
       line-height: ${mPxToRem(10)};
     `};
   }
 
   ${media.greaterThan('large')`
-    width: ${pxToRem(295)};
-    height: ${pxToRem(207)};
+    width: auto;
+    padding-left: ${pxToRem(67)};
+    padding-right: ${pxToRem(67)};
     text-shadow: 0 0 ${pxToRem(5)} rgba(0, 0, 0, 0.25);
   `}
 
   ${media.lessThan('large')`
     flex: 1;
-    width: ${mPxToRem(160)};
-    height: ${mPxToRem(146)};
+    width: auto;
+    height: ${mPxToRem(174)};
     text-shadow: 0 0 ${mPxToRem(5)} rgba(0, 0, 0, 0.25);
   `};
+`;
+
+export const MobileCardContent = styled(Box)`
+  flex: 1;
+  font-family: GenYoGothicTWTTF;
+  font-weight: 500;
+  font-size: ${mPxToRem(11)};
+  line-height: ${mPxToRem(26)};
+
+  text-align: center;
+  text-shadow: 0 0 ${mPxToRem(5)} rgba(0, 0, 0, 0.25);
+
+  padding-left: ${mPxToRem(12)};
+  padding-right: ${mPxToRem(12)};
 `;

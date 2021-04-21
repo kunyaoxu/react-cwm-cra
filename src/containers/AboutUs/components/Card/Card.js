@@ -1,17 +1,23 @@
 import React from 'react';
-import { Wrapper } from './Styled';
+import useMobile from 'hooks/useMobile';
+import { Wrapper, MobileCardContent } from './Styled';
 
 const Card = ({ title, contents }) => {
+  const isMoble = useMobile();
   return (
     <Wrapper>
       <p className="card-title">{title}</p>
-      {contents.map((t, i) => {
-        return (
-          <p className="card-content" key={`card-content-${i}`}>
-            {t}
-          </p>
-        );
-      })}
+      {isMoble ? (
+        <MobileCardContent>{contents.join('')}</MobileCardContent>
+      ) : (
+        contents.map((t, i) => {
+          return (
+            <p className="card-content" key={`card-content-${i}`}>
+              {t}
+            </p>
+          );
+        })
+      )}
     </Wrapper>
   );
 };

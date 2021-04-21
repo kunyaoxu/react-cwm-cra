@@ -23,8 +23,8 @@ export const Wrapper = styled(Flex)`
     border-left: ${mPxToRem(19)} solid #d6e2e5;
     border-right: ${mPxToRem(19)} solid #d6e2e5;
     padding-top: ${mPxToRem(70)};
-    padding-left: ${mPxToRem(27)};
-    padding-right: ${mPxToRem(27)};
+    padding-left: ${mPxToRem(10)};
+    padding-right: ${mPxToRem(10)};
   `}
 `;
 

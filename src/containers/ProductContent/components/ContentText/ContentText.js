@@ -8,8 +8,7 @@ export const ContentText = styled.p`
   font-family: GenYoGothicTWTTF;
 
   ${media.greaterThan('large')`
-    font-size: ${pxToRem(16)};
-    line-height: ${pxToRem(18)};
+    font-size: ${pxToRem(20)};
     letter-spacing: ${pxToRem(0.8)};
     &.gap {
       margin-top: ${pxToRem(42)};
@@ -17,7 +16,7 @@ export const ContentText = styled.p`
   `}
 
   ${media.lessThan('large')`
-    font-size: ${mPxToRem(10)};
+    font-size: ${mPxToRem(13)};
     line-height: ${mPxToRem(12)};
     letter-spacing: ${mPxToRem(0.5)};
     text-align: center;

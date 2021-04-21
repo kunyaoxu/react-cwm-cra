@@ -21,13 +21,13 @@ export const ContentWrapper = styled(Flex)`
   ${media.greaterThan('large')`
     height: ${pxToRem(1080)};
     padding-top: ${pxToRem(210)};
-    padding-bottom: ${pxToRem(76)};
+    padding-bottom: ${pxToRem(43)};
     background-image: url('/images/why-us-bg.jpg');
     background-position: top;
   `}
 
   ${media.lessThan('large')`
-    height: ${mPxToRem(736)};
+    min-height: ${mPxToRem(816)};
     padding-top: ${mPxToRem(70)};
     padding-bottom: ${mPxToRem(43)};
     background-image: url('/images/why-us-bg@mobile.jpg');
@@ -49,7 +49,7 @@ export const Description = styled.div`
   font-weight: 500;
 
   ${media.greaterThan('large')`
-    font-size: ${pxToRem(18)};
+    font-size: ${pxToRem(22)};
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -60,8 +60,8 @@ export const Description = styled.div`
 
   ${media.lessThan('large')`
     width: ${mPxToRem(320)};
-    font-size: ${mPxToRem(10)};
-    line-height: ${mPxToRem(17)};
+    font-size: ${mPxToRem(13)};
+    line-height: ${mPxToRem(20)};
     letter-spacing: 0.5px;
   `}
 `;

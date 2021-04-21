@@ -20,7 +20,7 @@ export const Wrapper = styled(Flex)`
   ${media.lessThan('large')`
     flex-direction: column;
     align-items: center;
-    height: ${mPxToRem(837)};
+    min-height: ${mPxToRem(837)};
     padding: ${mPxToRem(70)} ${mPxToRem(47)} ${mPxToRem(54)} ${mPxToRem(47)};
   `}
 `;
