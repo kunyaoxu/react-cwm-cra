@@ -25,7 +25,7 @@ const WhyNow = () => (
     </MainPartContainer>
 
     <WhyNowImageContainer>
-      <WhyNowImage />
+      <WhyNowImage width="100%" height="auto" />
     </WhyNowImageContainer>
   </Wrapper>
 );
