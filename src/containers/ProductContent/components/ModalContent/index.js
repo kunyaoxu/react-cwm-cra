@@ -1,1 +1,3 @@
-export { default } from './ModalContent';
+import loadable from '@loadable/component';
+
+export default loadable(() => import('./ModalContent'));

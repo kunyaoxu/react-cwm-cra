@@ -12,7 +12,7 @@ import {
   ModalContent07,
   ModalContent08,
   ModalContent09,
-} from 'svgs';
+} from '../../svgs';
 import {
   Wrapper,
   InvalidNameBox,

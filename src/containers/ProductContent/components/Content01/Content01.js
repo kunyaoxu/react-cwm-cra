@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import Modal from 'components/Modal';
+// import { useState } from 'react';
+// import Modal from 'components/Modal';
 import useMobile from 'hooks/useMobile';
 import ContentText from '../ContentText';
 import MobileContentText from '../MobileContentText';
-import ModalContent from '../ModalContent';
-import MobileModalContent from '../MobileModalContent';
+// import ModalContent from '../ModalContent';
+// import MobileModalContent from '../MobileModalContent';
 // import { LearnMoreButton, LearnMoreButtonContainer } from './Styled';
 
 const Content01 = () => {
   const isMobile = useMobile();
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  // const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <>
       {isMobile ? (
@@ -39,7 +39,7 @@ const Content01 = () => {
           <br />
           更多
         </LearnMoreButton>
-      </LearnMoreButtonContainer> */}
+      </LearnMoreButtonContainer>
       <Modal
         open={isModalVisible}
         onRequestClose={() => setIsModalVisible(false)}
@@ -49,7 +49,7 @@ const Content01 = () => {
         ) : (
           <ModalContent onCloseClick={() => setIsModalVisible(false)} />
         )}
-      </Modal>
+      </Modal> */}
     </>
   );
 };

@@ -1,1 +1,3 @@
-export { default } from './MobileModalContent';
+import loadable from '@loadable/component';
+
+export default loadable(() => import('./MobileModalContent'));
