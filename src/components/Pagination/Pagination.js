@@ -24,10 +24,12 @@ const Pagination = () => {
       const offsetHeightNavbar = document.getElementById('navbar').offsetHeight;
       setOffset(-1 * offsetHeightNavbar - 1); // `-1` 因為why-now滾動位置還是有1px誤差，走投無路惹只好寫死
     }, 150);
+
     getOffset();
+
     window.addEventListener('resize', getOffset);
     return () => window.removeEventListener('resize', getOffset);
-  }, []);
+  });
 
   return (
     <Dots id="dots">

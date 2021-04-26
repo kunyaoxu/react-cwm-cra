@@ -9,6 +9,7 @@ const Title = () => {
       {isMobile ? (
         <>
           <AboutEngSvg />
+
           <StyledMobileChtTitle>什麼是天下永續會</StyledMobileChtTitle>
         </>
       ) : (
