@@ -31,19 +31,17 @@ export const Wrapper = styled(Header)`
 export const BannerWrapper = styled.div`
   ${media.greaterThan('large')`
     flex: 212;
-    > svg {
-      cursor: pointer;
-      width: ${pxToRem(212.3)};
-      height: auto;
+    cursor: pointer;
+    img {
+      aspect-ratio: attr(width) / attr(height);
     }
   `}
   ${media.lessThan('large')`
     flex: 1;
     display: flex;
     justify-content: center;
-    > svg {
-      width: ${mPxToRem(144.7)};
-      height: auto;
+    img {
+      aspect-ratio: attr(width) / attr(height);
     }
   `}
 `;
