@@ -1,6 +1,5 @@
 import { ReactComponent as AboutSvg } from './about.svg';
 import { ReactComponent as AboutEngSvg } from './about-eng.svg';
-import { ReactComponent as LogoSvg } from './logo.svg';
 import { ReactComponent as HamburgerSvg } from './hamburger.svg';
 import { ReactComponent as DrawerCloseSvg } from './drawer-close.svg';
 import { ReactComponent as ProductSvg } from './product.svg';
@@ -43,7 +42,6 @@ import { ReactComponent as MobileModalContent09 } from './modal-content-p9@m.svg
 export {
   AboutSvg,
   AboutEngSvg,
-  LogoSvg,
   HamburgerSvg,
   DrawerCloseSvg,
   LoadingSvg,

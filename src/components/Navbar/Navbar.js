@@ -1,4 +1,3 @@
-import { LogoSvg } from 'svgs';
 import { handleClickHashLink } from 'utils/hashLinkClickHandler';
 import { Wrapper, BannerWrapper } from './styled';
 import Mobile from './mobile';
@@ -8,7 +7,11 @@ const Navbar = () => {
   return (
     <Wrapper id="navbar">
       <BannerWrapper>
-        <LogoSvg onClick={(e) => handleClickHashLink({ e, id: 'home' })} />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/logo.webp`}
+          alt="天下永續會"
+          onClick={(e) => handleClickHashLink({ e, id: 'home' })}
+        />
       </BannerWrapper>
 
       <Mobile />
