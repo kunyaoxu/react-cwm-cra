@@ -10,8 +10,6 @@ const Navbar = () => {
         <img
           src={`${process.env.PUBLIC_URL}/images/logo.webp`}
           alt="天下永續會"
-          width="auto"
-          height="auto"
           onClick={(e) => handleClickHashLink({ e, id: 'home' })}
         />
       </BannerWrapper>

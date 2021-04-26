@@ -1,5 +1,4 @@
 /* eslint-disable react/no-array-index-key */
-import useMobile from 'hooks/useMobile';
 import Title from './components/Title';
 import TextBox from './components/TextBox';
 import {
@@ -18,28 +17,22 @@ const TEXT_LIST = [
   '增進企業的永續交流與網絡。',
 ];
 
-const ValuesOfMembership = () => {
-  const isMobile = useMobile();
-  return (
-    <Wrapper id="values-of-membership">
-      {/* 區塊Title元件 */}
-      <Title />
+const ValuesOfMembership = () => (
+  <Wrapper id="values-of-membership">
+    {/* 區塊Title元件 */}
+    <Title />
 
-      {isMobile ? (
-        <GroupedMobileImage width="auto" height="auto" />
-      ) : (
-        <GroupedImage width="auto" height="auto" />
-      )}
+    <GroupedImage className="only-desktop" />
+    <GroupedMobileImage className="only-mobile" />
 
-      <TextBoxContainer>
-        {TEXT_LIST.map((text, i) => (
-          <TextBox key={i} index={i}>
-            <p>{text}</p>
-          </TextBox>
-        ))}
-      </TextBoxContainer>
-    </Wrapper>
-  );
-};
+    <TextBoxContainer>
+      {TEXT_LIST.map((text, i) => (
+        <TextBox key={i} index={i}>
+          <p>{text}</p>
+        </TextBox>
+      ))}
+    </TextBoxContainer>
+  </Wrapper>
+);
 
 export default ValuesOfMembership;
