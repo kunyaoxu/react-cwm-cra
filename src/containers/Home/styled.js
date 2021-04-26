@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
     padding-top: ${pxToRem(257)};
     padding-bottom: ${pxToRem(483)};
     text-shadow: 0 0 ${pxToRem(20)} rgba(0, 0, 0, 0.7);
-    background-image: url('/images/home.jpg');
+    background-image: url('/images/home.webp');
 
     *:not(:first-child) {
       margin-top: ${pxToRem(22)};
@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
     padding-top: ${mPxToRem(191)};
     padding-bottom: ${mPxToRem(313)};
     text-shadow: 0 0 ${mPxToRem(20)} rgba(0, 0, 0, 0.7);
-    background-image: url('/images/home@mobile.jpg');
+    background-image: url('/images/home@mobile.webp');
 
     *:not(:first-child) {
       margin-top: ${mPxToRem(16)};

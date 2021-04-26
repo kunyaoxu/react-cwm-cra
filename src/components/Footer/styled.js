@@ -70,7 +70,7 @@ export const FooterBox = styled(Flex)`
 `;
 
 export const FooterImage = styled.img.attrs(() => ({
-  src: '/images/footer.png',
+  src: '/images/footer.webp',
   alt: '天下雜誌',
 }))`
   ${media.greaterThan('large')`

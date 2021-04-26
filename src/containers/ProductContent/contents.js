@@ -15,13 +15,13 @@ const CONTENTS = [
     icon: <ProductContent01Svg />,
     title: '永續培力工作坊',
     body: <Content01 />,
-    imgSrc: '/images/product-contents-01.jpg',
+    imgSrc: '/images/product-contents-01.webp',
   },
   {
     icon: <ProductContent02Svg />,
     title: '企業家交流晚宴',
     body: <Content02 />,
-    imgSrc: '/images/product-contents-02.jpg',
+    imgSrc: '/images/product-contents-02.webp',
   },
   {
     icon: <ProductContent03Svg />,
@@ -49,7 +49,7 @@ const CONTENTS = [
         </MobileContentText>
       </>
     ),
-    imgSrc: '/images/product-contents-03.jpg',
+    imgSrc: '/images/product-contents-03.webp',
   },
   {
     icon: <ProductContent04Svg />,
@@ -80,7 +80,7 @@ const CONTENTS = [
         </MobileContentText>
       </>
     ),
-    imgSrc: '/images/product-contents-04.jpg',
+    imgSrc: '/images/product-contents-04.webp',
   },
   {
     icon: <ProductContent05Svg />,
@@ -110,7 +110,7 @@ const CONTENTS = [
         </MobileContentText>
       </>
     ),
-    imgSrc: '/images/product-contents-05.jpg',
+    imgSrc: '/images/product-contents-05.webp',
   },
 ];
 

@@ -8,8 +8,7 @@ export const Wrapper = styled(Flex)`
   width: 100%;
   color: #566c6c;
   font-family: GenYoMinTWTTF;
-  background-image: url('/images/why-now-bg.jpg');
-  background-size: auto 100%;
+  background-color: white;
 
   ${media.greaterThan('large')`
     height: ${pxToRem(1080)};
@@ -75,7 +74,7 @@ export const WhyNowImageContainer = styled(Flex)`
 `;
 
 export const WhyNowImage = styled.img.attrs(() => ({
-  src: '/images/why-now-contents.jpg',
+  src: '/images/why-now-contents.webp',
   alt: '為什麼是現在',
 }))`
   width: 100%;

@@ -82,7 +82,7 @@ export const CardContainer = styled(Flex)`
 `;
 
 export const EarthImg = styled.img.attrs(() => ({
-  src: `${process.env.PUBLIC_URL}/images/about-us-earth.png`,
+  src: `${process.env.PUBLIC_URL}/images/about-us-earth.webp`,
   alt: '...',
 }))`
   position: absolute;

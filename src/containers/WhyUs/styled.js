@@ -22,7 +22,7 @@ export const ContentWrapper = styled(Flex)`
     height: ${pxToRem(1080)};
     padding-top: ${pxToRem(210)};
     padding-bottom: ${pxToRem(43)};
-    background-image: url('/images/why-us-bg.jpg');
+    background-image: url('/images/why-us-bg.webp');
     background-position: top;
   `}
 
@@ -30,7 +30,7 @@ export const ContentWrapper = styled(Flex)`
     min-height: ${mPxToRem(816)};
     padding-top: ${mPxToRem(70)};
     padding-bottom: ${mPxToRem(43)};
-    background-image: url('/images/why-us-bg@mobile.jpg');
+    background-image: url('/images/why-us-bg@mobile.webp');
     background-position: center;
 
   `}

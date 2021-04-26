@@ -3,7 +3,7 @@ import media from 'styled-media-query';
 import pxToRem from 'utils/pxToRem';
 
 export const DesktopContent = styled.img.attrs(() => ({
-  src: '/images/about-us-contents.png',
+  src: '/images/about-us-contents.webp',
   alt: '關於我們',
 }))`
   width: ${pxToRem(1066)};
