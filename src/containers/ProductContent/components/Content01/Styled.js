@@ -12,7 +12,7 @@ export const LearnMoreButtonContainer = styled(Flex)`
 export const LearnMoreButton = styled.button`
   cursor: pointer;
   color: white;
-  font-family: GenYoGothicTWTTF;
+  font-family: Noto Serif TC;
   font-weight: bold;
   background-color: #566c6c;
   border-radius: 50%;

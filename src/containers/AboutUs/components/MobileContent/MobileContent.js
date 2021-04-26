@@ -5,7 +5,7 @@ import { mPxToRem } from 'utils/pxToRem';
 
 const Wrapper = styled(Box)`
   color: white;
-  font-family: GenYoGothicTWTTF;
+  font-family: Noto Serif TC;
   font-size: ${mPxToRem(10)};
   line-height: ${mPxToRem(12)};
   letter-spacing: ${mPxToRem(0.5)};

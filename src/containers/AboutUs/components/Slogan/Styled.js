@@ -5,7 +5,7 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
 export const Wrapper = styled(Box)`
   color: white;
-  font-family: GenYoGothicTWTTF;
+  font-family: Noto Serif TC;
   text-align: center;
 
   ${media.greaterThan('large')`

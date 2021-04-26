@@ -45,7 +45,7 @@ export const PageDescriptionContainer = styled.div`
 export const Description = styled.div`
   color: #768e91;
   text-align: center;
-  font-family: GenYoGothicTWTTF;
+  font-family: Noto Serif TC;
   font-weight: 500;
 
   ${media.greaterThan('large')`
