@@ -5,7 +5,7 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 export const ContentText = styled.p`
   color: #768e91;
   font-weight: 500;
-  font-family: GenYoGothicTWTTF;
+  font-family: Noto Sans TC;
 
   ${media.greaterThan('large')`
     font-size: ${pxToRem(20)};

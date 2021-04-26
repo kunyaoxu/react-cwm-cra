@@ -4,7 +4,7 @@ import Box from 'common/Box';
 import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
 export const Wrapper = styled(Box)`
-  font-family: GenYoGothicTWTTF;
+  font-family: Noto Sans TC;
 
   ${media.greaterThan('large')`
     min-width: ${pxToRem(621)};

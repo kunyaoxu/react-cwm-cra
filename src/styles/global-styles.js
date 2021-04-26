@@ -24,27 +24,6 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-display: swap;
-    font-family: GenYoMinTWTTF;
-    src: local('GenYoMinTWTTF'),
-      url(${process.env.PUBLIC_URL}/fonts/GenYoMin-R.woff) format('WOFF');
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: GenYoMin TW TTF;
-    src: local('GenYoMin TW TTF'),
-      url(${process.env.PUBLIC_URL}/fonts/GenYoMin-R.woff) format('WOFF');
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: GenYoGothicTWTTF;
-    src: local('GenYoGothicTWTTF'),
-      url(${process.env.PUBLIC_URL}/fonts/GenYoGothic-R.woff) format('WOFF');
-  }
-
-  @font-face {
-    font-display: swap;
     font-family: 'AdobeTextPro';
     src: url(${process.env.PUBLIC_URL}/fonts/AdobeTextPro-Regular.woff)
         format('woff'),
@@ -54,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
   
   h2 {
     color: #566c6c;
-    font-family: GenYoMinTWTTF;
+    font-family: Noto Serif TC;
     font-weight: bold;
     margin: 0;
 
@@ -74,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
 
   h3 {
     color: #566c6c;
-    font-family: GenYoMinTWTTF;
+    font-family: Noto Serif TC;
     font-weight: 500;
     margin: 0;
 

@@ -28,7 +28,7 @@ export const Wrapper = styled(Box)`
 
 export const TitleText = styled(Box)`
   color: #566c6c;
-  font-family: GenYoMinTWTTF;
+  font-family: Noto Serif TC;
   font-weight: bold;
   text-align: center;
   border-bottom: 1px solid rgb(86, 108, 108);

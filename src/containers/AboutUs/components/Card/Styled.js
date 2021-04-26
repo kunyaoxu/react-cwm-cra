@@ -11,7 +11,7 @@ export const Wrapper = styled(Flex)`
   flex-direction: column;
 
   > *.card-title {
-    font-family: GenYoMinTWTTF;
+    font-family: Noto Serif TC;
     font-weight: bold;
     text-decoration: underline;
 
@@ -29,7 +29,7 @@ export const Wrapper = styled(Flex)`
   }
 
   > *.card-content {
-    font-family: GenYoGothicTWTTF;
+    font-family: Noto Sans TC;
     font-weight: 500;
     text-align: center;
 
@@ -60,7 +60,7 @@ export const Wrapper = styled(Flex)`
 
 export const MobileCardContent = styled(Box)`
   flex: 1;
-  font-family: GenYoGothicTWTTF;
+  font-family: Noto Sans TC;
   font-weight: 500;
   font-size: ${mPxToRem(11)};
   line-height: ${mPxToRem(26)};

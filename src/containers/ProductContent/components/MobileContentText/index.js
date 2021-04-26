@@ -6,7 +6,7 @@ import { mPxToRem } from 'utils/pxToRem';
 export const MobileContentText = styled(Box)`
   color: #768e91;
   font-weight: 500;
-  font-family: GenYoGothicTWTTF;
+  font-family: Noto Sans TC;
 
   font-size: ${mPxToRem(14)};
   line-height: 1.96;
