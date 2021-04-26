@@ -73,9 +73,11 @@ export const WhyNowImageContainer = styled(Flex)`
   `};
 `;
 
-export const WhyNowImage = styled.img.attrs(() => ({
+export const WhyNowImage = styled.img.attrs(({ isMobile }) => ({
   src: '/images/why-now-contents.webp',
   alt: '為什麼是現在',
+  width: '320',
+  height: '320',
 }))`
   width: 100%;
   height: auto;

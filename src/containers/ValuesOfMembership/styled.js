@@ -29,6 +29,8 @@ export const Wrapper = styled(Flex)`
 export const GroupedImage = styled.img.attrs(() => ({
   src: '/images/values-of-membership-imgs.webp',
   alt: '天下永續會的價值',
+  width: '1920',
+  height: '235',
 }))`
   width: 100%;
   margin-top: ${pxToRem(134)};
@@ -38,6 +40,8 @@ export const GroupedImage = styled.img.attrs(() => ({
 export const GroupedMobileImage = styled.img.attrs(() => ({
   src: '/images/values-of-membership-imgs@mobile.webp',
   alt: '天下永續會的價值',
+  width: '414',
+  height: '170',
 }))`
   width: 100%;
   margin-top: ${mPxToRem(53.6)};
