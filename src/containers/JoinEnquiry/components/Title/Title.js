@@ -1,15 +1,21 @@
+import useMobile from 'hooks/useMobile';
 import { JoinEnquirySvg, JoinEngSvg } from '../../svgs';
 import { Wrapper, StyledMobileChtTitle } from './Styled';
 
-const Title = () => (
-  <Wrapper>
-    {/* desktop */}
-    <JoinEnquirySvg className="only-desktop" />
-
-    {/* mobile */}
-    <JoinEngSvg className="only-mobile" />
-    <StyledMobileChtTitle>申請表</StyledMobileChtTitle>
-  </Wrapper>
-);
+const Title = () => {
+  const isMobile = useMobile();
+  return (
+    <Wrapper>
+      {isMobile ? (
+        <>
+          <JoinEngSvg />
+          <StyledMobileChtTitle>申請表</StyledMobileChtTitle>
+        </>
+      ) : (
+        <JoinEnquirySvg />
+      )}
+    </Wrapper>
+  );
+};
 
 export default Title;

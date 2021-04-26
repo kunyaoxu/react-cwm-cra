@@ -1,15 +1,21 @@
+import useMobile from 'hooks/useMobile';
 import { AboutSvg, AboutEngSvg } from '../../svgs';
 import { Wrapper, StyledMobileChtTitle } from './Styled';
 
-const Title = () => (
-  <Wrapper>
-    {/* desktop */}
-    <AboutSvg className="only-desktop" />
-
-    {/* mobile */}
-    <AboutEngSvg className="only-mobile" />
-    <StyledMobileChtTitle>什麼是天下永續會</StyledMobileChtTitle>
-  </Wrapper>
-);
+const Title = () => {
+  const isMobile = useMobile();
+  return (
+    <Wrapper>
+      {isMobile ? (
+        <>
+          <AboutEngSvg />
+          <StyledMobileChtTitle>什麼是天下永續會</StyledMobileChtTitle>
+        </>
+      ) : (
+        <AboutSvg />
+      )}
+    </Wrapper>
+  );
+};
 
 export default Title;
