@@ -1,1 +1,3 @@
-export { default } from './AboutUs';
+import loadable from '@loadable/component';
+
+export default loadable(() => import('./AboutUs'));
