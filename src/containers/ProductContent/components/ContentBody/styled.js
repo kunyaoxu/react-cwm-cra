@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 export const ContentText = styled.p`
   color: #768e91;
   font-weight: 500;
-  font-family: Noto Serif TC;
+  font-family: GenYoGothicTWTTF;
 
   ${media.greaterThan('large')`
     font-size: ${pxToRem(16)};

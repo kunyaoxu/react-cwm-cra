@@ -49,7 +49,7 @@ export const InvalidNameTitle = styled(H3)`
 `;
 
 export const InvalidNameContent = styled(Box)`
-  font-family: Noto Serif TC;
+  font-family: GenYoGothicTWTTF;
   font-size: ${mPxToRem(15)};
   font-weight: 500;
   font-stretch: normal;

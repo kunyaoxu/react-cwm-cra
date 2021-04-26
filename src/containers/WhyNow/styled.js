@@ -7,7 +7,7 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 export const Wrapper = styled(Flex)`
   width: 100%;
   color: #566c6c;
-  font-family: Noto Sans TC;
+  font-family: GenYoMinTWTTF;
   background-color: white;
 
   ${media.greaterThan('large')`
@@ -36,7 +36,7 @@ export const MainPartContainer = styled(Box)`
 `;
 
 export const DescriptionBox = styled.div`
-  font-family: Noto Serif TC;
+  font-family: GenYoGothicTWTTF;
 
   ${media.greaterThan('large')`
     font-size: ${pxToRem(16)};

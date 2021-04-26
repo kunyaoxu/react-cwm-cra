@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   align-items: center;
   color: #ffffff;
   width: 100%;
-  font-family: Noto Sans TC;
+  font-family: GenYoMinTWTTF;
   font-weight: 600;
   text-align: center;
   background-repeat: no-repeat;
