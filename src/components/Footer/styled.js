@@ -13,7 +13,7 @@ export const Wrapper = styled(Flex)`
   overflow: hidden;
 
   p {
-    font-family: AdobeTextPro;
+    font-family: Noto Serif TC;
     font-size: 27px;
     font-weight: normal;
     font-stretch: normal;

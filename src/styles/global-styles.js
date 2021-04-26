@@ -20,15 +20,6 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-
-  @font-face {
-    font-display: swap;
-    font-family: 'AdobeTextPro';
-    src: url(${process.env.PUBLIC_URL}/fonts/AdobeTextPro-Regular.woff)
-        format('woff'),
-      url(${process.env.PUBLIC_URL}/fonts/AdobeTextPro-Regular.ttf)
-        format('truetype');
-  }
   
   h2 {
     color: #566c6c;
