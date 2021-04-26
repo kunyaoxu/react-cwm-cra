@@ -2,7 +2,7 @@ import { Form, Button, Select, Input, Col, Checkbox } from 'antd';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 import Flex from 'common/Flex';
-import { LoadingSvg } from 'svgs';
+import { LoadingSvg } from './svgs';
 import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
 export const Wrapper = styled(Flex)`

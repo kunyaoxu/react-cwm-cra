@@ -1,4 +1,4 @@
-import { ValuesSloganSvg, ValuesEngSloganSvg } from 'svgs';
+import { ValuesSloganSvg, ValuesEngSloganSvg } from '../../svgs';
 import MobileChtTitle from 'components/MobileChtTitle';
 import { Wrapper } from './Styled';
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Drawer } from 'antd';
 import { handleClickHashLink } from 'utils/hashLinkClickHandler';
-import { HamburgerSvg, DrawerCloseSvg } from 'svgs';
+import { HamburgerSvg, DrawerCloseSvg } from '../svgs';
 import { HamburgerBox, CloseIconBox, DrawerItem } from './styled';
 
 const bodyStyle = {

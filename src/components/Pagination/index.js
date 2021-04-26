@@ -1,2 +1,3 @@
-import Pagination from './Pagination';
-export default Pagination;
+import loadable from '@loadable/component';
+
+export default loadable(() => import('./Pagination'));

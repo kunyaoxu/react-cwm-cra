@@ -1,4 +1,4 @@
-import { WhyUsSvg, WhyEngSvg } from 'svgs';
+import { WhyUsSvg, WhyEngSvg } from '../../svgs';
 import { Wrapper, StyledMobileChtTitle } from './Styled';
 
 const Title = () => (

@@ -4,7 +4,7 @@ import {
   ProductContent03Svg,
   ProductContent04Svg,
   ProductContent05Svg,
-} from 'svgs';
+} from './svgs';
 import Content01 from './components/Content01';
 import Content02 from './components/Content02';
 import ContentText from './components/ContentText';

@@ -9,7 +9,7 @@ import {
   MobileModalContent08,
   MobileModalContent09,
   ModalCloseButton,
-} from '../../svgs';
+} from '../../svgs/modals';
 import {
   Wrapper,
   InvalidNameTitle,

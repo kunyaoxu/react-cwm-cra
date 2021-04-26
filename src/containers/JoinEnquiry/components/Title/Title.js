@@ -1,4 +1,4 @@
-import { JoinEnquirySvg, JoinEngSvg } from 'svgs';
+import { JoinEnquirySvg, JoinEngSvg } from '../../svgs';
 import { Wrapper, StyledMobileChtTitle } from './Styled';
 
 const Title = () => (

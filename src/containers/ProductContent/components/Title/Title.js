@@ -1,4 +1,4 @@
-import { ProductSvg, ProductEngSvg } from 'svgs';
+import { ProductSvg, ProductEngSvg } from '../../svgs';
 import MobileChtTitle from 'components/MobileChtTitle';
 import { Wrapper } from './Styled';
 
