@@ -22,22 +22,22 @@ const ValuesOfMembership = () => {
 
       <picture>
         <source
-          srcset="/images/values-of-membership-imgs.webp"
+          srcSet="/images/values-of-membership-imgs.webp"
           media="(min-width: 1170px)"
           type="image/webp"
         />
         <source
-          srcset="/images/values-of-membership-imgs.jpeg"
+          srcSet="/images/values-of-membership-imgs.jpeg"
           media="(min-width: 1170px)"
           type="image/jpeg"
         />
         <source
-          srcset="/images/values-of-membership-imgs@mobile.webp"
+          srcSet="/images/values-of-membership-imgs@mobile.webp"
           media="(max-width: 1170px)"
           type="image/webp"
         />
         <source
-          srcset="/images/values-of-membership-imgs.jpeg"
+          srcSet="/images/values-of-membership-imgs.jpeg"
           media="(max-width: 1170px)"
           type="image/jpeg"
         />

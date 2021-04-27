@@ -6,7 +6,7 @@ import { Wrapper, CardContainer } from './styled';
 const AboutUs = () => (
   <Wrapper id="about-us">
     <picture>
-      <source srcset="/images/about-us-earth.webp" type="image/webp" />
+      <source srcSet="/images/about-us-earth.webp" type="image/webp" />
       <img
         src="/images/about-us-earth.png"
         alt="什麼是天下永續會"

@@ -12,7 +12,7 @@ const Content = ({ icon, title, body, imgSrc }) => {
       </ContentTextContainer>
 
       <picture>
-        <source srcset={`${imgSrc}.webp`} type="image/webp" />
+        <source srcSet={`${imgSrc}.webp`} type="image/webp" />
         <img
           src={`${imgSrc}.jpeg`}
           alt="天下永續會會員時程表，第一期7月1日到9月30日，第二期10月1日到12月31日"

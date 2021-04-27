@@ -11,7 +11,7 @@ const Schedule = () => {
       <ScheduleTableContainer>
         {isMobile ? (
           <picture>
-            <source srcset="/images/schedule-table@m.webp" type="image/webp" />
+            <source srcSet="/images/schedule-table@m.webp" type="image/webp" />
             <img
               src="/images/schedule-table@m.png"
               alt="天下永續會會員時程表，第一期7月1日到9月30日，第二期10月1日到12月31日"
@@ -21,7 +21,7 @@ const Schedule = () => {
           </picture>
         ) : (
           <picture>
-            <source srcset="/images/schedule-table.webp" type="image/webp" />
+            <source srcSet="/images/schedule-table.webp" type="image/webp" />
             <img
               src="/images/schedule-table.png"
               alt="天下永續會會員時程表，第一期7月1日到9月30日，第二期10月1日到12月31日"

@@ -10,7 +10,7 @@ const Footer = () => {
         <p>For a Better Society</p>
         <FooterBox>
           <picture>
-            <source srcset="/images/footer.webp" type="image/webp" />
+            <source srcSet="/images/footer.webp" type="image/webp" />
             <img
               src="/images/footer.jpeg"
               alt="天下雜誌, 天下永續會"
