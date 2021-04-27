@@ -1,5 +1,4 @@
 import { Layout } from 'antd';
-import ReactModal from 'react-modal';
 import smoothscroll from 'smoothscroll-polyfill';
 
 import Navbar from 'components/Navbar';
@@ -21,12 +20,6 @@ import styles from 'styles/Home.module.css';
 
 // kick off the polyfill!
 smoothscroll.polyfill();
-
-/**
- * Binding react-modal to root react appElement.
- * More information (http://reactcommunity.org/react-modal/accessibility/)
- */
-ReactModal.setAppElement('#root');
 
 export default function App() {
   return (

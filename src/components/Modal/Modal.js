@@ -2,6 +2,12 @@ import React from 'react';
 import ReactModal from 'react-modal';
 import { Wrapper } from './Styled';
 
+/**
+ * Binding react-modal to root react appElement.
+ * More information (http://reactcommunity.org/react-modal/accessibility/)
+ */
+ReactModal.setAppElement('#root');
+
 const customStyle = {
   overlay: {
     position: 'fixed',
