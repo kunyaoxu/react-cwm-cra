@@ -23,7 +23,7 @@ import {
 import ContactInfo from './components/ContactInfo';
 
 const API_URL =
-  'https://script.google.com/macros/s/AKfycbxuV2Im86O8nMtcYMczL2IAGJCSpNn10ECxJRhTTyUPWepagf_DrIlGVoKXcJ8K8KE/exec';
+  'https://script.google.com/macros/s/AKfycbxkuGOmF0C8doxvtLfpMXK-yzGB0T3UDb22nDZZ2s48LpKhAcstNracI5IHGq-5Eu4e/exec';
 
 const { Option } = AntdSelect;
 
@@ -50,20 +50,37 @@ const JoinEnquiry = () => {
 
   const onSendForm = (data) => {
     if (isProcessSubmit) return;
+
+    const fields = data?.fields?.map((val) =>
+      Array.isArray(val)
+        ? val
+            .filter((val) => (val === OTHER ? false : val))
+            .join(',')
+            .concat(otherStr ? ',' + otherStr : '')
+        : val ?? null
+    );
+
+    // 判斷陣列中是否有任一個元素為 null or undefined
+    if (!fields.every((val) => val !== null && val !== undefined)) {
+      message.error({
+        content: (
+          <div style={{ textAlign: 'left' }}>
+            非常抱歉，您的表單尚未完成填寫，
+            <br />
+            麻煩您確實填寫每個欄目後送出，謝謝您！
+          </div>
+        ),
+        duration: 3,
+      });
+      return;
+    }
+
     setIsProcessSubmit(true);
-    // console.log(data);
 
     fetch(
       `${API_URL}?${qs.stringify(
         {
-          fields: data.fields.map((val) =>
-            Array.isArray(val)
-              ? val
-                  .filter((val) => (val === OTHER ? false : val))
-                  .join(',')
-                  .concat(otherStr ? ',' + otherStr : '')
-              : val ?? null
-          ),
+          fields,
         },
         {
           arrayFormat: 'repeat',
@@ -405,7 +422,6 @@ const JoinEnquiry = () => {
                     />
                   </OtherCol>
                 </Row>
-                {/* TODO: 其他 */}
               </Checkbox.Group>
             </AntdFormItem>
           </AntdCol>
