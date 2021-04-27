@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import disableReactDevTools from 'utils/disableReactDevTools';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'styles/globals.css';
 
 if (process.env.NODE_ENV === 'production') disableReactDevTools();
 
