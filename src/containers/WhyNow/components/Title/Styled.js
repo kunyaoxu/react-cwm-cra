@@ -10,8 +10,8 @@ export const Wrapper = styled(Flex)`
   ${media.greaterThan('large')`
     margin-bottom: ${pxToRem(174)};
     > svg {
-      height: ${pxToRem(66)};
       width: auto;
+      height: ${pxToRem(66)};
     }
   `}
 
@@ -19,6 +19,7 @@ export const Wrapper = styled(Flex)`
     flex-direction: column;
     margin-bottom: ${mPxToRem(58.6)};
     > svg {
+      width: auto;
       height: ${mPxToRem(28.4)};
     }
   `}

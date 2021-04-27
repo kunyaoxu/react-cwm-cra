@@ -24,28 +24,22 @@ export const Wrapper = styled(Flex)`
     border-left: ${mPxToRem(20)} solid #d6e2e5;
     border-right: ${mPxToRem(20)} solid #d6e2e5;
   `}
-`;
 
-export const GroupedImage = styled.img.attrs(() => ({
-  src: '/images/values-of-membership-imgs.webp',
-  alt: '天下永續會的價值',
-  width: '1920',
-  height: '235',
-}))`
-  width: 100%;
-  margin-top: ${pxToRem(134)};
-  margin-bottom: ${pxToRem(74)};
-`;
+  img {
+    ${media.greaterThan('large')`
+      width: 100%;
+      height: auto;
+      margin-top: ${pxToRem(134)};
+      margin-bottom: ${pxToRem(74)};
+    `}
 
-export const GroupedMobileImage = styled.img.attrs(() => ({
-  src: '/images/values-of-membership-imgs@mobile.webp',
-  alt: '天下永續會的價值',
-  width: '414',
-  height: '170',
-}))`
-  width: 100%;
-  margin-top: ${mPxToRem(53.6)};
-  margin-bottom: ${mPxToRem(45)};
+    ${media.lessThan('large')`
+      width: 100%;
+      height: auto;
+      margin-top: ${mPxToRem(53.6)};
+      margin-bottom: ${mPxToRem(45)};
+    `}
+  }
 `;
 
 export const TextBoxContainer = styled(Flex)`

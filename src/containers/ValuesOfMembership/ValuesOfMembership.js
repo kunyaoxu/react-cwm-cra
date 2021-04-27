@@ -2,12 +2,7 @@
 import useMobile from 'hooks/useMobile';
 import Title from './components/Title';
 import TextBox from './components/TextBox';
-import {
-  Wrapper,
-  GroupedImage,
-  GroupedMobileImage,
-  TextBoxContainer,
-} from './styled';
+import { Wrapper, TextBoxContainer } from './styled';
 
 const TEXT_LIST = [
   '發現企業決策納入永續的價值與方法。',
@@ -25,7 +20,34 @@ const ValuesOfMembership = () => {
       {/* 區塊Title元件 */}
       <Title />
 
-      {isMobile ? <GroupedMobileImage /> : <GroupedImage />}
+      <picture>
+        <source
+          srcset="/images/values-of-membership-imgs.webp"
+          media="(min-width: 1170px)"
+          type="image/webp"
+        />
+        <source
+          srcset="/images/values-of-membership-imgs.jpeg"
+          media="(min-width: 1170px)"
+          type="image/jpeg"
+        />
+        <source
+          srcset="/images/values-of-membership-imgs@mobile.webp"
+          media="(max-width: 1170px)"
+          type="image/webp"
+        />
+        <source
+          srcset="/images/values-of-membership-imgs.jpeg"
+          media="(max-width: 1170px)"
+          type="image/jpeg"
+        />
+        <img
+          src="/images/values-of-membership-imgs@mobile.jpeg"
+          alt="天下永續會共有六個價值"
+          width={isMobile ? '170' : '1920'}
+          height={isMobile ? '414' : '1920'}
+        />
+      </picture>
 
       <TextBoxContainer>
         {TEXT_LIST.map((text, i) => (

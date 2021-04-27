@@ -1,11 +1,19 @@
 import Card from './components/Card';
 import Title from './components/Title';
 import Slogan from './components/Slogan';
-import { Wrapper, CardContainer, EarthImg } from './styled';
+import { Wrapper, CardContainer } from './styled';
 
 const AboutUs = () => (
   <Wrapper id="about-us">
-    <EarthImg />
+    <picture>
+      <source srcset="/images/about-us-earth.webp" type="image/webp" />
+      <img
+        src="/images/about-us-earth.png"
+        alt="什麼是天下永續會"
+        width="167"
+        height="290"
+      />
+    </picture>
     {/* About Us Title */}
     <Title />
 

@@ -31,5 +31,9 @@ export const ScheduleTableContainer = styled(Box)`
     width: ${mPxToRem(367.5)};
     margin-top: ${mPxToRem(100.4)};
     margin-bottom: ${mPxToRem(75.5)};
+    img {
+      width: 100%;
+      height: auto;
+    }
   `}
 `;

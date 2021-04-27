@@ -1,18 +1,10 @@
-import useMobile from 'hooks/useMobile';
 import H2 from 'components/H2';
 import H3 from 'components/H3';
 import Title from './components/Title';
 import Description from './components/Description';
-import {
-  Wrapper,
-  MainPartContainer,
-  // DescriptionBox,
-  WhyNowImage,
-  WhyNowImageContainer,
-} from './styled';
+import { Wrapper, MainPartContainer, WhyNowImageContainer } from './styled';
 
 const WhyNow = () => {
-  const isMobile = useMobile();
   return (
     <Wrapper id="why-now">
       <MainPartContainer>
@@ -28,7 +20,15 @@ const WhyNow = () => {
       </MainPartContainer>
 
       <WhyNowImageContainer>
-        <WhyNowImage isMobile={isMobile} />
+        <picture>
+          <source srcset="/images/why-now-contents.webp" type="image/webp" />
+          <img
+            srcset="/images/why-now-contents.jpeg"
+            alt="為什麼是現在"
+            width="320"
+            height="320"
+          />
+        </picture>
       </WhyNowImageContainer>
     </Wrapper>
   );

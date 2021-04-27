@@ -11,7 +11,7 @@ export const Wrapper = styled(Flex)`
   background-color: white;
 
   ${media.greaterThan('large')`
-    height: ${pxToRem(1080)};
+    min-height: ${pxToRem(1080)};
     padding: ${pxToRem(290)} ${pxToRem(234)} ${pxToRem(137)} ${pxToRem(234)};
     justify-content: space-between;
   `}
@@ -62,23 +62,20 @@ export const DescriptionBox = styled.div`
 export const WhyNowImageContainer = styled(Flex)`
   align-items: center;
   justify-content: center;
+
   ${media.greaterThan('large')`
     width: ${pxToRem(653)};
     height: ${pxToRem(653)};
   `}
   ${media.lessThan('large')`
-    width: ${mPxToRem(320)};
+    /* width: ${mPxToRem(320)}; */
     height: ${mPxToRem(320)};
     margin-top: ${mPxToRem(30)};
+    margin-bottom: ${mPxToRem(30)};
   `};
-`;
 
-export const WhyNowImage = styled.img.attrs(({ isMobile }) => ({
-  src: '/images/why-now-contents.webp',
-  alt: '為什麼是現在',
-  width: '320',
-  height: '320',
-}))`
-  width: 100%;
-  height: auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;

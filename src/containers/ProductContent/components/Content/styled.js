@@ -30,7 +30,20 @@ export const Wrapper = styled(Flex)`
     &:not(:first-child) {
       margin-top: ${mPxToRem(47.2)};
     }
-  `} /* width: 100%; */
+  `}
+
+  img {
+    ${media.greaterThan('large')`
+    width: ${pxToRem(433)};
+    height: ${pxToRem(338)};
+  `}
+
+    ${media.lessThan('large')`
+    width: ${mPxToRem(305)};
+    height: ${mPxToRem(237)};
+    margin-top: ${mPxToRem(26)};
+  `}
+  }
 `;
 
 export const ContentTextContainer = styled(Box)`
@@ -40,18 +53,5 @@ export const ContentTextContainer = styled(Box)`
 
   ${media.lessThan('large')`
     width: ${mPxToRem(305)};
-  `}
-`;
-
-export const ContentImg = styled.img`
-  ${media.greaterThan('large')`
-    width: ${pxToRem(433)};
-    height: ${pxToRem(338)};
-  `}
-
-  ${media.lessThan('large')`
-    width: ${mPxToRem(305)};
-    height: ${mPxToRem(237)};
-    margin-top: ${mPxToRem(26)};
   `}
 `;

@@ -26,6 +26,23 @@ export const Wrapper = styled(Flex)`
     padding-left: ${mPxToRem(10)};
     padding-right: ${mPxToRem(10)};
   `}
+
+  picture {
+    position: absolute;
+    bottom: 0;
+  }
+
+  img {
+    ${media.greaterThan('large')`
+      width: ${pxToRem(1184)};
+      height: auto;
+    `}
+
+    ${media.lessThan('large')`
+      width: ${mPxToRem(290)};
+      height: auto;
+    `}
+  }
 `;
 
 export const CardContainer = styled(Flex)`
@@ -78,23 +95,5 @@ export const CardContainer = styled(Flex)`
         background-color: rgba(255, 255, 255, 0.5);
       }
     }
-  `}
-`;
-
-export const EarthImg = styled.img.attrs(() => ({
-  src: `${process.env.PUBLIC_URL}/images/about-us-earth.webp`,
-  alt: '...',
-}))`
-  position: absolute;
-  bottom: 0;
-
-  ${media.greaterThan('large')`
-    width: ${pxToRem(1184)};
-    height: auto;
-  `}
-
-  ${media.lessThan('large')`
-    width: ${mPxToRem(290)};
-    height: auto;
   `}
 `;

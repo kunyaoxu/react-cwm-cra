@@ -11,6 +11,7 @@ export const Wrapper = styled(Flex)`
     width: ${pxToRem(556)};
     height: ${pxToRem(67)};
     > svg {
+      width: auto;
       height: ${pxToRem(66)};
     }
   `}
@@ -18,6 +19,7 @@ export const Wrapper = styled(Flex)`
   ${media.lessThan('large')`
     flex-direction: column;
     > svg {
+      width: auto;
       height: ${mPxToRem(29)};
     }
   `}

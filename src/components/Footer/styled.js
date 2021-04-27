@@ -65,23 +65,19 @@ export const FooterBox = styled(Flex)`
       border-top: 1px solid white;
       transform: translateY(50%);
     }
-    
   `};
-`;
 
-export const FooterImage = styled.img.attrs(() => ({
-  src: '/images/footer.webp',
-  alt: '天下雜誌',
-}))`
-  ${media.greaterThan('large')`
-    width: ${pxToRem(141.2)};
-    height: ${pxToRem(51.9)};
-    margin-left: ${pxToRem(19.5)};
-  `}
+  img {
+    ${media.greaterThan('large')`
+      width: ${pxToRem(141.2)};
+      height: ${pxToRem(51.9)};
+      margin-left: ${pxToRem(19.5)};
+    `}
 
-  ${media.lessThan('large')`
-    width: ${mPxToRem(141.2)};
-    height: ${mPxToRem(51.9)};
-    margin: 0 ${mPxToRem(13.5)};
-  `}
+    ${media.lessThan('large')`
+      width: ${mPxToRem(141.2)};
+      height: ${mPxToRem(51.9)};
+      margin: 0 ${mPxToRem(13.5)};
+    `}
+  }
 `;
