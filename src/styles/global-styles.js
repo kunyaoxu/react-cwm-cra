@@ -20,6 +20,10 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+
+  img {
+    display: block;
+  }
   
   h2 {
     color: #566c6c;

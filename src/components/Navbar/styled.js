@@ -31,11 +31,13 @@ export const Wrapper = styled(Header)`
 export const BannerWrapper = styled.div`
   ${media.greaterThan('large')`
     flex: 212;
+    padding-left: ${pxToRem(95)};
     cursor: pointer;
     img {
       aspect-ratio: attr(width) / attr(height);
     }
   `}
+
   ${media.lessThan('large')`
     flex: 1;
     display: flex;

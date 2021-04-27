@@ -15,7 +15,7 @@ import ValuesOfMembership from 'containers/ValuesOfMembership';
 import ProductContent from 'containers/ProductContent';
 import JoinEnquiry from 'containers/JoinEnquiry';
 
-import 'antd/dist/antd.css';
+import 'styles/antd.css';
 import GlobalStyle from 'styles/global-styles';
 import styles from 'styles/Home.module.css';
 
