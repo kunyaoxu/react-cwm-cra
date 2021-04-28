@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import qs from 'qs';
 import { Form, Checkbox, Row, message } from 'antd';
 import { CaretDownOutlined } from '@ant-design/icons';
 import Title from './components/Title';
@@ -77,50 +76,42 @@ const JoinEnquiry = () => {
 
     setIsProcessSubmit(true);
 
-    fetch(
-      `${API_URL}?${qs.stringify(
-        {
-          fields,
-        },
-        {
-          arrayFormat: 'repeat',
-        }
-      )}`
-    )
-      .then(() => {
-        // console.log('fields', data?.fields, 'succes');
-        setOtherStr(null);
-        form.resetFields();
-        message.success({
-          content: (
-            <div style={{ textAlign: 'left' }}>
-              您申請的表單已成功送出，3日內將有專人與您聯繫。
-              <br />
-              <br />
-              若有任何問題請來電：
-              <br />
-              02-20578627#284
-              <br />
-              天下雜誌 行銷業務部副理 章庭維
-            </div>
-          ),
-          duration: 3,
-        });
-      })
-      .catch(() => {
-        message.error({
-          content: (
-            <div style={{ textAlign: 'left' }}>
-              抱歉，您的表單送出失敗，
-              <br />
-              請再次確認並送出，謝謝您！
-            </div>
-          ),
-          duration: 3,
-        });
-        console.error('google sheet error!');
-      })
-      .finally(() => setIsProcessSubmit(false));
+    import('qs').then((qs) => {
+      fetch(`${API_URL}?${qs.stringify({ fields }, { arrayFormat: 'repeat' })}`)
+        .then(() => {
+          setOtherStr(null);
+          form.resetFields();
+          message.success({
+            content: (
+              <div style={{ textAlign: 'left' }}>
+                您申請的表單已成功送出，3日內將有專人與您聯繫。
+                <br />
+                <br />
+                若有任何問題請來電：
+                <br />
+                02-20578627#284
+                <br />
+                天下雜誌 行銷業務部副理 章庭維
+              </div>
+            ),
+            duration: 3,
+          });
+        })
+        .catch(() => {
+          message.error({
+            content: (
+              <div style={{ textAlign: 'left' }}>
+                抱歉，您的表單送出失敗，
+                <br />
+                請再次確認並送出，謝謝您！
+              </div>
+            ),
+            duration: 3,
+          });
+          console.error('google sheet error!');
+        })
+        .finally(() => setIsProcessSubmit(false));
+    });
   };
 
   return (

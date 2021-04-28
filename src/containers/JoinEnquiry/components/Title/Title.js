@@ -1,5 +1,6 @@
 import useMobile from 'hooks/useMobile';
-import { JoinEnquirySvg, JoinEngSvg } from '../../svgs';
+import { ReactComponent as JoinEngSvg } from '../../svgs/join@eng.svg';
+import { ReactComponent as JoinEnquirySvg } from '../../svgs/join-enquiry.svg';
 import { Wrapper, StyledMobileChtTitle } from './Styled';
 
 const Title = () => {
