@@ -1,7 +1,8 @@
 import useMobile from 'hooks/useMobile';
-import { ProductSvg, ProductEngSvg } from '../../svgs';
 import MobileChtTitle from 'components/MobileChtTitle';
 import { Wrapper } from './Styled';
+import { ReactComponent as ProductEngSvg } from '../../svgs/product-eng.svg';
+import { ReactComponent as ProductSvg } from '../../svgs/product.svg';
 
 const Title = () => {
   const isMobile = useMobile();

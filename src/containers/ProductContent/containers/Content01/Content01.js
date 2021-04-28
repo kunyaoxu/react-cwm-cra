@@ -1,17 +1,17 @@
-// import { useState } from 'react';
-// import Modal from 'components/Modal';
+import { ReactComponent as ProductContent01Svg } from '../../svgs/product-content-1.svg';
 import useMobile from 'hooks/useMobile';
-import ContentText from '../ContentText';
-import MobileContentText from '../MobileContentText';
-// import ModalContent from '../ModalContent';
-// import MobileModalContent from '../MobileModalContent';
-// import { LearnMoreButton, LearnMoreButtonContainer } from './Styled';
+import Content from '../../components/Content';
+import ContentText from '../../components/ContentText';
+import MobileContentText from '../../components/MobileContentText';
 
 const Content01 = () => {
   const isMobile = useMobile();
-  // const [isModalVisible, setIsModalVisible] = useState(false);
   return (
-    <>
+    <Content
+      icon={<ProductContent01Svg />}
+      title="永續培力工作坊"
+      imgSrc="/images/product-contents-01"
+    >
       {isMobile ? (
         <MobileContentText>
           「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為期二天的培力工作坊。將針對公司治理、企業承諾、社會參與、環
@@ -32,25 +32,7 @@ const Content01 = () => {
           <ContentText>討論兩形式展開。</ContentText>
         </>
       )}
-
-      {/* <LearnMoreButtonContainer>
-        <LearnMoreButton onClick={() => setIsModalVisible(true)}>
-          瞭解
-          <br />
-          更多
-        </LearnMoreButton>
-      </LearnMoreButtonContainer>
-      <Modal
-        open={isModalVisible}
-        onRequestClose={() => setIsModalVisible(false)}
-      >
-        {isMobile ? (
-          <MobileModalContent onCloseClick={() => setIsModalVisible(false)} />
-        ) : (
-          <ModalContent onCloseClick={() => setIsModalVisible(false)} />
-        )}
-      </Modal> */}
-    </>
+    </Content>
   );
 };
 

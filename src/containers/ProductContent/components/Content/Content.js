@@ -1,14 +1,13 @@
 import ContentTitle from '../ContentTitle';
-import ContentBody from '../ContentBody';
 
-import { Wrapper, ContentTextContainer } from './styled';
+import { Wrapper, ContentBody, ContentTextContainer } from './styled';
 
-const Content = ({ icon, title, body, imgSrc }) => {
+const Content = ({ icon, title, children, imgSrc }) => {
   return (
     <Wrapper>
       <ContentTextContainer>
         <ContentTitle icon={icon}>{title}</ContentTitle>
-        <ContentBody>{body}</ContentBody>
+        <ContentBody>{children}</ContentBody>
       </ContentTextContainer>
 
       <picture>

@@ -13,7 +13,7 @@ export const Wrapper = styled(Flex)`
       margin-top: ${pxToRem(166)};
     }
 
-    &:nth-child(even) {
+    &:not(:first-child):nth-child(2n+1) {
       > :first-child {
         order: 2;
         > div {
@@ -53,5 +53,19 @@ export const ContentTextContainer = styled(Box)`
 
   ${media.lessThan('large')`
     width: ${mPxToRem(305)};
+  `}
+`;
+
+export const ContentBody = styled.div`
+  position: relative;
+  border-top: 1px solid #566c6c;
+
+  ${media.greaterThan('large')`
+    height: ${pxToRem(234.8)};
+    padding-top: ${pxToRem(38.8)};
+    text-align: justify;
+  `}
+  ${media.lessThan('large')`
+    padding-top: ${mPxToRem(25.8)};
   `}
 `;
