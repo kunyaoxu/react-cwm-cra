@@ -15337,12 +15337,12 @@ _:-ms-fullscreen
   padding: 0;
   color: transparent;
   font-size: 0;
-  background: #fff;
+  background: #cecece;
   border: 0;
   border-radius: 1px;
   outline: none;
   cursor: pointer;
-  opacity: 0.3;
+  opacity: 0.45;
   transition: all 0.5s;
 }
 .ant-carousel .slick-dots li button:focus,
@@ -15353,7 +15353,7 @@ _:-ms-fullscreen
   width: 24px;
 }
 .ant-carousel .slick-dots li.slick-active button {
-  background: #fff;
+  background: #566c6c;
   opacity: 1;
 }
 .ant-carousel .slick-dots li.slick-active:focus,
