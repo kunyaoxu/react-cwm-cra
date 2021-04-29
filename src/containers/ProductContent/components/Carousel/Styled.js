@@ -23,13 +23,18 @@ export const Wrapper = styled(Box)`
 export const CarouselContent = styled(Box)`
   ${media.greaterThan('large')`
     width: ${pxToRem(1180)};
-    height: ${pxToRem(606)};
+    height: ${pxToRem(606)};   
   `}
 
   ${media.lessThan('large')`
     width: ${mPxToRem(305)};
     height: ${mPxToRem(462)};
   `}
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const CarouselArrows = styled(Flex)`
