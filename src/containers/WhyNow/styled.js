@@ -13,6 +13,7 @@ export const Wrapper = styled(Flex)`
   ${media.greaterThan('large')`
     min-height: ${pxToRem(1080)};
     padding: ${pxToRem(290)} ${pxToRem(234)} ${pxToRem(137)} ${pxToRem(234)};
+    align-items: flex-end;
     justify-content: space-between;
   `}
 
@@ -68,7 +69,6 @@ export const WhyNowImageContainer = styled(Flex)`
     height: ${pxToRem(653)};
   `}
   ${media.lessThan('large')`
-    /* width: ${mPxToRem(320)}; */
     height: ${mPxToRem(320)};
     margin-top: ${mPxToRem(30)};
     margin-bottom: ${mPxToRem(30)};
