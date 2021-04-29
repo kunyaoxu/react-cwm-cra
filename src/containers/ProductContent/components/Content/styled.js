@@ -21,6 +21,12 @@ export const Wrapper = styled(Flex)`
         }
       }
     }
+
+    &:first-child, &:nth-child(2n) {
+      div.product-content-card-body {
+        padding-right: ${pxToRem(96)};
+      }
+    }
   `}
 
   ${media.lessThan('large')`

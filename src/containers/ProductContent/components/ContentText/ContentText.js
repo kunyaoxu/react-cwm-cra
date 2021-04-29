@@ -9,6 +9,7 @@ export const ContentText = styled.p`
 
   ${media.greaterThan('large')`
     font-size: ${pxToRem(20)};
+    line-height: ${pxToRem(36)};
     letter-spacing: ${pxToRem(0.8)};
     &.gap {
       margin-top: ${pxToRem(42)};

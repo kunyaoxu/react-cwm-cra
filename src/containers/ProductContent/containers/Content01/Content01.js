@@ -19,18 +19,10 @@ const Content01 = () => {
           practice與分組討論兩形式展開各以典範借鏡與分組討論兩形式展開。
         </MobileContentText>
       ) : (
-        <>
-          <ContentText>
-            「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為期二天
-          </ContentText>
-          <ContentText>
-            的培力工作坊。將針對公司治理、企業承諾、社會參與、環境永續四大
-          </ContentText>
-          <ContentText>
-            面向，各以Best practice與分組討論兩形式展開各以典範借鏡與分組
-          </ContentText>
-          <ContentText>討論兩形式展開。</ContentText>
-        </>
+        <ContentText>
+          「永續培力工作坊」為永續會的一大特色，是針對每期會員一場為期二天的培力工作坊。將針對公司治理、企業承諾、社會參與、環境永續四大面向，各以Best
+          practice與分組討論兩形式展開各以典範借鏡與分組討論兩形式展開。
+        </ContentText>
       )}
     </Content>
   );

@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
     padding-top: ${mPxToRem(191)};
     padding-bottom: ${mPxToRem(313)};
     text-shadow: 0 0 ${mPxToRem(20)} rgba(0, 0, 0, 0.7);
-    background-image: url('/images/天下永續會_CWS_淨零轉型@mobile.jpeg');
+    background-image: url('/images/天下永續會_CWS_淨零轉型@m.jpeg');
 
     *:not(:first-child) {
       margin-top: ${mPxToRem(16)};

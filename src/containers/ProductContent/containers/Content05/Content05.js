@@ -17,17 +17,17 @@ const Content05 = () => {
           國際政經局勢的動盪移轉、產業科技的變革創新，緊扣總體經濟發展！如何從新局勢與科技，看見未來機會？以天下永續會會員身份，受邀參加天下雜誌年度經濟論壇，天下經濟論壇夏季場（2021年7月15日）和冬季場。
         </MobileContentText>
       ) : (
-        <>
-          <ContentText>
-            國際政經局勢的動盪移轉、產業科技的變革創新，緊扣總體經濟發展！
-          </ContentText>
-          <ContentText>如何從新局勢與科技，看見未來機會？</ContentText>
-          <ContentText>以天下永續會會員身份，</ContentText>
-          <ContentText>受邀參加天下雜誌年度經濟論壇，</ContentText>
-          <ContentText>
-            天下經濟論壇夏季場（2021年7月15日）和冬季場。
-          </ContentText>
-        </>
+        <ContentText>
+          國際政經局勢的動盪移轉、產業科技的變革創新，緊扣總體經濟發展！
+          <br />
+          如何從新局勢與科技，看見未來機會？
+          <br />
+          以天下永續會會員身份，
+          <br />
+          受邀參加天下雜誌年度經濟論壇，
+          <br />
+          天下經濟論壇夏季場（2021年7月15日）和冬季場。
+        </ContentText>
       )}
     </Content>
   );

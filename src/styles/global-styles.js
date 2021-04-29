@@ -63,18 +63,6 @@ const GlobalStyle = createGlobalStyle`
       letter-spacing: ${mPxToRem(0.75)};
     `}
   }
-
-  *.only-mobile {
-    ${media.greaterThan('large')`
-      display: none;
-    `}
-  }
-
-  *.only-desktop {
-    ${media.lessThan('large')`
-      display: none;
-    `}
-  }
   
   .ant-select-item.ant-select-item-option.ant-select-item-option-selected {
     color: #566c6c;

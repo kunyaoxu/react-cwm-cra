@@ -7,7 +7,9 @@ const Content = ({ icon, title, children, imgSrc }) => {
     <Wrapper>
       <ContentTextContainer>
         <ContentTitle icon={icon}>{title}</ContentTitle>
-        <ContentBody>{children}</ContentBody>
+        <ContentBody className="product-content-card-body">
+          {children}
+        </ContentBody>
       </ContentTextContainer>
 
       <picture>
