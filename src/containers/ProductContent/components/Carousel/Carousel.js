@@ -41,6 +41,8 @@ const CarouselComp = () => {
               isMobile ? '@m' : ''
             }.svg`}
             alt="天下永續工作坊兩日行程安排-DAY1"
+            width={isMobile ? 305 : 606}
+            height={isMobile ? 462 : 1180}
           />
         </CarouselContent>
         <CarouselContent>
