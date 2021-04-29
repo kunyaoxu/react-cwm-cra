@@ -10,7 +10,7 @@ const Content05 = () => {
     <Content
       icon={<ProductContent05Svg />}
       title="天下經濟論壇"
-      imgSrc="/images/product-contents-05"
+      imgSrc="/images/CWEF_天下經濟論壇_經濟學人"
     >
       {isMobile ? (
         <MobileContentText>

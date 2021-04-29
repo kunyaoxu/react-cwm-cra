@@ -21,9 +21,12 @@ const WhyNow = () => {
 
       <WhyNowImageContainer>
         <picture>
-          <source srcSet="/images/why-now-contents.webp" type="image/webp" />
+          <source
+            srcSet="/images/SDGs_CSR_天下永續會CW.webp"
+            type="image/webp"
+          />
           <img
-            srcSet="/images/why-now-contents.jpeg"
+            srcSet="/images/SDGs_CSR_天下永續會CWs.jpeg"
             alt="為什麼是現在"
             width="320"
             height="320"

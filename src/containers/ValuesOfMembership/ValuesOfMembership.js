@@ -22,28 +22,28 @@ const ValuesOfMembership = () => {
 
       <picture>
         <source
-          srcSet="/images/values-of-membership-imgs.webp"
+          srcSet="/images/天下永續會策略_CSR_ESG_DJSI.webp"
           media="(min-width: 1170px)"
           type="image/webp"
         />
         <source
-          srcSet="/images/values-of-membership-imgs.jpeg"
+          srcSet="/images/天下永續會策略_CSR_ESG_DJSI.jpeg"
           media="(min-width: 1170px)"
           type="image/jpeg"
         />
         <source
-          srcSet="/images/values-of-membership-imgs@mobile.webp"
+          srcSet="/images/永續培力坊_企業永續報告.webp"
           media="(max-width: 1170px)"
           type="image/webp"
         />
         <source
-          srcSet="/images/values-of-membership-imgs.jpeg"
+          srcSet="/images/永續培力坊_企業永續報告.jpeg"
           media="(max-width: 1170px)"
           type="image/jpeg"
         />
         <img
-          src="/images/values-of-membership-imgs@mobile.jpeg"
-          alt="天下永續會共有六個價值"
+          src="/images/永續培力坊_企業永續報告.jpeg"
+          alt="天下永續會策略"
           width={isMobile ? '170' : '1920'}
           height={isMobile ? '414' : '1920'}
         />
