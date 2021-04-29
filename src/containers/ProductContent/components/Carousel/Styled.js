@@ -21,8 +21,6 @@ export const Wrapper = styled(Box)`
 `;
 
 export const CarouselContent = styled(Box)`
-  background-color: cyan;
-
   ${media.greaterThan('large')`
     width: ${pxToRem(1180)};
     height: ${pxToRem(606)};
