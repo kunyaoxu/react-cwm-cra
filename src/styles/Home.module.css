@@ -5,3 +5,11 @@
   justify-content: center;
   align-items: center;
 }
+
+@font-face {
+  font-family: PlayfairDisplay;
+  font-display: swap;
+  src: local('PlayfairDisplay'),
+    url('../fonts/playfair-display.woff') format('woff'),
+    url('../fonts/playfair-display.ttf') format('truetype');
+}

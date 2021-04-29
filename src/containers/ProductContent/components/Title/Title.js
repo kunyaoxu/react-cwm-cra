@@ -1,21 +1,10 @@
-import useMobile from 'hooks/useMobile';
-import MobileChtTitle from 'components/MobileChtTitle';
+import TitleGlobal from 'components/Title';
 import { Wrapper } from './Styled';
-import { ReactComponent as ProductEngSvg } from '../../svgs/product-eng.svg';
-import { ReactComponent as ProductSvg } from '../../svgs/product.svg';
 
 const Title = () => {
-  const isMobile = useMobile();
   return (
     <Wrapper>
-      {isMobile ? (
-        <>
-          <ProductEngSvg />
-          <MobileChtTitle>天下永續會提供</MobileChtTitle>
-        </>
-      ) : (
-        <ProductSvg />
-      )}
+      <TitleGlobal eng="product" cht="天下永續會提供" />
     </Wrapper>
   );
 };

@@ -1,20 +1,10 @@
-import useMobile from 'hooks/useMobile';
-import { ReactComponent as JoinEngSvg } from '../../svgs/join@eng.svg';
-import { ReactComponent as JoinEnquirySvg } from '../../svgs/join-enquiry.svg';
-import { Wrapper, StyledMobileChtTitle } from './Styled';
+import TitleGlobal from 'components/Title';
+import { Wrapper } from './Styled';
 
 const Title = () => {
-  const isMobile = useMobile();
   return (
     <Wrapper>
-      {isMobile ? (
-        <>
-          <JoinEngSvg />
-          <StyledMobileChtTitle>申請表</StyledMobileChtTitle>
-        </>
-      ) : (
-        <JoinEnquirySvg />
-      )}
+      <TitleGlobal eng="join" cht="申請表" white />
     </Wrapper>
   );
 };

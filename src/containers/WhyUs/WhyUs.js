@@ -10,7 +10,7 @@ import {
 const WhyUs = () => (
   <Wrapper id="why-us" className="page-container">
     <ContentWrapper>
-      {/* 上方的Why Us svg */}
+      {/* 上方的Why Us */}
       <Title />
 
       {/* 底部的敘述 */}

@@ -1,21 +1,10 @@
-import useMobile from 'hooks/useMobile';
-import MobileChtTitle from 'components/MobileChtTitle';
-import { ReactComponent as TitleSvg } from 'svgs/schedule.svg';
-import { ReactComponent as MobileTitleSvg } from 'svgs/schedule-eng.svg';
+import TitleGlobal from 'components/Title';
 import { Wrapper } from './Styled';
 
 const Title = () => {
-  const isMobile = useMobile();
   return (
     <Wrapper>
-      {isMobile ? (
-        <>
-          <MobileTitleSvg />
-          <MobileChtTitle>天下永續會會員時程表</MobileChtTitle>
-        </>
-      ) : (
-        <TitleSvg />
-      )}
+      <TitleGlobal eng="schedule" cht="天下永續會會員時程表" />
     </Wrapper>
   );
 };

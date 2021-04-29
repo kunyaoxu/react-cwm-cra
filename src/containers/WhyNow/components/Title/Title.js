@@ -1,19 +1,10 @@
-import useMobile from 'hooks/useMobile';
-import { WhyNowSvg, WhyEngSvg } from '../../svgs';
-import { Wrapper, StyledMobileChtTitle } from './Styled';
+import TitleGlobal from 'components/Title';
+import { Wrapper } from './Styled';
 
 const Title = () => {
-  const isMobile = useMobile();
   return (
     <Wrapper>
-      {isMobile ? (
-        <>
-          <WhyEngSvg />
-          <StyledMobileChtTitle>為什麼是現在</StyledMobileChtTitle>
-        </>
-      ) : (
-        <WhyNowSvg />
-      )}
+      <TitleGlobal eng="why" cht="為什麼是現在" />
     </Wrapper>
   );
 };

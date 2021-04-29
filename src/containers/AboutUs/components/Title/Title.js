@@ -1,20 +1,10 @@
-import useMobile from 'hooks/useMobile';
-import { AboutSvg, AboutEngSvg } from '../../svgs';
-import { Wrapper, StyledMobileChtTitle } from './Styled';
+import TitleGlobal from 'components/Title';
+import { Wrapper } from './Styled';
 
 const Title = () => {
-  const isMobile = useMobile();
   return (
     <Wrapper>
-      {isMobile ? (
-        <>
-          <AboutEngSvg />
-
-          <StyledMobileChtTitle>什麼是天下永續會</StyledMobileChtTitle>
-        </>
-      ) : (
-        <AboutSvg />
-      )}
+      <TitleGlobal eng="about" cht="什麼是天下永續會" white />
     </Wrapper>
   );
 };

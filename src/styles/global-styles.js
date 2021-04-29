@@ -102,6 +102,8 @@ const GlobalStyle = createGlobalStyle`
       font-size: ${pxToRem(16)};
     `}
   }
+
+ 
 `;
 
 export default GlobalStyle;
