@@ -32,7 +32,7 @@ const MobileContent = () => (
     <p>是動盪新時代下最能掌握新機遇的企業永續社群。</p>
 
     <ContentImg
-      src="/images/about-us-mobile-content.webp"
+      src={`${process.env.PUBLIC_URL}/images/about-us-mobile-content.webp`}
       alt="關於天下讀書會"
     />
   </Wrapper>

@@ -7,11 +7,11 @@ const AboutUs = () => (
   <Wrapper id="about-us">
     <picture>
       <source
-        srcSet="/images/綠能_綠色經濟_環境永續_天下永續會.webp"
+        srcSet={`${process.env.PUBLIC_URL}/images/綠能_綠色經濟_環境永續_天下永續會.webp`}
         type="image/webp"
       />
       <img
-        src="/images/綠能_綠色經濟_環境永續_天下永續會.png"
+        src={`${process.env.PUBLIC_URL}/images/綠能_綠色經濟_環境永續_天下永續會.png`}
         alt="什麼是天下永續會"
         width="167"
         height="290"

@@ -10,7 +10,7 @@ const Content03 = () => {
     <Content
       icon={<ProductContent03Svg />}
       title="企業永續調查白皮書"
-      imgSrc="/images/天下雜誌_企業永續調查白皮書"
+      imgSrc={`${process.env.PUBLIC_URL}/images/天下雜誌_企業永續調查白皮書`}
     >
       {isMobile ? (
         <MobileContentText>

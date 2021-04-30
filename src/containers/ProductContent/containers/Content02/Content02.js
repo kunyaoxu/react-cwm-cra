@@ -9,7 +9,7 @@ const Content02 = () => {
     <Content
       icon={<ProductContent02Svg />}
       title="企業家交流晚宴"
-      imgSrc="/images/天下永續會_企業交流活動_CWEF_經濟論壇"
+      imgSrc={`${process.env.PUBLIC_URL}/images/天下永續會_企業交流活動_CWEF_經濟論壇`}
     >
       {isMobile ? (
         <>

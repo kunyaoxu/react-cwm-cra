@@ -10,7 +10,7 @@ const Content04 = () => {
     <Content
       icon={<ProductContent04Svg />}
       title="典範企業參訪"
-      imgSrc="/images/天下永續公民獎_企業參訪_CWS"
+      imgSrc={`${process.env.PUBLIC_URL}/images/天下永續公民獎_企業參訪_CWS`}
     >
       {isMobile /* 手機版文字 */ ? (
         <MobileContentText>

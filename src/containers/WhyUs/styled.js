@@ -22,7 +22,7 @@ export const ContentWrapper = styled(Flex)`
     height: ${pxToRem(1080)};
     padding-top: ${pxToRem(210)};
     padding-bottom: ${pxToRem(43)};
-    background-image: url('/images/天下雜誌_天下永續會_ESG.jpeg');
+    background-image: url(${process.env.PUBLIC_URL}/images/天下雜誌_天下永續會_ESG.jpeg);
     background-position: top;
   `}
 
@@ -30,7 +30,7 @@ export const ContentWrapper = styled(Flex)`
     min-height: ${mPxToRem(816)};
     padding-top: ${mPxToRem(70)};
     padding-bottom: ${mPxToRem(43)};
-    background-image: url('/images/天下雜誌_天下永續會_ESG@mobile.jpeg');
+    background-image: url(${process.env.PUBLIC_URL}/images/天下雜誌_天下永續會_ESG@mobile.jpeg);
     background-position: center;
 
   `}

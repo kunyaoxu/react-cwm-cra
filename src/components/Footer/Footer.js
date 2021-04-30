@@ -10,9 +10,9 @@ const Footer = () => {
         <p>For a Better Society</p>
         <FooterBox>
           <picture>
-            <source srcSet="/images/footer.webp" type="image/webp" />
+            <source srcSet={`${process.env.PUBLIC_URL}/images/footer.webp`} type="image/webp" />
             <img
-              src="/images/footer.jpeg"
+              src={`${process.env.PUBLIC_URL}/images/footer.jpeg`}
               alt="天下雜誌, 天下永續會"
               width="141.2"
               height="51.9"

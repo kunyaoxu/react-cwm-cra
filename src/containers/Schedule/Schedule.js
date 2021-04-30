@@ -12,11 +12,11 @@ const Schedule = () => {
         {isMobile ? (
           <picture>
             <source
-              srcSet="/images/天下永續會會員時程表@m.webp"
+              srcSet={`${process.env.PUBLIC_URL}/images/天下永續會會員時程表@m.webp`}
               type="image/webp"
             />
             <img
-              src="/images/天下永續會會員時程表@m.png"
+              src={`${process.env.PUBLIC_URL}/images/天下永續會會員時程表@m.png`}
               alt="天下永續會會員時程表，第一期7月1日到9月30日，第二期10月1日到12月31日"
               width="367.5"
               height="319.5"
@@ -25,11 +25,11 @@ const Schedule = () => {
         ) : (
           <picture>
             <source
-              srcSet="/images/天下永續會會員時程表.webp"
+              srcSet={`${process.env.PUBLIC_URL}/images/天下永續會會員時程表.webp`}
               type="image/webp"
             />
             <img
-              src="/images/天下永續會會員時程表.png"
+              src={`${process.env.PUBLIC_URL}/images/天下永續會會員時程表.png`}
               alt="天下永續會會員時程表，第一期7月1日到9月30日，第二期10月1日到12月31日"
               width="912"
               height="466.1"
