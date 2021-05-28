@@ -26,7 +26,7 @@ const WhyNow = () => {
             type="image/webp"
           />
           <img
-            srcSet={`${process.env.PUBLIC_URL}/images/SDGs_CSR_天下永續會CWs.jpeg`}
+            srcSet={`${process.env.PUBLIC_URL}/images/SDGs_CSR_天下永續會CW.jpeg`}
             alt="為什麼是現在"
             width="320"
             height="320"

@@ -12,6 +12,7 @@ import Schedule from 'containers/Schedule';
 import ValuesOfMembership from 'containers/ValuesOfMembership';
 import ProductContent from 'containers/ProductContent';
 import JoinEnquiry from 'containers/JoinEnquiry';
+import PresidentLetter from 'containers/PresidentLetter';
 
 import 'styles/antd.css';
 import GlobalStyle from 'styles/global-styles';
@@ -37,8 +38,7 @@ export default function App() {
           <Landing />
           {/* Section - Why Now */}
           <WhyNow />
-          {/* Section - Why Us */}
-          <WhyUs />
+
           {/* Section - About Us */}
           <AboutUs />
           {/* Section - Values Of Membership */}
@@ -49,6 +49,10 @@ export default function App() {
           <Schedule />
           {/* Section - Join Enquiry */}
           <JoinEnquiry />
+          {/* Section - Why Us */}
+          <WhyUs />
+          {/* Section - President Letter */}
+          <PresidentLetter />
         </Content>
 
         {/* Footer */}
