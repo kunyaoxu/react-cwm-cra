@@ -5,8 +5,8 @@ import { Wrapper } from './Styled';
 const Title = ({ eng, cht, white }) => {
   return (
     <Wrapper className={classnames({ white })}>
-      <span className="eng">{eng}</span>
       <span className="cht">{cht}</span>
+      <span className="eng">{eng}</span>
     </Wrapper>
   );
 };

@@ -8,6 +8,7 @@ import Landing from 'containers/Home';
 import WhyNow from 'containers/WhyNow';
 import WhyUs from 'containers/WhyUs';
 import AboutUs from 'containers/AboutUs';
+import AboutCWS from 'containers/AboutCWS';
 import Schedule from 'containers/Schedule';
 import ValuesOfMembership from 'containers/ValuesOfMembership';
 import ProductContent from 'containers/ProductContent';
@@ -38,7 +39,8 @@ export default function App() {
           <Landing />
           {/* Section - Why Now */}
           <WhyNow />
-
+          {/* Section - About CWS */}
+          <AboutCWS />
           {/* Section - About Us */}
           <AboutUs />
           {/* Section - Values Of Membership */}

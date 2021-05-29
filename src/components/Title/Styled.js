@@ -12,6 +12,11 @@ export const Wrapper = styled(Box)`
     color: white;
   }
 
+  span {
+    display: block;
+    text-align: center;
+  }
+
   span.eng {
     font-family: 'PlayfairDisplay';
     font-style: italic;
@@ -23,33 +28,27 @@ export const Wrapper = styled(Box)`
   }
 
   ${media.greaterThan('large')`
-    span.eng {
-      font-size: ${pxToRem(80)};
-      line-height: 1.2;
-    }
-    span.cht {
-      font-size: ${pxToRem(41)};
+  span.cht {
+      font-size: ${pxToRem(50)};
       font-weight: 600;
-      line-height: 2.61;
-      letter-spacing: ${pxToRem(4.76)};
+      letter-spacing: ${pxToRem(5.8)};
       margin-left: ${pxToRem(12.9)};
+    }
+    span.eng {
+      font-size: ${pxToRem(45)};
     }
   `}
 
   ${media.lessThan('large')`
-    span {
-      display: block;
-      text-align: center;
-    }
-    span.eng {
-      font-size: ${mPxToRem(40)};
-      line-height: ${mPxToRem(48)};
-    }
     span.cht {
-      font-size: ${mPxToRem(22)};
+      font-size: ${mPxToRem(24)};
       line-height: ${mPxToRem(27)};
       letter-spacing: ${mPxToRem(2.2)};
       margin-top: ${mPxToRem(4.5)};
+    }
+    span.eng {
+      font-size: ${mPxToRem(24)};
+      line-height: ${mPxToRem(48)};
     }
   `}
 `;
