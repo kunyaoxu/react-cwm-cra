@@ -4,7 +4,7 @@ import { Wrapper } from './Styled';
 const Title = () => {
   return (
     <Wrapper>
-      <TitleGlobal eng="join" cht="申請表" white />
+      <TitleGlobal eng="Enquiry" cht="了解更多" white />
     </Wrapper>
   );
 };

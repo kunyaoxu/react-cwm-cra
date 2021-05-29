@@ -5,13 +5,13 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
 export const Wrapper = styled(Box)`
   ${media.greaterThan('large')`
-    margin-top: ${pxToRem(246.1)};
-    margin-bottom: ${pxToRem(153.1)};
+    margin-top: ${pxToRem(194)};
+    margin-bottom: ${pxToRem(75)};
   `}
 
   ${media.lessThan('large')`
     margin-top: ${mPxToRem(70)};
-    margin-bottom: ${mPxToRem(33.6)};
+    margin-bottom: ${mPxToRem(21)};
   `}
 `;
 
