@@ -4,7 +4,7 @@ import { Wrapper } from './Styled';
 const Title = () => {
   return (
     <Wrapper>
-      <TitleGlobal eng="about" cht="什麼是天下永續會" white />
+      <TitleGlobal eng="ASPECTS" cht="企業經營四大面向" white />
     </Wrapper>
   );
 };

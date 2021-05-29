@@ -15,7 +15,6 @@ export const Wrapper = styled(Flex)`
     border-left: ${pxToRem(92)} solid #d6e2e5;
     border-right: ${pxToRem(92)} solid #d6e2e5;
     padding-top: ${pxToRem(214.9)};
-
   `}
 
   ${media.lessThan('large')`
@@ -34,7 +33,7 @@ export const Wrapper = styled(Flex)`
 
   img {
     ${media.greaterThan('large')`
-      width: ${pxToRem(1184)};
+      width: ${pxToRem(1090)};
       height: auto;
     `}
 

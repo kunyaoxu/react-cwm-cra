@@ -7,7 +7,7 @@ import Content from 'components/Content';
 import Landing from 'containers/Home';
 import WhyNow from 'containers/WhyNow';
 import WhyUs from 'containers/WhyUs';
-import AboutUs from 'containers/AboutUs';
+import Aspects from 'containers/Aspects';
 import AboutCWS from 'containers/AboutCWS';
 import Schedule from 'containers/Schedule';
 import ValuesOfMembership from 'containers/ValuesOfMembership';
@@ -41,8 +41,8 @@ export default function App() {
           <WhyNow />
           {/* Section - About CWS */}
           <AboutCWS />
-          {/* Section - About Us */}
-          <AboutUs />
+          {/* Section - Aspects */}
+          <Aspects />
           {/* Section - Values Of Membership */}
           <ValuesOfMembership />
           {/* Section - Product Content */}

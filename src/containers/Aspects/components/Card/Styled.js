@@ -36,10 +36,12 @@ export const Wrapper = styled(Flex)`
     ${media.greaterThan('large')`
       font-size: ${pxToRem(22)};
       line-height: ${pxToRem(16)};
+      letter-spacing: ${pxToRem(0.7)};
     `}
     ${media.lessThan('large')`
       font-size: ${mPxToRem(11)};
       line-height: ${mPxToRem(10)};
+      letter-spacing: ${mPxToRem(0.45)};
     `};
   }
 
