@@ -4,7 +4,7 @@ import { Wrapper } from './Styled';
 const Title = () => {
   return (
     <Wrapper>
-      <TitleGlobal eng="values" cht="永續會價值" />
+      <TitleGlobal eng="values" cht="天下永續六大價值" />
     </Wrapper>
   );
 };
