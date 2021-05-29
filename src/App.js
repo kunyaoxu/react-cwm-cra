@@ -11,7 +11,6 @@ import WhyUs from 'containers/WhyUs';
 import WhyNow from 'containers/WhyNow';
 import Rights from 'containers/Rights';
 import Landing from 'containers/Home';
-import Schedule from 'containers/Schedule';
 import JoinEnquiry from 'containers/JoinEnquiry';
 import PresidentLetter from 'containers/PresidentLetter';
 import ValuesOfMembership from 'containers/ValuesOfMembership';
@@ -48,8 +47,6 @@ export default function App() {
           <ValuesOfMembership />
           {/* Section - Rights */}
           <Rights />
-          {/* Section - Schedule */}
-          <Schedule />
           {/* Section - Join Enquiry */}
           <JoinEnquiry />
           {/* Section - Why Us */}
