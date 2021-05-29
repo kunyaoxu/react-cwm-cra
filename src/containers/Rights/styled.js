@@ -10,7 +10,7 @@ export const Wrapper = styled(Flex)`
 
   ${media.greaterThan('large')`
     /* height: ${pxToRem(2730)}; */
-    padding-top: ${pxToRem(250.1)};
+    padding-top: ${pxToRem(194)};
     border-left: ${pxToRem(92)} solid #d6e2e5;
     border-right: ${pxToRem(92)} solid #d6e2e5;
   `}
@@ -32,7 +32,7 @@ export const ContentWrapper = styled(Flex)`
 
   ${media.greaterThan('large')`
     padding: 0 ${pxToRem(278)} ${pxToRem(176)} ${pxToRem(278)};
-    margin-top: ${pxToRem(221)};
+    margin-top: ${pxToRem(93)};
   `}
 
   ${media.lessThan('large')`

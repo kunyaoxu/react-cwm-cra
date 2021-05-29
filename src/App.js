@@ -4,16 +4,17 @@ import smoothscroll from 'smoothscroll-polyfill';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import Content from 'components/Content';
-import Landing from 'containers/Home';
-import WhyNow from 'containers/WhyNow';
-import WhyUs from 'containers/WhyUs';
+
 import Aspects from 'containers/Aspects';
 import AboutCWS from 'containers/AboutCWS';
+import WhyUs from 'containers/WhyUs';
+import WhyNow from 'containers/WhyNow';
+import Rights from 'containers/Rights';
+import Landing from 'containers/Home';
 import Schedule from 'containers/Schedule';
-import ValuesOfMembership from 'containers/ValuesOfMembership';
-import ProductContent from 'containers/ProductContent';
 import JoinEnquiry from 'containers/JoinEnquiry';
 import PresidentLetter from 'containers/PresidentLetter';
+import ValuesOfMembership from 'containers/ValuesOfMembership';
 
 import 'styles/antd.css';
 import GlobalStyle from 'styles/global-styles';
@@ -45,8 +46,8 @@ export default function App() {
           <Aspects />
           {/* Section - Values Of Membership */}
           <ValuesOfMembership />
-          {/* Section - Product Content */}
-          <ProductContent />
+          {/* Section - Rights */}
+          <Rights />
           {/* Section - Schedule */}
           <Schedule />
           {/* Section - Join Enquiry */}

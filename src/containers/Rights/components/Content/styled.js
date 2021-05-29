@@ -13,7 +13,7 @@ export const Wrapper = styled(Flex)`
       margin-top: ${pxToRem(166)};
     }
 
-    &:not(:first-child):nth-child(2n+1) {
+    &:nth-child(2n) {
       > :first-child {
         order: 2;
         > div {
@@ -22,7 +22,7 @@ export const Wrapper = styled(Flex)`
       }
     }
 
-    &:first-child, &:nth-child(2n) {
+    &:nth-child(2n+1) {
       div.product-content-card-body {
         padding-right: ${pxToRem(96)};
       }

@@ -18,7 +18,7 @@ export const ContentText = styled.p`
 
   ${media.lessThan('large')`
     font-size: ${mPxToRem(13)};
-    line-height: ${mPxToRem(12)};
+    line-height: 1.7;
     letter-spacing: ${mPxToRem(0.5)};
     text-align: center;
     word-wrap: break-word;

@@ -4,7 +4,7 @@ import { Wrapper } from './Styled';
 const Title = () => {
   return (
     <Wrapper>
-      <TitleGlobal eng="product" cht="天下永續會提供" />
+      <TitleGlobal eng="RIGHTS" cht="會員專屬五大權益" />
     </Wrapper>
   );
 };
