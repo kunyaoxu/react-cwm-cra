@@ -8,6 +8,7 @@ import Content from 'components/Content';
 import Aspects from 'containers/Aspects';
 import AboutCWS from 'containers/AboutCWS';
 import WhyUs from 'containers/WhyUs';
+import WhyCWS from 'containers/WhyCWS';
 import WhyNow from 'containers/WhyNow';
 import Rights from 'containers/Rights';
 import Landing from 'containers/Home';
@@ -41,6 +42,8 @@ export default function App() {
           <WhyNow />
           {/* Section - About CWS */}
           <AboutCWS />
+          {/* Section - Why CWS */}
+          <WhyCWS />
           {/* Section - Aspects */}
           <Aspects />
           {/* Section - Values Of Membership */}

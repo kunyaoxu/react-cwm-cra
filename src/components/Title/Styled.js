@@ -31,6 +31,7 @@ export const Wrapper = styled(Box)`
   ${media.greaterThan('large')`
     span.cht {
       font-size: ${pxToRem(50)};
+      line-height: ${pxToRem(72)};
       letter-spacing: ${pxToRem(5.8)};
     }
     span.eng {
@@ -41,13 +42,12 @@ export const Wrapper = styled(Box)`
   ${media.lessThan('large')`
     span.cht {
       font-size: ${mPxToRem(24)};
-      line-height: ${mPxToRem(27)};
+      line-height: ${mPxToRem(36)};
       letter-spacing: ${mPxToRem(2.2)};
-      margin-top: ${mPxToRem(4.5)};
     }
     span.eng {
-      font-size: ${mPxToRem(24)};
-      line-height: ${mPxToRem(48)};
+      font-size: ${mPxToRem(22)};
+      line-height: ${mPxToRem(30)};
     }
   `}
 `;
