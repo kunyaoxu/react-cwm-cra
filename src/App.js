@@ -12,6 +12,7 @@ import WhyCWS from 'containers/WhyCWS';
 import WhyNow from 'containers/WhyNow';
 import Rights from 'containers/Rights';
 import Landing from 'containers/Home';
+import Mission from 'containers/Mission';
 import JoinEnquiry from 'containers/JoinEnquiry';
 import PresidentLetter from 'containers/PresidentLetter';
 import ValuesOfMembership from 'containers/ValuesOfMembership';
@@ -48,6 +49,8 @@ export default function App() {
           <Aspects />
           {/* Section - Values Of Membership */}
           <ValuesOfMembership />
+          {/* Section - Mission */}
+          <Mission />
           {/* Section - Rights */}
           <Rights />
           {/* Section - Join Enquiry */}
