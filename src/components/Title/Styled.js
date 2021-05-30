@@ -14,7 +14,8 @@ export const Wrapper = styled(Box)`
 
   span {
     display: block;
-    text-align: center;
+    font-weight: 600;
+    text-align: ${(props) => props.align};
   }
 
   span.eng {
@@ -28,11 +29,9 @@ export const Wrapper = styled(Box)`
   }
 
   ${media.greaterThan('large')`
-  span.cht {
+    span.cht {
       font-size: ${pxToRem(50)};
-      font-weight: 600;
       letter-spacing: ${pxToRem(5.8)};
-      margin-left: ${pxToRem(12.9)};
     }
     span.eng {
       font-size: ${pxToRem(45)};

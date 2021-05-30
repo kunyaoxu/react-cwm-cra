@@ -8,7 +8,8 @@ export const Wrapper = styled(Flex)`
   width: 100%;
   color: #566c6c;
   font-family: Noto Serif TC;
-  background-color: white;
+  background-image: url(${process.env.PUBLIC_URL}/images/why-now-bg.png);
+  background-size: cover;
 
   ${media.greaterThan('large')`
     min-height: ${pxToRem(1080)};
