@@ -7,7 +7,7 @@ export const Wrapper = styled(Flex)`
   width: 100%;
   align-items: center;
   flex-direction: column;
-  background: #98bc77;
+  background: #76ac71;
   position: relative;
 
   ${media.greaterThan('large')`
