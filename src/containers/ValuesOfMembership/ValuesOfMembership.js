@@ -1,8 +1,9 @@
-/* eslint-disable react/no-array-index-key */
+import LazyLoad from 'react-lazyload';
 import useMobile from 'hooks/useMobile';
 import Title from './components/Title';
 import TextBox from './components/TextBox';
 import { Wrapper, TextBoxContainer } from './styled';
+import pxToRem, { mPxToRem } from 'utils/pxToRem';
 
 const TEXT_LIST = [
   '發現企業決策納入永續的價值與方法。',
@@ -16,47 +17,49 @@ const TEXT_LIST = [
 const ValuesOfMembership = () => {
   const isMobile = useMobile();
   return (
-    <Wrapper id="values-of-membership">
-      {/* 區塊Title元件 */}
-      <Title />
+    <LazyLoad height={isMobile ? mPxToRem(928) : pxToRem(1080)} once>
+      <Wrapper id="values-of-membership">
+        {/* 區塊Title元件 */}
+        <Title />
 
-      <picture>
-        <source
-          srcSet={`${process.env.PUBLIC_URL}/images/天下永續會策略_CSR_ESG_DJSI.webp`}
-          media="(min-width: 1170px)"
-          type="image/webp"
-        />
-        <source
-          srcSet={`${process.env.PUBLIC_URL}/images/天下永續會策略_CSR_ESG_DJSI.jpeg`}
-          media="(min-width: 1170px)"
-          type="image/jpeg"
-        />
-        <source
-          srcSet={`${process.env.PUBLIC_URL}/images/永續培力坊_企業永續報告.webp`}
-          media="(max-width: 1170px)"
-          type="image/webp"
-        />
-        <source
-          srcSet={`${process.env.PUBLIC_URL}/images/永續培力坊_企業永續報告.jpeg`}
-          media="(max-width: 1170px)"
-          type="image/jpeg"
-        />
-        <img
-          src={`${process.env.PUBLIC_URL}/images/永續培力坊_企業永續報告.jpeg`}
-          alt="天下永續會策略"
-          width={isMobile ? '170' : '1920'}
-          height={isMobile ? '414' : '1920'}
-        />
-      </picture>
+        <picture>
+          <source
+            srcSet={`${process.env.PUBLIC_URL}/images/天下永續會策略_CSR_ESG_DJSI.webp`}
+            media="(min-width: 1170px)"
+            type="image/webp"
+          />
+          <source
+            srcSet={`${process.env.PUBLIC_URL}/images/天下永續會策略_CSR_ESG_DJSI.jpeg`}
+            media="(min-width: 1170px)"
+            type="image/jpeg"
+          />
+          <source
+            srcSet={`${process.env.PUBLIC_URL}/images/永續培力坊_企業永續報告.webp`}
+            media="(max-width: 1170px)"
+            type="image/webp"
+          />
+          <source
+            srcSet={`${process.env.PUBLIC_URL}/images/永續培力坊_企業永續報告.jpeg`}
+            media="(max-width: 1170px)"
+            type="image/jpeg"
+          />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/永續培力坊_企業永續報告.jpeg`}
+            alt="天下永續會策略"
+            width={isMobile ? '170' : '1920'}
+            height={isMobile ? '414' : '1920'}
+          />
+        </picture>
 
-      <TextBoxContainer>
-        {TEXT_LIST.map((text, i) => (
-          <TextBox key={i} index={i}>
-            <p>{text}</p>
-          </TextBox>
-        ))}
-      </TextBoxContainer>
-    </Wrapper>
+        <TextBoxContainer>
+          {TEXT_LIST.map((text, i) => (
+            <TextBox key={i} index={i}>
+              <p>{text}</p>
+            </TextBox>
+          ))}
+        </TextBoxContainer>
+      </Wrapper>
+    </LazyLoad>
   );
 };
 
