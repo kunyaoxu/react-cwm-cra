@@ -8,32 +8,34 @@ export const Wrapper = styled(Box)`
   position: relative;
 
   ${media.greaterThan('large')`
-    width: ${pxToRem(1180)};
-    height: ${pxToRem(606)};
-    margin-top: ${pxToRem(70)};
+    width: ${pxToRem(1573.4)};
+    height: ${pxToRem(801)};
+    margin-top: ${pxToRem(68)};
   `}
 
   ${media.lessThan('large')`
-    width: ${mPxToRem(305)};
-    height: ${mPxToRem(462)};
-    margin-top: ${mPxToRem(29)};
+    width: ${mPxToRem(341)};
+    height: ${mPxToRem(192)};
+    margin-top: ${mPxToRem(18)};
   `}
 `;
 
 export const CarouselContent = styled(Box)`
+  position: relative;
+
   ${media.greaterThan('large')`
-    width: ${pxToRem(1180)};
-    height: ${pxToRem(606)};   
+    width: ${pxToRem(1424)};
+    height: ${pxToRem(801)};
   `}
 
   ${media.lessThan('large')`
-    width: ${mPxToRem(305)};
-    height: ${mPxToRem(462)};
+    width: ${mPxToRem(341)};
+    height: ${mPxToRem(192)};
   `}
 
-  img {
+  iframe {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 `;
 

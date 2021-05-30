@@ -14,6 +14,7 @@ import Rights from 'containers/Rights';
 import Landing from 'containers/Home';
 import Mission from 'containers/Mission';
 import JoinEnquiry from 'containers/JoinEnquiry';
+import VideoShowcase from 'containers/VideoShowcase';
 import PresidentLetter from 'containers/PresidentLetter';
 import ValuesOfMembership from 'containers/ValuesOfMembership';
 
@@ -59,6 +60,8 @@ export default function App() {
           <WhyUs />
           {/* Section - President Letter */}
           <PresidentLetter />
+          {/* Section - Video Showcase */}
+          <VideoShowcase />
         </Content>
 
         {/* Footer */}
