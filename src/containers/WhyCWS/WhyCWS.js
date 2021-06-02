@@ -19,7 +19,11 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 const WhyCWS = () => {
   const isMobile = useMobile();
   return (
-    <LazyLoad height={isMobile ? mPxToRem(847) : pxToRem(1080)}>
+    <LazyLoad
+      height={isMobile ? mPxToRem(847) : pxToRem(1080)}
+      placeholder={<Wrapper id="why-cws" />}
+      once
+    >
       <Wrapper id="why-cws">
         <ContentWrapper>
           {/* 標頭 */}

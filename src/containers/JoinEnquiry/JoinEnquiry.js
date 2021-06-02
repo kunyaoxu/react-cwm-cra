@@ -113,7 +113,7 @@ const JoinEnquiry = () => {
   };
 
   return (
-    <Wrapper id="join-enquiry">
+    <Wrapper id="enquiry">
       {/* 頁面Title */}
       <Title />
       {/* 招收規則 */}

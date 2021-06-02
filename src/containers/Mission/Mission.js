@@ -17,7 +17,11 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 const Mission = () => {
   const isMobile = useMobile();
   return (
-    <LazyLoad height={isMobile ? mPxToRem(613) : pxToRem(1315)} once>
+    <LazyLoad
+      height={isMobile ? mPxToRem(613) : pxToRem(1315)}
+      placeholder={<Wrapper id="mission" />}
+      once
+    >
       <Wrapper id="mission">
         <ContentWrapper>
           {/* 標頭 */}
@@ -36,7 +40,10 @@ const Mission = () => {
               >
                 合規 → 賦能 → 競爭力
               </TextBox>
-              <TextBox marginTop={pxToRem(32)}>
+              <TextBox
+                marginTop={pxToRem(32)}
+                justifyContent={isMobile ? 'center' : 'flex-start'}
+              >
                 符合法令或投資人要求，養成ESG能力，具備ESG競爭力，
                 <br />
                 群聚最強ESG企業，共同倡議，共好社會。

@@ -47,51 +47,67 @@ const MobileNavbar = () => {
         </DrawerItem>
         <DrawerItem
           onClick={(e) => {
+            handleClickHashLink({ e, id: 'about-cws' });
+            onClose();
+          }}
+        >
+          ABOUT CWS
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'why-cws' });
+            onClose();
+          }}
+        >
+          WHY CWS
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'aspects' });
+            onClose();
+          }}
+        >
+          ASPECTS
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'values' });
+            onClose();
+          }}
+        >
+          VALUES
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'mission' });
+            onClose();
+          }}
+        >
+          MISSION
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'rights' });
+            onClose();
+          }}
+        >
+          RIGHTS
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
+            handleClickHashLink({ e, id: 'enquiry' });
+            onClose();
+          }}
+        >
+          ENQUIRY
+        </DrawerItem>
+        <DrawerItem
+          onClick={(e) => {
             handleClickHashLink({ e, id: 'why-us' });
             onClose();
           }}
         >
           WHY US
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'about-us' });
-            onClose();
-          }}
-        >
-          ABOUT US
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'values-of-membership' });
-            onClose();
-          }}
-        >
-          VALUES OF MEMBERSHIP
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'product-content' });
-            onClose();
-          }}
-        >
-          PRODUCT CONTENT
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'schedule-section' });
-            onClose();
-          }}
-        >
-          SCHEDULE
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'join-enquiry' });
-            onClose();
-          }}
-        >
-          JOIN ENQUIRY
         </DrawerItem>
       </Drawer>
     </>

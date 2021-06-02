@@ -9,8 +9,12 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 const AboutUs = () => {
   const isMobile = useMobile();
   return (
-    <LazyLoad height={isMobile ? mPxToRem(826) : pxToRem(1368)} once>
-      <Wrapper id="about-us">
+    <LazyLoad
+      height={isMobile ? mPxToRem(826) : pxToRem(1368)}
+      placeholder={<Wrapper id="aspects" />}
+      once
+    >
+      <Wrapper id="aspects">
         <picture>
           <source
             srcSet={`${process.env.PUBLIC_URL}/images/綠能_綠色經濟_環境永續_天下永續會.webp`}

@@ -30,9 +30,9 @@ export const DrawerItem = styled.div`
   cursor: pointer;
   font-family: 'Noto Sans TC';
   font-weight: bold;
-  font-size: 0.410628rem;
-  letter-spacing: 0.020531rem;
-  margin-bottom: 0.4rem;
+  font-size: ${mPxToRem(17)};
+  letter-spacing: ${mPxToRem(0.85)};
+  margin-bottom: ${mPxToRem(24)};
 
   :hover {
     color: #909798;

@@ -6,6 +6,7 @@ import {
   ContentWrapper,
   PageDescriptionContainer,
   Description,
+  Indicator,
 } from './styled';
 
 const WhyUs = () => {
@@ -41,6 +42,8 @@ const WhyUs = () => {
               打造企業家追求永續的交流、共享、共學平台，是動盪新時代下最能掌握新機遇的企業永續社群。
             </Description>
           )}
+
+          <Indicator />
         </PageDescriptionContainer>
       </ContentWrapper>
     </Wrapper>

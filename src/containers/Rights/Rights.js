@@ -14,7 +14,11 @@ const Rights = () => {
   const isMobile = useMobile();
 
   return (
-    <LazyLoad height={isMobile ? mPxToRem(3070) : pxToRem(2823)}>
+    <LazyLoad
+      height={isMobile ? mPxToRem(3070) : pxToRem(2823)}
+      placeholder={<Wrapper id="rights" />}
+      once
+    >
       <Wrapper id="rights">
         {/* 標頭 */}
         <Title />

@@ -10,7 +10,10 @@ const Navbar = () => {
     <Wrapper id="navbar">
       <BannerWrapper>
         <picture onClick={(e) => handleClickHashLink({ e, id: 'home' })}>
-          <source srcSet={`${process.env.PUBLIC_URL}/images/logo.webp`} type="image/webp" />
+          <source
+            srcSet={`${process.env.PUBLIC_URL}/images/logo.webp`}
+            type="image/webp"
+          />
           <img
             src={`${process.env.PUBLIC_URL}/images/logo.png`}
             alt="天下永續會"
@@ -20,8 +23,7 @@ const Navbar = () => {
         </picture>
       </BannerWrapper>
 
-      <Mobile />
-      <Desktop />
+      {isMobile ? <Mobile /> : <Desktop />}
     </Wrapper>
   );
 };

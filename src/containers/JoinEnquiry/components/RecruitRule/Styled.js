@@ -17,7 +17,7 @@ export const Wrapper = styled(Box)`
   `}
 
   ${media.lessThan('large')`
-    font-size: ${mPxToRem(11)};
+    font-size: ${mPxToRem(12)};
     line-height: 1.63;
     margin-bottom: ${mPxToRem(11)};
     letter-spacing: ${mPxToRem(0.55)};

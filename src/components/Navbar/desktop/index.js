@@ -11,41 +11,52 @@ const Navbar = () => (
         WHY NOW
       </NavbarItem>
       <NavbarItem
+        href="#about-cws"
+        onClick={(e) => handleClickHashLink({ e, id: 'about-cws' })}
+      >
+        ABOUT CWS
+      </NavbarItem>
+      <NavbarItem
+        href="#why-cws"
+        onClick={(e) => handleClickHashLink({ e, id: 'why-cws' })}
+      >
+        WHY CWS
+      </NavbarItem>
+      <NavbarItem
+        href="#aspects"
+        onClick={(e) => handleClickHashLink({ e, id: 'aspects' })}
+      >
+        ASPECTS
+      </NavbarItem>
+      <NavbarItem
+        href="#values"
+        onClick={(e) => handleClickHashLink({ e, id: 'values' })}
+      >
+        VALUES
+      </NavbarItem>
+      <NavbarItem
+        href="#mission"
+        onClick={(e) => handleClickHashLink({ e, id: 'mission' })}
+      >
+        MISSION
+      </NavbarItem>
+      <NavbarItem
+        href="#rights"
+        onClick={(e) => handleClickHashLink({ e, id: 'rights' })}
+      >
+        RIGHTS
+      </NavbarItem>
+      <NavbarItem
+        href="#enquiry"
+        onClick={(e) => handleClickHashLink({ e, id: 'enquiry' })}
+      >
+        ENQUIRY
+      </NavbarItem>
+      <NavbarItem
         href="#why-us"
         onClick={(e) => handleClickHashLink({ e, id: 'why-us' })}
       >
         WHY US
-      </NavbarItem>
-      <NavbarItem
-        href="#about-us"
-        onClick={(e) => handleClickHashLink({ e, id: 'about-us' })}
-      >
-        ABOUT US
-      </NavbarItem>
-      <NavbarItem
-        href="#values-of-membership"
-        onClick={(e) => handleClickHashLink({ e, id: 'values-of-membership' })}
-      >
-        VALUES OF MEMBERSHIP
-      </NavbarItem>
-      <NavbarItem
-        href="#product-content"
-        onClick={(e) => handleClickHashLink({ e, id: 'product-content' })}
-      >
-        PRODUCT CONTENT
-      </NavbarItem>
-      <NavbarItem
-        href="#schedule-section"
-        onClick={(e) => handleClickHashLink({ e, id: 'schedule-section' })}
-      >
-        SCHEDULE
-      </NavbarItem>
-      <NavbarItem
-        href="#join-enquiry"
-        onClick={(e) => handleClickHashLink({ e, id: 'join-enquiry' })}
-        style={{ marginRight: '0.259259rem' }}
-      >
-        JOIN ENQUIRY
       </NavbarItem>
     </ItemsBox>
   </Wrapper>

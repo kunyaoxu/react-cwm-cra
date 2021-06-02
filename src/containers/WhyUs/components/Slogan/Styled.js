@@ -20,5 +20,5 @@ export const StyledH2 = styled(H2)`
 
 export const StyledH3 = styled(H3)`
   text-align: center;
-  margin-bottom: 23px;
+  margin-bottom: 0px;
 `;

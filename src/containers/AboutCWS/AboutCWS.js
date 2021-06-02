@@ -16,7 +16,11 @@ import {
 const AboutCWS = () => {
   const isMobile = useMobile();
   return (
-    <LazyLoad height={isMobile ? mPxToRem(713) : pxToRem(1422)} once>
+    <LazyLoad
+      height={isMobile ? mPxToRem(713) : pxToRem(1422)}
+      placeholder={<Wrapper id="about-cws" />}
+      once
+    >
       <Wrapper id="about-cws">
         {/* 上半部 Container, 放Title */}
         <TopContainer>
@@ -32,11 +36,11 @@ const AboutCWS = () => {
             <BannerBox>
               <picture>
                 <source
-                  srcSet={`${process.env.PUBLIC_URL}/images/leadership-team-banner.webp`}
+                  srcSet={`${process.env.PUBLIC_URL}/images/什麼是天下永續會.webp`}
                   type="image/webp"
                 />
                 <img
-                  src={`${process.env.PUBLIC_URL}/images/leadership-team-banner.jpg`}
+                  src={`${process.env.PUBLIC_URL}/images/什麼是天下永續會.jpg`}
                   alt="..."
                   width="1736"
                   height="521"

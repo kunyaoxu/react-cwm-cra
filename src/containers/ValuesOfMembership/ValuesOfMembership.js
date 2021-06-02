@@ -17,8 +17,12 @@ const TEXT_LIST = [
 const ValuesOfMembership = () => {
   const isMobile = useMobile();
   return (
-    <LazyLoad height={isMobile ? mPxToRem(928) : pxToRem(1080)} once>
-      <Wrapper id="values-of-membership">
+    <LazyLoad
+      height={isMobile ? mPxToRem(928) : pxToRem(1080)}
+      placeholder={<Wrapper id="values" />}
+      once
+    >
+      <Wrapper id="values">
         {/* 區塊Title元件 */}
         <Title />
 

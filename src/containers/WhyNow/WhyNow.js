@@ -10,7 +10,11 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 const WhyNow = () => {
   const isMobile = useMobile();
   return (
-    <LazyLoad height={isMobile ? mPxToRem(837) : pxToRem(1080)}>
+    <LazyLoad
+      height={isMobile ? mPxToRem(837) : pxToRem(1080)}
+      placeholder={<Wrapper id="why-now" />}
+      once
+    >
       <Wrapper id="why-now">
         <MainPartContainer>
           {/* Section title */}

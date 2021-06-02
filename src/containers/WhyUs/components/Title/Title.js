@@ -4,7 +4,7 @@ import { Wrapper } from './Styled';
 const Title = () => {
   return (
     <Wrapper>
-      <TitleGlobal eng="why" cht="為什麼是天下雜誌" />
+      <TitleGlobal eng="why us" cht="為什麼是天下雜誌" />
     </Wrapper>
   );
 };
