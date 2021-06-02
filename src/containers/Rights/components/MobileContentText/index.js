@@ -7,9 +7,8 @@ export const MobileContentText = styled(Box)`
   color: #768e91;
   font-weight: 500;
   font-family: Noto Sans TC;
-  font-size: ${mPxToRem(14)};
-  line-height: 1.7;
-  letter-spacing: ${mPxToRem(0.5)};
+  font-size: ${mPxToRem(11)};
+  line-height: 1.64;
   text-align: center;
   word-wrap: break-word;
 

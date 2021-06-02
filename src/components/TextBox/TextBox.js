@@ -16,7 +16,7 @@ export const TextBox = styled(Flex)`
   `}
 
   ${media.lessThan('large')`
-    font-size: ${mPxToRem(11)};
+    font-size: ${mPxToRem(12)};
     line-height: 1.7;
     letter-spacing: ${mPxToRem(0.5)};
   `}

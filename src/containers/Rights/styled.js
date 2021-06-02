@@ -35,7 +35,7 @@ export const ContentWrapper = styled(Flex)`
 
   ${media.lessThan('large')`
     justify-content: space-between;
-    margin-top: ${mPxToRem(56.6)};
+    margin-top: ${mPxToRem(25.7)};
     padding-bottom: ${mPxToRem(48)};
   `}
 `;
