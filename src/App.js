@@ -1,4 +1,5 @@
 import { Layout } from 'antd';
+import styled from 'styled-components';
 import smoothscroll from 'smoothscroll-polyfill';
 
 import Navbar from 'components/Navbar';
@@ -25,6 +26,11 @@ import styles from 'styles/Home.module.css';
 // kick off the polyfill!
 smoothscroll.polyfill();
 
+const StyledLayout = styled(Layout)`
+  position: relative;
+  width: 100%;
+`;
+
 export default function App() {
   return (
     <div className={styles.container}>
@@ -32,7 +38,7 @@ export default function App() {
       <GlobalStyle />
 
       {/* Main Layout */}
-      <Layout style={{ width: '100%' }}>
+      <StyledLayout>
         {/* Navbar */}
         <Navbar />
 
@@ -66,7 +72,7 @@ export default function App() {
 
         {/* Footer */}
         <Footer />
-      </Layout>
+      </StyledLayout>
     </div>
   );
 }

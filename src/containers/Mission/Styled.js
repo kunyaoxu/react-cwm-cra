@@ -63,7 +63,7 @@ export const MainArticle = styled(Flex)`
 export const MainArticleImg = styled(Box)`
   background-image: url(${process.env.PUBLIC_URL}/images/天下永續會_使命.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
   ${media.greaterThan('large')`
     width: ${pxToRem(719)};
@@ -83,7 +83,7 @@ export const BottomImg = styled(Box)`
   flex: 1;
   width: 100%;
   background-image: url(${imgUrl});
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
 
   ${media.greaterThan('large')`

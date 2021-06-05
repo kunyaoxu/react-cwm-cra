@@ -16,7 +16,7 @@ const Rights = () => {
   return (
     <LazyLoad
       height={isMobile ? mPxToRem(3070) : pxToRem(2823)}
-      placeholder={<Wrapper id="rights" />}
+      placeholder={<Wrapper id="rights" height={pxToRem(2823)} />}
       once
     >
       <Wrapper id="rights">

@@ -22,6 +22,7 @@ export const Wrapper = styled(Box)`
 
 export const ContentWrapper = styled(Box)`
   height: 100%;
+  position: relative;
   background-color: #f6f6f6;
 
   ${media.greaterThan('large')`
@@ -46,6 +47,7 @@ export const MobileCWSLogoFlexBox = styled(Flex)`
 
 export const MainContentWrapper = styled(Flex)`
   width: 100%;
+
   ${media.greaterThan('large')`
     margin-top: ${pxToRem(120)};
   `}
@@ -75,7 +77,7 @@ export const CSRSolutionImgBox = styled(Box)`
 export const PageArticleWrapper = styled(Box)`
   ${media.greaterThan('large')`
     margin-left: ${pxToRem(115)};
-    `}
+  `}
 
   ${media.lessThan('large')`
     margin-top: ${mPxToRem(41)};
