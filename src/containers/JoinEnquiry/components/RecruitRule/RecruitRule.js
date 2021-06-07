@@ -1,37 +1,11 @@
 import useMobile from 'hooks/useMobile';
+import { ReactComponent as DesktopSvg } from './svg/desktop.svg';
+import { ReactComponent as MobileSvg } from './svg/mobile.svg';
 import { Wrapper } from './Styled';
 
 const RecruitRule = () => {
   const isMobile = useMobile();
-  return (
-    <Wrapper>
-      {isMobile ? (
-        <>
-          天下永續會採審核機制，以3個月(一季)為一期，每期僅招收30位會員，
-          <br />
-          每位會員可參加一次當季的培力工坊，並享有一整年度的五大權益。欲了
-          <br />
-          解更多「天下永續會」，請於下方表格填寫相關資訊，送出後，將有專員
-          <br />
-          與您聯繫並提供天下永續會介紹手冊。若有任何問題，歡迎致電尊榮服務
-          <br />
-          專線：02-2662-0332（週一～週五 09:00~17:30）
-          <br />
-        </>
-      ) : (
-        <>
-          天下永續會採審核機制，以3個月(一季)為一期，每期僅招收30位會員，
-          <br />
-          每位會員可參加一次當季的培力工坊，並享有一整年度的五大權益。
-          <br />
-          欲了解更多「天下永續會」，請於下方表格填寫相關資訊，送出後，將有專員與您聯繫並提供天下永續會介紹手冊。
-          <br />
-          若有任何問題，歡迎致電尊榮服務專線：02-2662-0332（週一～週五
-          09:00~17:30）
-        </>
-      )}
-    </Wrapper>
-  );
+  return <Wrapper>{isMobile ? <MobileSvg /> : <DesktopSvg />}</Wrapper>;
 };
 
 export default RecruitRule;

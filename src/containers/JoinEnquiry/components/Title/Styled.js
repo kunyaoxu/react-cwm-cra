@@ -11,7 +11,7 @@ export const Wrapper = styled(Box)`
 
   ${media.lessThan('large')`
     margin-top: ${mPxToRem(70)};
-    margin-bottom: ${mPxToRem(21)};
+    margin-bottom: ${mPxToRem(31)};
   `}
 `;
 
