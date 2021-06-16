@@ -34,7 +34,8 @@ export const BannerWrapper = styled.div`
     padding-left: ${pxToRem(95)};
     cursor: pointer;
     img {
-      aspect-ratio: attr(width) / attr(height);
+      width: auto;
+      height: ${pxToRem(71.6)};
     }
   `}
 
@@ -43,7 +44,8 @@ export const BannerWrapper = styled.div`
     display: flex;
     justify-content: center;
     img {
-      aspect-ratio: attr(width) / attr(height);
+      width: auto;
+      height: ${mPxToRem(48.8)};
     }
   `}
 `;
