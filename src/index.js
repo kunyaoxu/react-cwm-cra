@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 import disableReactDevTools from 'utils/disableReactDevTools';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 if (process.env.NODE_ENV === 'production') disableReactDevTools();
 
-ReactDOM.render(
+render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
