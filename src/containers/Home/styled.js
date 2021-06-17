@@ -57,7 +57,11 @@ export const SloganTextBox = styled.div`
   `}
 `;
 
-export const BrandTextBox = styled.div`
+export const BrandTextBox = styled.h1`
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0;
+
   ${media.greaterThan('large')`
     font-size: ${pxToRem(67)};
     letter-spacing: ${pxToRem(26.8)};
