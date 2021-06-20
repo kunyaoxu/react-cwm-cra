@@ -9,6 +9,7 @@ const Content03 = () => {
   return (
     <Content
       icon={<ProductContent03Svg />}
+      alt="每年12月將製作會員專屬的年度企業永續白皮書"
       title="企業永續調查白皮書"
       imgSrc={`${process.env.PUBLIC_URL}/images/天下雜誌_企業永續調查白皮書`}
     >

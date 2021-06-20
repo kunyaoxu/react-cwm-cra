@@ -9,6 +9,7 @@ const Content04 = () => {
   return (
     <Content
       icon={<ProductContent04Svg />}
+      alt="永續會每半年舉辦一次典範企業參訪，以參訪當年度天下永續公民獎各組名列前茅之企業為主"
       title="典範企業參訪"
       imgSrc={`${process.env.PUBLIC_URL}/images/天下永續公民獎_企業參訪_CWS`}
     >

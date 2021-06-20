@@ -41,7 +41,7 @@ const AboutCWS = () => {
                 />
                 <img
                   src={`${process.env.PUBLIC_URL}/images/什麼是天下永續會.jpg`}
-                  alt="..."
+                  alt="天下永續會針對企業經營的四大面向，共享永續會的六大價值和會員專屬的五大權益"
                   width="1736"
                   height="521"
                 />

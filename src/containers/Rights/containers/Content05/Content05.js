@@ -9,6 +9,7 @@ const Content05 = () => {
   return (
     <Content
       icon={<ProductContent05Svg />}
+      alt="以天下永續會會員身份，受邀參加天下雜誌年度經濟論壇夏季場和冬季場"
       title="天下經濟論壇"
       imgSrc={`${process.env.PUBLIC_URL}/images/CWEF_天下經濟論壇_經濟學人`}
     >

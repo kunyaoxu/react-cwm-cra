@@ -26,6 +26,7 @@ const ValuesOfMembership = () => {
         {/* 區塊Title元件 */}
         <Title />
 
+        {/* 區塊 banner */}
         <picture>
           <source
             srcSet={`${process.env.PUBLIC_URL}/images/天下永續會策略_CSR_ESG_DJSI.webp`}
@@ -49,7 +50,7 @@ const ValuesOfMembership = () => {
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/永續培力坊_企業永續報告.jpeg`}
-            alt="天下永續會策略"
+            alt="企業會員共享天下永續會六大價值"
             width={isMobile ? '170' : '1920'}
             height={isMobile ? '414' : '1920'}
           />

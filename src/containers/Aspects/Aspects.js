@@ -22,7 +22,7 @@ const AboutUs = () => {
           />
           <img
             src={`${process.env.PUBLIC_URL}/images/綠能_綠色經濟_環境永續_天下永續會.png`}
-            alt="什麼是天下永續會"
+            alt="天下永續會針對企業經營四大面向提供交流、培力、見學等多元形式與內容"
             width="10"
             height="10"
           />

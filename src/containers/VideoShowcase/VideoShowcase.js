@@ -6,7 +6,10 @@ const VideoShowcase = () => {
     <Wrapper>
       <Carousel />
       <Description>2021《 如何避免氣候災難》行動論壇精彩回顧</Description>
-      <MoreInfoButton href="https://csr.cw.com.tw/article/41950">
+      <MoreInfoButton
+        href="https://csr.cw.com.tw/article/41950"
+        title="如何避免氣候災難行動論壇宣布成立天下永續會"
+      >
         觀看更多精彩演講內容
       </MoreInfoButton>
     </Wrapper>

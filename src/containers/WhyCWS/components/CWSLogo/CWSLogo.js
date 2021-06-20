@@ -10,7 +10,7 @@ const CWSLogo = (props) => {
         />
         <img
           src={`${process.env.PUBLIC_URL}/images/CWS_LOGO.png`}
-          alt="CWS 天下永續會"
+          alt="選擇天下永續會，協助解決企業獨自面對永續發展時的難題"
         />
       </picture>
     </Wrapper>

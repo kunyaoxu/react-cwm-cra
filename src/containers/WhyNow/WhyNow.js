@@ -36,7 +36,7 @@ const WhyNow = () => {
             />
             <img
               srcSet={`${process.env.PUBLIC_URL}/images/SDGs_CSR_天下永續會CW.jpeg`}
-              alt="為什麼是現在"
+              alt="現在成立天下永續會，協助企業把握危機轉型的新際遇，為永續經營奠基"
               width="320"
               height="320"
             />

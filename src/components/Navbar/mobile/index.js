@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Drawer } from 'antd';
+import { NAV_ITEMS_PROPS } from '../constants';
 import { handleClickHashLink } from 'utils/hashLinkClickHandler';
 import { HamburgerSvg, DrawerCloseSvg } from '../svgs';
 import { HamburgerBox, CloseIconBox, DrawerItem } from './styled';
@@ -37,78 +38,20 @@ const MobileNavbar = () => {
           </CloseIconBox>
         }
       >
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'why-now' });
-            onClose();
-          }}
-        >
-          WHY NOW
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'about-cws' });
-            onClose();
-          }}
-        >
-          ABOUT CWS
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'why-cws' });
-            onClose();
-          }}
-        >
-          WHY CWS
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'aspects' });
-            onClose();
-          }}
-        >
-          ASPECTS
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'values' });
-            onClose();
-          }}
-        >
-          VALUES
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'mission' });
-            onClose();
-          }}
-        >
-          MISSION
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'rights' });
-            onClose();
-          }}
-        >
-          RIGHTS
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'enquiry' });
-            onClose();
-          }}
-        >
-          ENQUIRY
-        </DrawerItem>
-        <DrawerItem
-          onClick={(e) => {
-            handleClickHashLink({ e, id: 'why-us' });
-            onClose();
-          }}
-        >
-          WHY US
-        </DrawerItem>
+        {NAV_ITEMS_PROPS.map((props, i) => {
+          const { id, text } = props;
+          return (
+            <DrawerItem
+              key={i}
+              onClick={(e) => {
+                handleClickHashLink({ e, id });
+                onClose();
+              }}
+            >
+              {text}
+            </DrawerItem>
+          );
+        })}
       </Drawer>
     </>
   );

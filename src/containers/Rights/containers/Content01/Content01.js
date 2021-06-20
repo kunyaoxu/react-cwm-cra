@@ -10,6 +10,7 @@ const Content01 = () => {
   return (
     <Content
       icon={<ProductContent01Svg />}
+      alt="永續培力工作坊為永續會的一大特色，針對每年度會員進行一場為期二天的培力工作坊"
       title="永續培力工作坊"
       imgSrc={`${process.env.PUBLIC_URL}/images/天下永續會_培力工作坊_企業永續營`}
     >
