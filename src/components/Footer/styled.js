@@ -22,12 +22,12 @@ export const Wrapper = styled(Flex)`
   }
 
   ${media.greaterThan('large')`
-    height: ${pxToRem(376)};
+    min-height: ${pxToRem(376)};
     padding: ${pxToRem(145)} ${pxToRem(107)} ${pxToRem(65.3)} ${pxToRem(109.5)};
   `}
 
   ${media.lessThan('large')`
-    height: ${mPxToRem(375)};
+    min-height: ${mPxToRem(375)};
     padding: ${mPxToRem(145)} ${mPxToRem(42)} ${mPxToRem(48.3)} ${mPxToRem(42)};
     
     span {
