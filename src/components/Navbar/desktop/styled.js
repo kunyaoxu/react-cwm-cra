@@ -1,4 +1,4 @@
-import { Button } from 'antd';
+import Button from 'antd/lib/button';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import Flex from 'common/Flex';

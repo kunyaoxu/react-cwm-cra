@@ -1,0 +1,11 @@
+import 'antd/lib/col/style/css';
+import 'antd/lib/row/style/css';
+import 'antd/lib/form/style/css';
+import 'antd/lib/input/style/css';
+import 'antd/lib/button/style/css';
+import 'antd/lib/select/style/css';
+import 'antd/lib/message/style/css';
+import 'antd/lib/checkbox/style/css';
+import 'antd/lib/layout/style/css';
+import 'antd/lib/drawer/style/css';
+import 'antd/lib/carousel/style/css';

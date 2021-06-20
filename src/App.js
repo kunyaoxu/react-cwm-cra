@@ -1,4 +1,4 @@
-import { Layout } from 'antd';
+import Layout from 'antd/lib/layout';
 import styled from 'styled-components';
 import smoothscroll from 'smoothscroll-polyfill';
 
@@ -19,7 +19,8 @@ import VideoShowcase from 'containers/VideoShowcase';
 import PresidentLetter from 'containers/PresidentLetter';
 import ValuesOfMembership from 'containers/ValuesOfMembership';
 
-import 'styles/antd.css';
+// import 'styles/antd.css';
+import 'styles/antd.js';
 import GlobalStyle from 'styles/global-styles';
 import styles from 'styles/Home.module.css';
 

@@ -1,4 +1,9 @@
-import { Form, Button, Select, Input, Col, Checkbox } from 'antd';
+import Col from 'antd/lib/col';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Button from 'antd/lib/button';
+import Select from 'antd/lib/select';
+import Checkbox from 'antd/lib/checkbox';
 import styled, { keyframes } from 'styled-components';
 import media from 'styled-media-query';
 import Flex from 'common/Flex';

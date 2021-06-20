@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Drawer } from 'antd';
+import Drawer from 'antd/lib/drawer';
 import { NAV_ITEMS_PROPS } from '../constants';
 import { handleClickHashLink } from 'utils/hashLinkClickHandler';
 import { HamburgerSvg, DrawerCloseSvg } from '../svgs';

@@ -1,6 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
-import { Form, Checkbox, Row, message } from 'antd';
+import Row from 'antd/lib/row';
+import Form from 'antd/lib/form';
+import message from 'antd/lib/message';
+import Checkbox from 'antd/lib/checkbox';
 import { CaretDownOutlined } from '@ant-design/icons';
+
 import Title from './components/Title';
 import RecruitRule from './components/RecruitRule';
 import SortInfo from './components/SortInfo';
