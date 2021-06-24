@@ -44,6 +44,17 @@ const AboutUs = () => {
             ]}
           />
           <Card
+            title="社會參與"
+            contents={[
+              'SDGs選題與呈現原則',
+              '企業志工氛圍形塑',
+              '本業核心職能的連結之道',
+              '擴大供應商、客戶參與',
+              '社會投資影響力最大化',
+            ]}
+          />
+          <div className="break" />
+          <Card
             title="企業承諾"
             contents={[
               '人才培育制度的建立',
@@ -53,7 +64,6 @@ const AboutUs = () => {
               '對客戶、消費者承諾的創新實務',
             ]}
           />
-          <div className="break" />
           <Card
             title="環境永續"
             contents={[
@@ -62,16 +72,6 @@ const AboutUs = () => {
               '擴大改善層面',
               '創新環境行動探討',
               '環境影響力的擴大與擴散',
-            ]}
-          />
-          <Card
-            title="社會參與"
-            contents={[
-              'SDGs選題與呈現原則',
-              '企業志工氛圍形塑',
-              '本業核心職能的連結之道',
-              '擴大供應商、客戶參與',
-              '社會投資影響力最大化',
             ]}
           />
         </CardContainer>

@@ -7,10 +7,14 @@ import pxToRem, { mPxToRem } from 'utils/pxToRem';
 export const Wrapper = styled(Flex)`
   ${media.greaterThan('large')`
     width: ${pxToRem(1180)};
-    height: ${pxToRem(338)};
+    min-height: ${pxToRem(338)};
 
     &:not(:first-child) {
       margin-top: ${pxToRem(166)};
+    }
+
+    &:nth-child(2) {
+      margin-top: ${pxToRem(72)};
     }
 
     &:nth-child(2n) {
@@ -67,7 +71,7 @@ export const ContentBody = styled.div`
   border-top: 1px solid #566c6c;
 
   ${media.greaterThan('large')`
-    height: ${pxToRem(234.8)};
+    min-height: ${pxToRem(234.8)};
     padding-top: ${pxToRem(38.8)};
     text-align: justify;
   `}

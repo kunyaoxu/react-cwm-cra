@@ -9,7 +9,7 @@ export const MobileContentText = styled(Box)`
   font-family: Noto Sans TC;
   font-size: ${mPxToRem(11)};
   line-height: 1.64;
-  text-align: center;
+  text-align: left;
   word-wrap: break-word;
 
   &.gap {

@@ -3,9 +3,11 @@ import useMobile from 'hooks/useMobile';
 import Content from '../../components/Content';
 import ContentText from '../../components/ContentText';
 import MobileContentText from '../../components/MobileContentText';
+import { contextType } from 'react-modal';
 
 const Content04 = () => {
   const isMobile = useMobile();
+  const ContextComp = isMobile ? MobileContentText : ContentText;
   return (
     <Content
       icon={<ProductContent04Svg />}
@@ -13,18 +15,11 @@ const Content04 = () => {
       title="典範企業參訪"
       imgSrc={`${process.env.PUBLIC_URL}/images/天下永續公民獎_企業參訪_CWS`}
     >
-      {isMobile /* 手機版文字 */ ? (
-        <MobileContentText>
-          永續會每半年舉辦一次典範企業參訪，參訪對象以當年度「天下永續公民獎」各組名列前茅之企業為主。永續會首發前兩期（第一、第二期）的參訪企業現定為台積電。2022年上半年（第三、第四期）參訪企業將於2021年CSR
-          100強榜單內各組名列前茅擇一進行。另也將視當期會員交流狀況與意願，將朝不定期會員互訪方向進行規畫。
-        </MobileContentText>
-      ) : (
-        /* 桌面版文字 */
-        <ContentText>
-          永續會每半年舉辦一次典範企業參訪，參訪對象以當年度「天下永續公民獎」各組名列前茅之企業為主。永續會首發前兩期（第一、第二期）的參訪企業現定為台積電。2022年上半年（第三、第四期）參訪企業將於2021年CSR
-          100強榜單內各組名列前茅擇一進行。另也將視當期會員交流狀況與意願，將朝不定期會員互訪方向進行規畫。
-        </ContentText>
-      )}
+      <ContextComp>
+        永續會每半年舉辦一次典範企業參訪，參訪對象以當年度「天下永續公民獎」各組名列前茅之企業為主。永續會創始年(2021
+        年) 的參訪企業現定為台積電，2022 年度的參訪企業將於2021 年永續100
+        強榜單內各組名列前矛擇一進行。另也將視當期會員交流狀況與意願，將朝不定期會員互訪方向進行規畫。
+      </ContextComp>
     </Content>
   );
 };

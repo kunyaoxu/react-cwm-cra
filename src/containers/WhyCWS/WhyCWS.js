@@ -47,16 +47,13 @@ const WhyCWS = () => {
 
               <TextBox>當企業獨自面對永續發展時</TextBox>
               <ListText marginTop={isMobile ? mPxToRem(19) : pxToRem(41)}>
-                決策層級在目前既有單一組織作業下，可能遇到將「永續」融
-                入企業決策與發展文化的難處
+                決策層級在目前既有單一組織作業下，可能遇到將「永續」融入企業決策與發展文化的難處
               </ListText>
               <ListText marginTop={isMobile ? mPxToRem(19) : pxToRem(36)}>
-                目前組織在執行「永續」策略時，是否還未大幅發揮跨部門合
-                作，較難以產生的企業永續策略，創造企業最大價值
+                目前組織在執行「永續」策略時，還未大幅發揮跨部門合作，較難以產生的企業永續策略，創造企業最大價值
               </ListText>
               <ListText marginTop={isMobile ? mPxToRem(19) : pxToRem(36)}>
-                如何將企業的永續行為轉換成內容，有效地做廣度宣傳，讓利
-                益關係人都可以感受
+                如何將企業的永續行為轉換成內容，有效地做廣度宣傳，讓利益關係人都可以感受
               </ListText>
             </PageArticleWrapper>
           </MainContentWrapper>
