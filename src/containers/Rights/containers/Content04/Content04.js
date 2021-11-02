@@ -3,7 +3,6 @@ import useMobile from 'hooks/useMobile';
 import Content from '../../components/Content';
 import ContentText from '../../components/ContentText';
 import MobileContentText from '../../components/MobileContentText';
-import { contextType } from 'react-modal';
 
 const Content04 = () => {
   const isMobile = useMobile();

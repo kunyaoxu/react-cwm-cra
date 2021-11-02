@@ -37,7 +37,7 @@ const layout = {
   wrapperCol: { span: 24 },
 };
 
-const JoinEnquiry = () => {
+const JoinEnquiry = ({ isEmbedMode = false }) => {
   const [form] = Form.useForm();
   const ref = useRef();
   const [isProcessSubmit, setIsProcessSubmit] = useState(false);
@@ -118,10 +118,14 @@ const JoinEnquiry = () => {
 
   return (
     <Wrapper id="enquiry">
-      {/* 頁面Title */}
-      <Title />
-      {/* 招收規則 */}
-      <RecruitRule />
+      {isEmbedMode ? null : (
+        <>
+          {/* 頁面Title */}
+          <Title />
+          {/* 招收規則 */}
+          <RecruitRule />
+        </>
+      )}
 
       {/* Form part */}
       <AntdFrom form={form} name="control-hooks" autoComplete={'off'}>

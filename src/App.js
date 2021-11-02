@@ -23,6 +23,7 @@ import ValuesOfMembership from 'containers/ValuesOfMembership';
 import 'styles/antd.js';
 import GlobalStyle from 'styles/global-styles';
 import styles from 'styles/Home.module.css';
+import qs from 'qs';
 
 // kick off the polyfill!
 smoothscroll.polyfill();
@@ -33,6 +34,9 @@ const StyledLayout = styled(Layout)`
 `;
 
 export default function App() {
+  const obj = qs.parse(window.location.search, { ignoreQueryPrefix: true });
+  const isEmbedMode = obj['src'] === 'embed';
+
   return (
     <div className={styles.container}>
       {/* HTML headers */}
@@ -40,39 +44,48 @@ export default function App() {
 
       {/* Main Layout */}
       <StyledLayout>
-        {/* Navbar */}
-        <Navbar />
+        {isEmbedMode ? (
+          <>
+            {/* Section - Join Enquiry */}
+            <JoinEnquiry isEmbedMode={isEmbedMode} />
+          </>
+        ) : (
+          <>
+            {/* Navbar */}
+            <Navbar />
 
-        {/* Content */}
-        <Content>
-          {/* Section - Home */}
-          <Landing />
-          {/* Section - Why Now */}
-          <WhyNow />
-          {/* Section - About CWS */}
-          <AboutCWS />
-          {/* Section - Why CWS */}
-          <WhyCWS />
-          {/* Section - Aspects */}
-          <Aspects />
-          {/* Section - Values Of Membership */}
-          <ValuesOfMembership />
-          {/* Section - Mission */}
-          <Mission />
-          {/* Section - Rights */}
-          <Rights />
-          {/* Section - Join Enquiry */}
-          <JoinEnquiry />
-          {/* Section - Why Us */}
-          <WhyUs />
-          {/* Section - President Letter */}
-          <PresidentLetter />
-          {/* Section - Video Showcase */}
-          <VideoShowcase />
-        </Content>
+            {/* Content */}
+            <Content>
+              {/* Section - Home */}
+              <Landing />
+              {/* Section - Why Now */}
+              <WhyNow />
+              {/* Section - About CWS */}
+              <AboutCWS />
+              {/* Section - Why CWS */}
+              <WhyCWS />
+              {/* Section - Aspects */}
+              <Aspects />
+              {/* Section - Values Of Membership */}
+              <ValuesOfMembership />
+              {/* Section - Mission */}
+              <Mission />
+              {/* Section - Rights */}
+              <Rights />
+              {/* Section - Join Enquiry */}
+              <JoinEnquiry />
+              {/* Section - Why Us */}
+              <WhyUs />
+              {/* Section - President Letter */}
+              <PresidentLetter />
+              {/* Section - Video Showcase */}
+              <VideoShowcase />
+            </Content>
 
-        {/* Footer */}
-        <Footer />
+            {/* Footer */}
+            <Footer />
+          </>
+        )}
       </StyledLayout>
     </div>
   );

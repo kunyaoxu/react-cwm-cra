@@ -19,6 +19,16 @@ export const Wrapper = styled(Flex)`
   * {
     user-select: auto;
   }
+
+  ${media.greaterThan('large')`
+    padding-top: ${pxToRem(194)};
+    padding-bottom: ${pxToRem(181)};
+  `}
+
+  ${media.lessThan('large')`
+    padding-top: ${mPxToRem(70)};
+    padding-bottom: ${mPxToRem(48)};
+  `}
 `;
 
 export const AntdFrom = styled(Form)`
@@ -31,11 +41,6 @@ export const AntdFrom = styled(Form)`
   ${media.greaterThan('large')`
     max-width: 75.6%;
     padding: 4% 10.5%;
-    margin-bottom: ${pxToRem(181)};
-  `}
-
-  ${media.lessThan('large')`
-    margin-bottom: ${mPxToRem(48)};
   `}
 `;
 

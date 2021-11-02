@@ -6,7 +6,7 @@ import MobileContentText from '../../components/MobileContentText';
 
 const Content02 = () => {
   const isMobile = useMobile();
-  const ContextTextComp = isMobile ? MobileContentText : ContentText;
+
   return (
     <Content
       icon={<ProductContent02Svg />}
