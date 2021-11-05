@@ -1,10 +1,7 @@
 import Layout from 'antd/lib/layout';
 import styled from 'styled-components';
 import smoothscroll from 'smoothscroll-polyfill';
-
 import JoinEnquiry from 'containers/JoinEnquiry';
-
-// import 'styles/antd.css';
 import 'styles/antd.js';
 import GlobalStyle from 'styles/global-styles';
 import styles from 'styles/Home.module.css';

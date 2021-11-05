@@ -4,6 +4,7 @@ import Form from 'antd/lib/form';
 import message from 'antd/lib/message';
 import Checkbox from 'antd/lib/checkbox';
 import { CaretDownOutlined } from '@ant-design/icons';
+import qs from 'qs';
 
 import Title from './components/Title';
 import RecruitRule from './components/RecruitRule';
@@ -25,11 +26,7 @@ import {
 } from './styled';
 import ContactInfo from './components/ContactInfo';
 
-const API_URL =
-  'https://script.google.com/macros/s/AKfycbxuV2Im86O8nMtcYMczL2IAGJCSpNn10ECxJRhTTyUPWepagf_DrIlGVoKXcJ8K8KE/exec';
-
 const { Option } = AntdSelect;
-
 const OTHER = '@@OTHER@@';
 
 const layout = {
@@ -38,6 +35,12 @@ const layout = {
 };
 
 const JoinEnquiry = ({ isEmbedMode = false }) => {
+  /**
+   * example: http://localhost:3000/?gas_url=https://script.google.com/macros/s/AKfycbx8k7HRZdDz6WtC0KRpfsc7ZIvxAvLVj4HC71Nlxrm9P6mL2iexAGJ5FB8VE00YvsUVvg/exec
+   **/
+  const obj = qs.parse(window.location.search, { ignoreQueryPrefix: true });
+  const gasLink = obj['gas_url'];
+
   const [form] = Form.useForm();
   const ref = useRef();
   const [isProcessSubmit, setIsProcessSubmit] = useState(false);
@@ -53,6 +56,11 @@ const JoinEnquiry = ({ isEmbedMode = false }) => {
 
   const onSendForm = (data) => {
     if (isProcessSubmit) return;
+    if (!gasLink) {
+      alert('[error] query string must contain gas_url');
+      setIsProcessSubmit(false);
+      return;
+    }
 
     const fields = data?.fields?.map((val) =>
       Array.isArray(val)
@@ -80,40 +88,38 @@ const JoinEnquiry = ({ isEmbedMode = false }) => {
 
     setIsProcessSubmit(true);
 
-    import('qs').then((qs) => {
-      fetch(`${API_URL}?${qs.stringify({ fields }, { arrayFormat: 'repeat' })}`)
-        .then(() => {
-          setOtherStr(null);
-          form.resetFields();
-          message.success({
-            content: (
-              <div style={{ textAlign: 'left' }}>
-                您申請的表單已成功送出，3日內將有專人與您聯繫。
-                <br />
-                <br />
-                若有任何問題請來電：
-                <br />
-                02-2662-0332（週一～週五 09:00~17:30）
-              </div>
-            ),
-            duration: 3,
-          });
-        })
-        .catch(() => {
-          message.error({
-            content: (
-              <div style={{ textAlign: 'left' }}>
-                抱歉，您的表單送出失敗，
-                <br />
-                請再次確認並送出，謝謝您！
-              </div>
-            ),
-            duration: 3,
-          });
-          console.error('google sheet error!');
-        })
-        .finally(() => setIsProcessSubmit(false));
-    });
+    fetch(`${gasLink}?${qs.stringify({ fields }, { arrayFormat: 'repeat' })}`)
+      .then(() => {
+        setOtherStr(null);
+        form.resetFields();
+        message.success({
+          content: (
+            <div style={{ textAlign: 'left' }}>
+              您申請的表單已成功送出，3日內將有專人與您聯繫。
+              <br />
+              <br />
+              若有任何問題請來電：
+              <br />
+              02-2662-0332（週一～週五 09:00~17:30）
+            </div>
+          ),
+          duration: 3,
+        });
+      })
+      .catch(() => {
+        message.error({
+          content: (
+            <div style={{ textAlign: 'left' }}>
+              抱歉，您的表單送出失敗，
+              <br />
+              請再次確認並送出，謝謝您！
+            </div>
+          ),
+          duration: 3,
+        });
+        console.error('google sheet error!');
+      })
+      .finally(() => setIsProcessSubmit(false));
   };
 
   return (
