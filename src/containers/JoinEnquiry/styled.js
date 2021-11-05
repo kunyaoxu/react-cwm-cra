@@ -20,35 +20,37 @@ export const Wrapper = styled(Flex)`
     user-select: auto;
   }
 
-  ${media.greaterThan('large')`
-    padding-top: ${pxToRem(194)};
-    padding-bottom: ${pxToRem(181)};
+  ${media.greaterThan('medium')`
+    padding-top: ${pxToRem(36)};
+    padding-bottom: ${pxToRem(36)};
   `}
 
-  ${media.lessThan('large')`
-    padding-top: ${mPxToRem(70)};
-    padding-bottom: ${mPxToRem(48)};
+  ${media.lessThan('medium')`
+    padding-top: ${mPxToRem(24)};
+    padding-bottom: ${mPxToRem(24)};
   `}
 `;
 
 export const AntdFrom = styled(Form)`
   background-color: #768e91;
   width: 100%;
-  max-width: 90.5%;
-  padding: 6% 7.7%;
+  max-width: 95%;
   font-family: 'Noto Sans TC';
 
-  ${media.greaterThan('large')`
-    max-width: 75.6%;
-    padding: 4% 10.5%;
+  ${media.greaterThan('medium')`
+    padding: 3%;
+  `}
+
+  ${media.lessThan('medium')`
+    padding: 5% 4%;
   `}
 `;
 
 export const AntdFormItem = styled(Form.Item)`
-  margin-bottom: ${mPxToRem(12)};
+  margin-bottom: ${mPxToRem(10)};
 
-  ${media.greaterThan('large')`
-    margin-bottom: ${pxToRem(40)};
+  ${media.greaterThan('medium')`
+    margin-bottom: ${pxToRem(26)};
   `}
 
   & > .ant-form-item-label > label,
@@ -60,7 +62,7 @@ export const AntdFormItem = styled(Form.Item)`
     height: initial;
     word-break: keep-all;
 
-    ${media.greaterThan('large')`
+    ${media.greaterThan('medium')`
       font-size:${pxToRem(18)};
       line-height: ${pxToRem(27)};
     `}
@@ -100,7 +102,7 @@ export const AntdSelect = styled(Select)`
       height: 100%;
     }
 
-    ${media.greaterThan('large')`
+    ${media.greaterThan('medium')`
       height: ${pxToRem(46)};
     `}
   }
@@ -115,7 +117,7 @@ export const AntdSelect = styled(Select)`
     letter-spacing: 1px;
     font-weight: bold;
 
-    ${media.greaterThan('large')`
+    ${media.greaterThan('medium')`
       font-size: ${pxToRem(15)};
       line-height: ${pxToRem(46)};
     `}
@@ -128,7 +130,7 @@ export const OptionStyle = styled.div`
   font-weight: bold;
   font-family: 'Noto Sans TC';
 
-  ${media.greaterThan('large')`
+  ${media.greaterThan('medium')`
     font-size: ${pxToRem(15)};
   `}
 `;
@@ -154,7 +156,7 @@ export const AntdButton = styled(Button)`
     background-color: #006999;
   }
 
-  ${media.greaterThan('large')`
+  ${media.greaterThan('medium')`
     font-size: ${pxToRem(17)};
     border-radius: ${pxToRem(21)};
     height: ${pxToRem(42)};
@@ -188,7 +190,7 @@ export const AntdInput = styled(Input)`
     background-color: #fff;
   }
 
-  ${media.greaterThan('large')`
+  ${media.greaterThan('medium')`
     font-size: ${pxToRem(15)};
     height: ${pxToRem(46)};
   `}
@@ -196,7 +198,7 @@ export const AntdInput = styled(Input)`
 
 export const AntdCol = styled(Col)`
   min-width: 100%;
-  ${media.greaterThan('large')`
+  ${media.greaterThan('medium')`
     min-width: unset;
     flex: 1;
     padding: 0 ${pxToRem(30)};
@@ -206,7 +208,7 @@ export const AntdCol = styled(Col)`
 export const AntdCheckbox = styled(Checkbox)`
   margin-bottom: ${mPxToRem(10)};
   margin-right: ${pxToRem(29)};
-  ${media.greaterThan('large')`
+  ${media.greaterThan('medium')`
     margin-bottom: ${pxToRem(14)};
     margin-right: ${pxToRem(32)};
   `}
@@ -215,7 +217,7 @@ export const AntdCheckbox = styled(Checkbox)`
 export const OtherCol = styled(Col)`
   flex: 1;
 
-  ${media.greaterThan('large')`
+  ${media.greaterThan('medium')`
     display: flex;
     & ${AntdCheckbox} {
       margin-right: ${pxToRem(15)};
@@ -230,7 +232,7 @@ export const OtherCol = styled(Col)`
 export const CheckboxCol = styled(Col)`
   min-width: 100%;
 
-  ${media.greaterThan('large')`
+  ${media.greaterThan('medium')`
     min-width: unset;
   `}
 `;
@@ -247,7 +249,7 @@ export const AntdLoadingCircle = styled(LoadingSvg)`
   animation: ${rotate} 1s linear infinite;
   width: ${mPxToRem(14)};
   height: ${mPxToRem(14)};
-  ${media.greaterThan('large')`
+  ${media.greaterThan('medium')`
     width: ${pxToRem(25)};
     height: ${pxToRem(25)};
   `}
@@ -256,9 +258,9 @@ export const AntdLoadingCircle = styled(LoadingSvg)`
 export const DivideLine = styled.div`
   background-color: #fff;
   height: 1px;
-  margin-top: ${mPxToRem(8)};
-  margin-bottom: ${mPxToRem(14)};
-  ${media.greaterThan('large')`
-    margin: ${pxToRem(0)} ${pxToRem(30)} ${pxToRem(36)};
+  margin-top: ${mPxToRem(6)};
+  margin-bottom: ${mPxToRem(12)};
+  ${media.greaterThan('medium')`
+    margin: ${pxToRem(0)} ${pxToRem(24)} ${pxToRem(28)};
   `}
 `;
