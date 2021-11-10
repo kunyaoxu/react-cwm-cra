@@ -5,6 +5,6 @@ const MAP_MEDIA_QUERY = {
   small: '450px',
 };
 
-export const MEDIA_THRESHOLD = 'large';
+export const MEDIA_THRESHOLD = 'medium';
 
 export const MEDIA_THRESHOLD_FOR_HOOK = `(max-width: ${MAP_MEDIA_QUERY[MEDIA_THRESHOLD]})`;

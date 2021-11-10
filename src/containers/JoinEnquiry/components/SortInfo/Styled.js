@@ -9,23 +9,23 @@ export const Wrapper = styled(Box)`
   font-family: 'Noto Sans TC';
 
   ${media.greaterThan('medium')`
-    margin-top: ${pxToRem(-20)};
-    margin-bottom: ${pxToRem(57)};
+    margin-top: ${pxToRem(-16)};
+    margin-bottom: ${pxToRem(56)};
   `}
   ${media.lessThan('medium')`
-    margin-top: ${mPxToRem(25)};
+    margin-top: ${mPxToRem(18)};
     margin-bottom:  ${mPxToRem(11)};
   `}
   & p {
     ${media.greaterThan('medium')`
-      font-size: ${pxToRem(13)};
-      line-height: ${pxToRem(15)};
+      font-size: ${pxToRem(14)};
+      line-height: 1.3;
       margin-bottom: 0;
       letter-spacing: ${pxToRem(0.65)};
     `}
 
     ${media.lessThan('medium')`
-      font-size: ${mPxToRem(8)};
+      font-size: ${mPxToRem(9)};
       line-height:  1.34;
       margin-bottom: 0;
       letter-spacing: ${mPxToRem(0.4)};

@@ -4,6 +4,7 @@ import Form from 'antd/lib/form';
 import message from 'antd/lib/message';
 import Checkbox from 'antd/lib/checkbox';
 import { CaretDownOutlined } from '@ant-design/icons';
+import isNil from 'lodash/isNil';
 import qs from 'qs';
 
 import Title from './components/Title';
@@ -33,6 +34,8 @@ const layout = {
   labelCol: { span: 24 },
   wrapperCol: { span: 24 },
 };
+
+message.config({ duration: 3, maxCount: 1 });
 
 const JoinEnquiry = ({ isEmbedMode = false }) => {
   /**
@@ -72,7 +75,7 @@ const JoinEnquiry = ({ isEmbedMode = false }) => {
     );
 
     // 判斷陣列中是否有任一個元素為 null or undefined
-    if (!fields.every((val) => val !== null && val !== undefined)) {
+    if (fields.some((val) => isNil(val) || val === '')) {
       message.error({
         content: (
           <div style={{ textAlign: 'left' }}>
@@ -81,7 +84,6 @@ const JoinEnquiry = ({ isEmbedMode = false }) => {
             麻煩您確實填寫每個欄目後送出，謝謝您！
           </div>
         ),
-        duration: 3,
       });
       return;
     }
@@ -100,10 +102,10 @@ const JoinEnquiry = ({ isEmbedMode = false }) => {
               <br />
               若有任何問題請來電：
               <br />
-              02-2662-0332（週一～週五 09:00~17:30）
+              02-25078627#284 章先生
             </div>
           ),
-          duration: 3,
+          duration: 6,
         });
       })
       .catch(() => {
@@ -115,7 +117,6 @@ const JoinEnquiry = ({ isEmbedMode = false }) => {
               請再次確認並送出，謝謝您！
             </div>
           ),
-          duration: 3,
         });
         console.error('google sheet error!');
       })

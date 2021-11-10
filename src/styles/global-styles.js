@@ -75,10 +75,15 @@ const GlobalStyle = createGlobalStyle`
     background: white;
   }
 
-  .ant-message-notice {
-    margin-top: ${mPxToRem(95)};
-    ${media.greaterThan('large')`
-      margin-top: ${pxToRem(140)};
+  .ant-message  {
+    top: unset;
+    bottom: 0;
+
+    ${media.greaterThan('medium')`
+      transform: translateY(calc(${pxToRem(-180)} - 50%));
+    `}
+    ${media.lessThan('medium')`
+      transform: translateY(calc(${mPxToRem(-125)} - 50%));
     `}
   }
 
@@ -86,7 +91,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     font-size: ${mPxToRem(12)};
 
-    ${media.greaterThan('large')`
+    ${media.greaterThan('medium')`
       font-size: ${pxToRem(16)};
     `}
   }

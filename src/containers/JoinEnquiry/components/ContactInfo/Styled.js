@@ -7,7 +7,7 @@ export const Wrapper = styled(Box)`
   color: #f6f6f6;
   text-align: center;
   font-family: 'Noto Sans TC';
-  margin: 0 -8%;
+  margin: 0 -4%;
 
   p {
     &.white-text {
